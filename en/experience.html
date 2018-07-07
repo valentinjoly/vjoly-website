@@ -1,0 +1,169 @@
+---
+layout: default-en
+title: "Experience"
+basename: experience.html
+banner_image: argentine.jpg
+---
+
+<div class="row">
+  <div class="col-xs-12 col-md-9">
+
+    <h1>Experience</h1>
+    <h2>Education</h2>
+    <hr>
+
+    <ul class="list-unstyled">
+      {% for degree in site.data.education %}
+        <div class="media">
+          <div class="media-left">
+            <a href="{{degree.url}}">
+              <img class="img-rounded" src="{{site.baseurl}}/images/{{degree.image}}" alt="..." width="100px"/>
+            </a>
+          </div>
+          <div class="media-body">
+            <h3 class="media-heading">
+              <strong>{{degree.name}}</strong>
+              {% if degree.field %}
+                – {{degree.field}}
+              {% endif %}
+            </h3>
+            <h4><strong>{{degree.year}}</strong></h4>
+            <h4><strong>{{degree.institution}}</strong>, <em>{{degree.location}}</em></h4>
+            {% if degree.institution_alt %}
+              <h4><strong>{{degree.institution_alt}}</strong>, <em>{{degree.location_alt}}</em></h4>
+            {% endif %}
+
+            {% if degree.advisor %}
+              <h4><strong>Advisor:</strong> {{degree.advisor}}</h4>
+            {% endif %}
+
+            {% if degree.project %}
+              <h4><strong>Project:</strong> {{degree.project}}</h4>
+            {% endif %}
+
+            {% if degree.info %}
+              <h4 style="color:#808080">{{degree.info}}</h4>
+            {% endif %}
+
+          </div>
+        </div>
+        <hr>
+      {% endfor %}
+    </ul>
+
+    <br/>
+
+    <h2>International research activities</h2>
+    <hr>
+
+    <ul class="list-unstyled">
+      {% for internship in site.data.internships %}
+        <div class="media">
+          <div class="media-left">
+            <a href="{{internship.url}}">
+              <img class="img-rounded" src="{{site.baseurl}}/images/{{internship.image}}" alt="..." width="100px"/>
+            </a>
+          </div>
+          <div class="media-body">
+            <h3 class="media-heading">
+              <strong>{{internship.name}}</strong>
+              {% if internship.field %}
+                – {{internship.field}}
+              {% endif %}
+            </h3>
+            <h4><strong>{{internship.date}}</strong></h4>
+            <h4><strong>{{internship.institution}}</strong>, <em>{{internship.location}}</em></h4>
+
+            {% if internship.supervisor %}
+              <h4>{{internship.supervisor}}</h4>
+            {% endif %}
+
+            {% if internship.description %}
+              <h4 style="color:#808080">{{internship.description}}</h4>
+            {% endif %}
+
+          </div>
+        </div>
+        <hr>
+      {% endfor %}
+    </ul>
+
+    <br/>
+
+    <h2>Teaching</h2>
+    <hr>
+
+    <ul class="list-unstyled">
+      {% for teaching in site.data.teaching %}
+        <div class="media">
+          <div class="media-left">
+            <a href="{{teaching.url}}">
+              <img class="img-rounded" src="{{site.baseurl}}/images/{{teaching.image}}" alt="..." width="100px"/>
+            </a>
+          </div>
+          <div class="media-body">
+            <h3 class="media-heading">
+              <strong>{{teaching.position}}</strong>
+              {% if teaching.field %}
+                – {{teaching.field}}
+              {% endif %}
+            </h3>
+            <h4><strong>{{teaching.period}}</strong></h4>
+            <h4><strong>{{teaching.institution}}</strong>, <em>{{teaching.location}}</em></h4>
+
+            {% if teaching.course %}
+              <h4>
+                {{teaching.course}}
+                {% if teaching.professor %}
+                  – {{teaching.professor}}
+                {% endif %}
+              </h4>
+            {% endif %}
+
+            {% if teaching.description %}
+              <h4 style="color:#808080">{{teaching.description}}</h4>
+            {% endif %}
+
+          </div>
+        </div>
+        <hr>
+      {% endfor %}
+    </ul>
+
+    <br/>
+
+    <h2>Volunteering</h2>
+    <hr>
+
+    <ul class="list-unstyled">
+      {% for volunteering in site.data.volunteering %}
+        <div class="media">
+          <div class="media-left">
+            <a href="{{volunteering.url}}">
+              <img class="img-rounded" src="{{site.baseurl}}/images/{{volunteering.image}}" alt="..." width="100px"/>
+            </a>
+          </div>
+          <div class="media-body">
+            <h3 class="media-heading"><strong>{{volunteering.position}}</strong></h3>
+            <h4><strong>{{volunteering.period}}</strong></h4>
+            <h4><strong>{{volunteering.institution}}</strong>, <em>{{volunteering.location}}</em></h4>
+
+            {% if volunteering.description %}
+              <h4 style="color:#808080">{{volunteering.description}}</h4>
+            {% endif %}
+
+          </div>
+        </div>
+        <hr>
+      {% endfor %}
+    </ul>
+
+
+  </div>
+</div>
+
+
+
+
+<br/>
+

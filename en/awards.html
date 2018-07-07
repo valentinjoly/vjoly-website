@@ -1,0 +1,52 @@
+---
+layout: default-en
+title: "CV"
+basename: awards.html
+banner_image: libellule.jpg
+---
+
+<h1>Scholarships and Awards</h1>
+
+{% assign star = '<span class="glyphicon glyphicon-star" aria-hidden="true"></span>' %}
+{% assign travel = '<span class="glyphicon glyphicon-send" aria-hidden="true"></span>' %}
+
+{{star}} Major scholarship/award {{travel}} Travel scholarship
+
+{% assign years = "" %}
+{% for award in site.data.scholarships_awards %}
+  {% assign years = years | append: award.year %}
+  {% assign years = years | append: " " %}
+{% endfor %}
+{% assign years = years | strip | split: " " | uniq | sort | reverse %}
+
+{% for year in years %}
+<h3>{{ year }}</h3>
+
+<ul class="list-unstyled">
+  {% for award in site.data.scholarships_awards %}
+    {% if year == award.year %}
+      <li>
+        <h4>
+          {% if award.major %}
+            {{star}}
+          {% endif %}
+
+          {% if award.travel %}
+            {{travel}}
+          {% endif %}
+
+          <strong>{{award.name}}</strong>
+          <br/>
+
+          {% if award.amount %}
+            {{award.organization}}, {{award.currency}} {{award.amount}}
+          {% else %}
+            {{award.organization}}
+          {% endif %}
+        </h4>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
+<hr>
+{% endfor %}
