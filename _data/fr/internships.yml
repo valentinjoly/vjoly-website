@@ -1,0 +1,72 @@
+- name: JSPS Summer Program
+  field: Pollen tube microfluidics
+  date: June–Aug. 2016
+  supervisor: Prof. Tetsuya Higashiyama
+  institution: Institute for Transformative Bio-Molecules (ITbM), Nagoya University
+  location: Nagoya, Japan
+  image: itbm.png
+  url: http://www.itbm.nagoya-u.ac.jp/en/members/t-higashiyama/
+  description: "The JSPS summer program is highly selective (10 Canadian students selected) and comes with a ¥534,000 stipend and a ¥158,500 research grant. This experience allowed me to be welcomed for a two-month stay at Prof. Higashiyama's laboratory, and benefit from their expertise to optimize a series of pollen tube guidance microfluidic devices tailored for solanaceous species. These devices allow to monitor both long- and short-distance pollen tube attraction."
+
+- name: International collaboration
+  field: Bioinformatics
+  date: May 2016
+  supervisor: Prof. Johan Edqvist
+  institution: Linköping University
+  location: Linköping, Sweden
+  image: linköping_university.png
+  url: https://www.ifm.liu.se/biology/molgen/edqvist_lab/
+  description: "After the release of the KAPPA CRP detection program, I got involved in a project developed at Prof. Edqvist's laboratory aiming to study the evolution and diversification of the non-specific lipid-transfer proteins (nsLTPs) across plant taxa. This stay in his lab allowed us to launch this collaboration, which is still active."
+
+- name: Research internship
+  field: Molecular evolution & Bioinformatics
+  date: Apr.–May 2014
+  supervisor: Prof. William J. Swanson
+  institution: University of Washington
+  location: Seattle, WA, USA
+  image: uofw.png
+  url: http://depts.washington.edu/swansonw/Swanson_Lab/Overview.html
+
+- name: International seminar
+  field: Functional protein annotation with BLAST2GO
+  date: July 2012
+  institution: University of California
+  location: Davis, CA, USA
+  image: blast2go.jpg
+  url: https://www.blast2go.com/
+
+- name: Botanical transect
+  field: Collection of <em>Solanum</em> individuals in the Andes
+  date: Apr.–May 2012
+  supervisor: Partnership with Dr. Franco Chiarini
+  institution: Universidad Nacional de Córdoba
+  location: Córdoba, Argentina
+  image: unc.png
+  url: http://museobotanico.unc.edu.ar/herbario
+
+- name: Research internship
+  field: Plant molecular biology
+  date: Jan.–Aug. 2011
+  supervisor: Prof. Daniel P. Matton
+  institution: University of Montreal
+  location: Montreal, QC, Canada
+  image: udem.png
+  url: http://www.irbv.umontreal.ca/chercheurs/daniel-philippe-matton
+
+- name: Research internship
+  field: Plant physiology
+  date: June–July 2010
+  supervisor: Prof. Christophe Bailly
+  institution: CNRS (UMR 7622) – Pierre & Marie Curie University (Paris-VI)
+  location: Paris, France
+  image: upmc.jpg
+  url: http://www.ibps.upmc.fr/en/research/developmental-biology-laboratory/seed-biology
+
+- name: Short-term introductory research internship
+  field: Plant molecular biology
+  date: Jan. 2009
+  supervisor: Prof. Chris Bowler
+  institution: CNRS (UMR 8197) – École Normale Supérieure
+  location: Paris, France
+  image: ens.png
+  url: http://www.ibens.ens.fr/spip.php?rubrique36&lang=fr

@@ -13,7 +13,7 @@ banner_image: libellule.jpg
 {{star}} Major scholarship/award {{travel}} Travel scholarship
 
 {% assign years = "" %}
-{% for award in site.data.scholarships_awards %}
+{% for award in site.data.en.scholarships_awards %}
   {% assign years = years | append: award.year %}
   {% assign years = years | append: " " %}
 {% endfor %}
@@ -23,7 +23,7 @@ banner_image: libellule.jpg
 <h3>{{ year }}</h3>
 
 <ul class="list-unstyled">
-  {% for award in site.data.scholarships_awards %}
+  {% for award in site.data.en.scholarships_awards %}
     {% if year == award.year %}
       <li>
         <h4>

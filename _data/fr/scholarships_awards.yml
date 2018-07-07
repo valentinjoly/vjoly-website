@@ -1,0 +1,245 @@
+- name: Scholarship for Finishing Ph.D. Students (BEFD)
+  year: "2017"
+  organization: "Faculty of Graduate and Postdoctoral Studies, University of Montreal"
+  amount: "12,000"
+  currency: "CAD"
+  major: true
+  travel: false
+
+- name: "Jacques-Rousseau Travel Scholarship"
+  year: "2017"
+  organization: "Plant Biology Research Institute, University of Montreal"
+  amount: "1,500"
+  currency: "CAD"
+  major: false
+  travel: true
+
+- name: "Travel Scholarship (<em>Bourse d'appui à la diffusion des résultats de recherche</em>)"
+  year: "2017"
+  organization: "Faculty of Graduate and Postdoctoral Studies, University of Montreal"
+  amount: "500"
+  currency: "CAD"
+  major: false
+  travel: true
+
+- name: "Hydro-Québec Excellence Scholarship"
+  year: "2016"
+  organization: "Hydro-Québec (national electricity company)"
+  amount: "24,500"
+  currency: "CAD"
+  major: true
+  travel: false
+
+- name: "Ph.D. Scholarship from the Government of Québec"
+  year: "2016"
+  organization: "Fonds Québécois de Recherche – Nature et Technologies"
+  amount: "13,333"
+  currency: "CAD"
+  major: true
+  travel: false
+
+- name: "MITACS Globalink Award – JSPS Summer Program"
+  year: "2016"
+  organization: "MITACS / Japanese Society for the Promotion of Science"
+  amount: "534,000"
+  currency: "JPY"
+  major: true
+  travel: true
+
+- name: "Best Graduate Student Poster Award"
+  year: "2016"
+  organization: "Frontiers in Plant Reproduction Biology, <em>Plant Reproduction 2016</em> Conference"
+  amount: "300"
+  currency: "USD"
+  major: false
+  travel: false
+
+- name: "Jacques-Rousseau Travel Scholarship"
+  year: "2016"
+  organization: "Plant Biology Research Institute, University of Montreal"
+  amount: "1,500"
+  currency: "CAD"
+  major: false
+  travel: true
+
+- name: "PARSECS Travel Subvention"
+  year: "2016"
+  organization: "FAÉCUM, University of Montreal"
+  amount: "400"
+  currency: "CAD"
+  major: false
+  travel: true
+
+- name: "Catherine-Frédette Excellence Scholarship in Biological Sciences and Neurology"
+  year: "2015"
+  organization: "Faculty of Graduate and Postdoctoral Studies, University of Montreal"
+  amount: "5,000"
+  currency: "CAD"
+  major: true
+  travel: false
+
+- name: "FBSB Ph.D. Scholarship from the Dept. of Biological Sciences"
+  year: "2015"
+  organization: "University of Montreal"
+  amount: "1,500"
+  currency: "CAD"
+  major: true
+  travel: false
+
+- name: "President's Award for the Best Student Oral Presentation"
+  year: "2015"
+  organization: "Canadian Society of Plant Biologists (CSPB), Botany 2015 Conference"
+  amount: "500"
+  currency: "CAD"
+  major: false
+  travel: false
+
+- name: "Best Student Poster Award"
+  year: "2015"
+  organization: "Compute Canada, High Performance Computing Symposium HPCS 2015"
+  amount: "500"
+  currency: "CAD"
+  major: false
+  travel: false
+
+- name: "G.-H. Duff Travel Scholarship"
+  year: "2015"
+  organization: "Canadian Society of Plant Biologists (CSPB)"
+  amount: "340"
+  currency: "CAD"
+  major: false
+  travel: true
+
+- name: "Jacques-Rousseau Travel Scholarship"
+  year: "2015"
+  organization: "Plant Biology Research Institute, University of Montreal"
+  amount: "770"
+  currency: "CAD"
+  major: false
+  travel: true
+
+- name: "Excellence Scholarship from the Faculty of Graduate and Postdoctoral Studies"
+  year: "2015"
+  organization: "University of Montreal"
+  amount: "3,000"
+  currency: "CAD"
+  major: true
+  travel: false
+
+- name: "Pehr-Kalm Scholarship"
+  year: "2014"
+  organization: "Montreal Botanical Garden"
+  amount: "2,000"
+  currency: "CAD"
+  major: true
+  travel: false
+
+- name: "Travel Scholarship for International Interns"
+  year: "2014"
+  organization: "Government of Quebec (FRQNT) – Centre SÈVE"
+  amount: "3,815"
+  currency: "CAD"
+  major: false
+  travel: true
+
+- name: "Jacques-Rousseau Travel Scholarship"
+  year: "2014"
+  organization: "Plant Biology Research Institute, University of Montreal"
+  amount: "1,760"
+  currency: "CAD"
+  major: false
+  travel: true
+
+- name: "Marie-Victorin Excellence Scholarship"
+  year: "2013"
+  organization: "Plant Biology Research Institute, University of Montreal"
+  amount: "3,000"
+  currency: "CAD"
+  major: true
+  travel: false
+
+- name: "Best Oral Presentation Award"
+  year: "2013"
+  organization: "Journées du Centre SÈVE"
+  amount: "300"
+  currency: "CAD"
+  major: false
+  travel: false
+
+- name: "Jacques-Rousseau Travel Scholarship"
+  year: "2013"
+  organization: "Plant Biology Research Institute, University of Montreal"
+  amount: "850"
+  currency: "CAD"
+  major: false
+  travel: true
+
+- name: "Best Oral Presentation Award"
+  year: "2013"
+  organization: "Symposium of Biological Sciences, University of Montreal"
+  amount: "100"
+  currency: "CAD"
+  major: false
+  travel: false
+
+- name: "FBSB M.Sc. Scholarship from the Dept. of Biological Sciences"
+  year: "2012"
+  organization: "University of Montreal"
+  amount: "1,200"
+  currency: "CAD"
+  major: true
+  travel: false
+
+- name: "Scholarship for Accelerated M.Sc.-to-Ph.D. Transition"
+  year: "2012"
+  organization: "Faculty of Graduate and Postdoctoral Studies, University of Montreal"
+  amount: "14,000"
+  currency: "CAD"
+  major: true
+  travel: false
+
+- name: "Travel Scholarship for Student Exchange in Canada"
+  year: "2011"
+  organization: "French Ministry of Research (CROUS)"
+  amount: "1,600 "
+  currency: "EUR"
+  major: false
+  travel: true
+
+- name: "PIL Excellence Scholarship for Student Exchange in Canada"
+  year: "2011"
+  organization: "Pierre & Marie Curie University (Paris VI)"
+  amount: "1,500"
+  currency: "EUR"
+  major: false
+  travel: true
+
+- name: "AMIÉ Travel Scholarship for Student Exchange in Canada"
+  year: "2011"
+  organization: "French Regional Authority (<em>Conseil régional</em>)"
+  amount: "2,800"
+  currency: "EUR"
+  major: false
+  travel: true
+
+- name: "Campus'Trotter Scholarship for Student Exchange in Canada"
+  year: "2011"
+  organization: "French Local Authority (<em>Conseil général</em>)"
+  amount: "700"
+  currency: "EUR"
+  major: false
+  travel: true
+
+- name: "Best B.Sc. Student in the Dept. of Biology after the June 2010 final exams"
+  year: "2010"
+  organization: "Pierre & Marie Curie University (Paris VI)"
+  major: false
+  travel: false
+
+- name: "Excellence Scholarship for Undergraduate Studies"
+  year: "2008"
+  organization: "French Ministry of Research (CROUS)"
+  amount: "5,400"
+  currency: "EUR"
+  major: true
+  travel: false
