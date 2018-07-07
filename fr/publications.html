@@ -1,0 +1,83 @@
+---
+layout: default-fr
+title: "Publications"
+basename: publications.html
+banner_image: pollen_MEB.png
+---
+
+{% assign new_window = '<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>' %}
+{% assign download = '<span class="glyphicon glyphicon-save" aria-hidden="true"></span>' %}
+{% assign bookmark = '<span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span>' %}
+{% assign speaker = '<span class="glyphicon glyphicon-user" aria-hidden="true"></span>' %}
+{% assign speaker_small = "<small>*</small>" | replace: "*", speaker %}
+{% assign co_author = '<span class="glyphicon glyphicon-adjust" aria-hidden="true"></span>' %}
+{% assign co_author_small = "<small>*</small>" | replace: "*", co_author %}
+
+<h1>Publications</h1>
+<br/>
+
+<h2>Articles</h2>
+<h5>{{co_author}} Co-first authors</h5>
+<hr>
+<ul class="list-unstyled">
+  {% for paper in site.data.published_papers %}
+    <li>
+      <h4>
+        <strong>{{paper.title}}</strong>
+        <br/>
+        {{paper.authors | replace: "*", co_author_small}}
+        <br/>
+        <em>{{paper.journal}}</em>, {{paper.year}}, {{paper.volume}}({{paper.issue}}):{{paper.pages}}. DOI: {{paper.doi}}
+        <br/>
+        <small>
+          <strong>
+            {{new_window}} <a href="http://dx.doi.org/{{paper.doi}}" target="_new">Read online</a>
+          </strong>
+        </small>
+        |
+        {% if paper.pdf %}
+        <small>
+          <strong>
+            {{download}} <a href="{{site.baseurl}}/papers/{{paper.pdf}}" target="_new">PDF</a>
+          </strong>
+        </small>
+        |
+        {% endif %}
+        {% if paper.supp %}
+        <small>
+          <strong>
+            {{download}} <a href="{{site.baseurl}}/papers/{{paper.supp}}" target="_new">Supplementary</a>
+          </strong>
+        </small>
+        |
+        {% endif %}
+        <small>
+          <strong>
+            {{bookmark}} <a href="{{site.baseurl}}/papers/{{paper.bibtex}}" target="_new">BibTeX entry</a>
+          </strong>
+        </small>
+      </h4>
+      <hr>
+    </li>
+  {% endfor %}
+</ul>
+
+<br/>
+
+<h2>Oral presentations and posters</h2>
+<h5>{{speaker}} Speaker</h5>
+<hr>
+<ul class="list-unstyled">
+  {% for presentation in site.data.presentations_posters %}
+    <li>
+      <h4>
+        <strong>{{presentation.title}}</strong>
+        <br/>
+        {{presentation.authors | replace: "*", speaker_small}}
+        <br/>
+        <em>{{presentation.conference}}</em>, {{presentation.location}}, {{presentation.date}}.
+      </h4>
+      <hr>
+    </li>
+  {% endfor %}
+</ul>

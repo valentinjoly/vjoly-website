@@ -1,0 +1,90 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">
+        Valentin Joly
+      </a>
+    </div>
+
+
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+        <li class="{% if page.url contains 'index.html' %}active{% endif %}">
+          <a href="{{site.baseurl}}/fr/index.html">
+            Accueil
+          </a>
+        </li>
+
+        <li class="dropdown" class="{% if page.url contains 'research.html' %}active{% endif %}">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+            Intérêts scientifiques
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <a href="{{site.baseurl}}/fr/pt_guidance_research.html">
+                Guidage du tube pollinique
+              </a>
+            </li>
+            <li>
+              <a href="{{site.baseurl}}/fr/reprod_isolation_research.html">
+                Isolement reproductif
+              </a>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a href="{{site.baseurl}}/fr/omics_research.html">
+                -Omiques reproductives
+              </a>
+            </li>
+
+            <li>
+              <a href="{{site.baseurl}}/fr/crp_research.html">
+                Protéines riches en cystéines
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="{% if page.url contains 'experience.html' %}active{% endif %}">
+          <a href="{{site.baseurl}}/fr/experience.html">
+            Expérience
+          </a>
+        </li>
+
+        <li class="{% if page.url contains 'publications.html' %}active{% endif %}">
+          <a href="{{site.baseurl}}/fr/publications.html">
+            Publications
+          </a>
+        </li>
+
+        <li class="{% if page.url contains 'awards.html' %}active{% endif %}">
+          <a href="{{site.baseurl}}/fr/awards.html">
+            Prix et bourses
+          </a>
+        </li>
+
+
+        <li class="{% if page.url contains 'blog.html' %}active{% endif %}">
+          <a href="{{site.baseurl}}/fr/blog.html">
+            Blog
+          </a>
+        </li>
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{{site.baseurl}}/en/{{page.basename}}">English</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
