@@ -19,13 +19,13 @@
 
 - name: International collaboration
   field: Bioinformatics
-  date: May 20163–<em>present</em>
+  date: May 2016–<em>present</em>
   supervisor: Dr. Johan Edqvist
   institution: Linköping University
   location: Linköping, Sweden
   image: linköping_university.png
   url: https://www.ifm.liu.se/biology/molgen/edqvist_lab/
-  description: "After the release of the KAPPA CRP detection program, I got involved in a project developed at Prof. Edqvist's laboratory aiming to study the evolution and diversification of the non-specific lipid-transfer proteins (nsLTPs) across plant taxa. This stay in his lab allowed us to launch this collaboration, which is still active."
+  description: "After the release of the KAPPA CRP detection program, I got involved in a project developed at Dr. Edqvist's laboratory aiming to study the evolution and diversification of the non-specific lipid-transfer proteins (nsLTPs) across plant taxa. This stay in his lab allowed us to launch this collaboration, which is still active."
   wetlab_skills: [
     Protein expression and purification in <em>Pichia pastoris</em>.,
   ]
