@@ -1,0 +1,44 @@
+- title: "Deciphering the evolution and development of the cuticle by studying lipid transfer proteins in mosses and liverworts."
+  authors: Salminen TA, Eklund DM, Joly V, Blomqvist K, Matton DP, Edqvist J.
+  journal: Plants
+  year: 2018
+  volume: 7
+  issue: 1
+  pages: 6
+  doi: 10.3390/plants7010006
+  bibtex: Salminen_2018_LTP.bib
+  pdf: Salminen_2018_LTP.pdf
+
+- title: "KAPPA, a simple algorithm for discovery and clustering of proteins defined by a key amino acid pattern: a case study of the cysteine-rich proteins."
+  authors: Joly V and Matton DP.
+  journal: Bioinformatics
+  year: 2015
+  volume: 31
+  issue: 11
+  pages: 1716-23
+  doi: 10.1093/bioinformatics/btv047
+  bibtex: Joly_2015_KAPPA.bib
+  pdf: Joly_2015_KAPPA.pdf
+  supp: Joly_2015_KAPPA_supp.pdf
+
+- title: "The plant ovule secretome: a different view toward pollen-pistil interactions."
+  authors: Liu Y*, Joly V*, Dorion S, Rivoal J and Matton DP.
+  journal: J. Proteome Res.
+  year: 2015
+  volume: 14
+  issue: 11
+  pages: 4763-75
+  doi: 10.1021/acs.jproteome.5b00618
+  bibtex: Liu_2015_secretome.bib
+
+- title: "The FRK1 mitogen-activated protein kinase kinase kinase (MAPKKK) from <em>Solanum chacoense</em> is involved in embryo sac and pollen development."
+  authors: Lafleur É, Kapfer C, Joly V, Liu Y, Tebbji F, Daigle C, Gray-Mitsumune M, Cappadocia M, Nantel A and Matton DP.
+  journal: J. Exp. Bot.
+  year: 2015
+  volume: 66
+  issue: 7
+  pages: 1833-43
+  doi: 10.1093/jxb/eru524
+  bibtex: Lafleur_2015_frk1.bib
+  pdf: Lafleur_2015_frk1.pdf
+  supp: Lafleur_2015_frk1_supp.pdf
