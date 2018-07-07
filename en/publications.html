@@ -12,6 +12,7 @@ banner_image: pollen_MEB.png
 {% assign speaker_small = "<small>*</small>" | replace: "*", speaker %}
 {% assign co_author = '<span class="glyphicon glyphicon-adjust" aria-hidden="true"></span>' %}
 {% assign co_author_small = "<small>*</small>" | replace: "*", co_author %}
+{% assign star = '<span class="glyphicon glyphicon-star" aria-hidden="true"></span>' %}
 
 <h1>Publications</h1>
 <br/>
@@ -67,12 +68,15 @@ banner_image: pollen_MEB.png
 <br/>
 
 <h2>Oral presentations</h2>
-<h5>{{speaker}} Speaker</h5>
+<h5>{{speaker}} Speaker &nbsp;&nbsp; {{star}} Award</h5>
 <hr>
 <ul class="list-unstyled">
   {% for talk in site.data.en.oral_presentations %}
     <li>
       <h4>
+        {% if talk.award %}
+          {{star}}
+        {% endif %}
         <strong>{{talk.title}}</strong>
         <br/>
         {{talk.authors | replace: "*", speaker_small}}
@@ -89,12 +93,15 @@ banner_image: pollen_MEB.png
 <br/>
 
 <h2>Poster presentations</h2>
-<h5>{{speaker}} Speaker</h5>
+<h5>{{star}} Award</h5>
 <hr>
 <ul class="list-unstyled">
   {% for poster in site.data.en.poster_presentations %}
     <li>
       <h4>
+        {% if poster.award %}
+          {{star}}
+        {% endif %}
         <strong>{{poster.title}}</strong>
         <br/>
         {{poster.authors}}
