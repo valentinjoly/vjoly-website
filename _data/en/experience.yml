@@ -60,14 +60,6 @@
     "Molecular evolution and positive selection analysis (codeml).",
   ]
 
-- name: International seminar
-  field: Functional protein annotation with BLAST2GO
-  date: July 2012
-  institution: University of California
-  location: Davis, CA, USA
-  image: blast2go.jpg
-  url: https://www.blast2go.com/
-
 - name: Botanical transect
   field: Collection of <em>Solanum</em> individuals in the Andes
   date: Apr.–May 2012
