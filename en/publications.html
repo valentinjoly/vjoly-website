@@ -63,19 +63,43 @@ banner_image: pollen_MEB.png
 </ul>
 
 <br/>
+<br/>
+<br/>
 
-<h2>Oral presentations and posters</h2>
+<h2>Oral presentations</h2>
 <h5>{{speaker}} Speaker</h5>
 <hr>
 <ul class="list-unstyled">
-  {% for presentation in site.data.en.presentations_posters %}
+  {% for talk in site.data.en.oral_presentations %}
     <li>
       <h4>
-        <strong>{{presentation.title}}</strong>
+        <strong>{{talk.title}}</strong>
         <br/>
-        {{presentation.authors | replace: "*", speaker_small}}
+        {{talk.authors | replace: "*", speaker_small}}
         <br/>
-        <em>{{presentation.conference}}</em>, {{presentation.location}}, {{presentation.date}}.
+        <em>{{talk.conference}}</em>, {{talk.location}}, {{talk.date}}.
+      </h4>
+      <hr>
+    </li>
+  {% endfor %}
+</ul>
+
+<br/>
+<br/>
+<br/>
+
+<h2>Poster presentations</h2>
+<h5>{{speaker}} Speaker</h5>
+<hr>
+<ul class="list-unstyled">
+  {% for poster in site.data.en.poster_presentations %}
+    <li>
+      <h4>
+        <strong>{{poster.title}}</strong>
+        <br/>
+        {{poster.authors}}
+        <br/>
+        <em>{{poster.conference}}</em>, {{poster.location}}, {{poster.date}}.
       </h4>
       <hr>
     </li>
