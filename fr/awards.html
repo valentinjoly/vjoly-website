@@ -1,5 +1,5 @@
 ---
-layout: default-en
+layout: default-fr
 title: "CV"
 basename: awards.html
 banner_image: libellule.jpg
@@ -8,12 +8,12 @@ banner_image: libellule.jpg
 {% assign travel = '<span class="glyphicon glyphicon-send" aria-hidden="true"></span>' %}
 
 <div class="row">
-<h1>Scholarships and Awards</h1>
-<h4>{{star}} Major scholarship/award &nbsp;&nbsp; {{travel}} Travel scholarship</h4>
+<h1>Prix et bourses</h1>
+<h4>{{star}} Bourse ou prix important &nbsp;&nbsp; {{travel}} Bourse de voyage</h4>
 <hr>
 
 {% assign years = "" %}
-{% for award in site.data.en.scholarships_awards %}
+{% for award in site.data.fr.scholarships_awards %}
   {% assign years = years | append: award.year %}
   {% assign years = years | append: " " %}
 {% endfor %}
@@ -23,7 +23,7 @@ banner_image: libellule.jpg
 <h3>{{ year }}</h3>
 
 <ul class="list-unstyled">
-  {% for award in site.data.en.scholarships_awards %}
+  {% for award in site.data.fr.scholarships_awards %}
     {% if year == award.year %}
       <li>
         <h4>
@@ -39,7 +39,7 @@ banner_image: libellule.jpg
           <br/>
 
           {% if award.amount %}
-            {{award.organization}}, {{award.currency}} {{award.amount}}
+            {{award.organization}}, {{award.amount}} {{award.currency}}
           {% else %}
             {{award.organization}}
           {% endif %}

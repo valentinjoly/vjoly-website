@@ -1,5 +1,5 @@
 ---
-layout: default-en
+layout: default-fr
 title: "Experience"
 basename: experience.html
 banner_image: argentine.jpg
@@ -12,12 +12,12 @@ banner_image: argentine.jpg
 <div class="row">
   <div class="col-xs-12 col-md-9">
 
-    <h1>Experience</h1>
-    <h2>Education</h2>
+    <h1>Expérience</h1>
+    <h2>Formation académique</h2>
     <hr>
 
     <ul class="list-unstyled">
-      {% for degree in site.data.en.education %}
+      {% for degree in site.data.fr.education %}
         <div class="media">
           <div class="media-left">
             <a href="{{degree.url}}">
@@ -38,11 +38,11 @@ banner_image: argentine.jpg
             {% endif %}
 
             {% if degree.advisor %}
-              <h4><strong>Advisor:</strong> {{degree.advisor}}</h4>
+              <h4><strong>Directeur de recherche:</strong> {{degree.advisor}}</h4>
             {% endif %}
 
             {% if degree.project %}
-              <h4><strong>Project:</strong> {{degree.project}}</h4>
+              <h4><strong>Projet:</strong> {{degree.project}}</h4>
             {% endif %}
 
             {% if degree.info %}
@@ -59,16 +59,16 @@ banner_image: argentine.jpg
     <br/>
     <br/>
 
-    <h2>Research experience</h2>
+    <h2>Expérience en recherche</h2>
     <h5>
-      <strong>Skills acquired:</strong>
-      {{wetlab}} Wetlab
-      {{bioinfo}} Bioinformatics
+      <strong>Compétences acquises:</strong>
+      {{wetlab}} Travail de labo
+      {{bioinfo}} Bioinformatique
     </h5>
     <hr>
 
     <ul class="list-unstyled">
-      {% for experience in site.data.en.experience %}
+      {% for experience in site.data.fr.experience %}
         <div class="media">
           <div class="media-left">
             <a href="{{experience.url}}">
@@ -115,10 +115,10 @@ banner_image: argentine.jpg
     <br/>
     <br/>
 
-    <h2>Other training</h2>
+    <h2>Autres formations</h2>
     <hr>
     <ul class="list-unstyled">
-      {% for training in site.data.en.other_training %}
+      {% for training in site.data.fr.other_training %}
         <div class="media">
           <div class="media-left">
             <a href="{{training.url}}">
@@ -163,11 +163,11 @@ banner_image: argentine.jpg
     <br/>
     <br/>
 
-    <h2>Teaching</h2>
+    <h2>Enseignement</h2>
     <hr>
 
     <ul class="list-unstyled">
-      {% for teaching in site.data.en.teaching %}
+      {% for teaching in site.data.fr.teaching %}
         <div class="media">
           <div class="media-left">
             <a href="{{teaching.url}}">
@@ -207,11 +207,11 @@ banner_image: argentine.jpg
     <br/>
     <br/>
 
-    <h2>Volunteering</h2>
+    <h2>Bénévolat</h2>
     <hr>
 
     <ul class="list-unstyled">
-      {% for volunteering in site.data.en.volunteering %}
+      {% for volunteering in site.data.fr.volunteering %}
         <div class="media">
           <div class="media-left">
             <a href="{{volunteering.url}}">
