@@ -1,9 +1,17 @@
-- name: Scholarship for Finishing Ph.D. Students (BEFD)
+- name: "Hydro-Québec Excellence Scholarship (2nd year)"
   year: "2017"
-  organization: "Faculty of Graduate and Postdoctoral Studies, University of Montreal"
-  amount: "12,000"
+  organization: "Hydro-Québec (national electricity company)"
+  amount: "25,000"
   currency: "CAD"
   major: true
+  travel: false
+
+- name: "Scholarship for Finishing Ph.D. Students (BEFD)"
+  year: "2017"
+  organization: "Faculty of Graduate and Postdoctoral Studies, University of Montreal"
+  amount: "8,400"
+  currency: "CAD"
+  major: false
   travel: false
 
 - name: "Jacques-Rousseau Travel Scholarship"
@@ -22,10 +30,17 @@
   major: false
   travel: true
 
+- name: "Honorable mention for a student oral presentation"
+  year: "2017"
+  organization: "CSPB Eastern Regional Meeting"
+  major: false
+  travel: false
+
+
 - name: "Hydro-Québec Excellence Scholarship"
   year: "2016"
   organization: "Hydro-Québec (national electricity company)"
-  amount: "24,500"
+  amount: "25,000"
   currency: "CAD"
   major: true
   travel: false

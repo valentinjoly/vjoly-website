@@ -1,3 +1,38 @@
+- name: Ph.D. Project
+  field: Molecular Biology & Bioinformatics
+  date: 2013–<em>present</em>
+  supervisor: Prof. Daniel P. Matton
+  institution: University of Montreal
+  location: Montreal, QC, Canada
+  image: udem.png
+  url: http://www.irbv.umontreal.ca/chercheurs/daniel-philippe-matton
+  wetlab_skills: [
+    "DNA/RNA techniques. Cloning. Protein expression and purification.",
+    "Plant cell culture. Pollen tube guidance assays. Microfluidics.",
+    "Microscopy: epifluorescence, confocal, SEM, TEM.",
+  ]
+  bioinfo_skills: [
+    "Python and R programming. Development of the sequence search tool KAPPA.",
+    "Transcriptomics: RNA-seq assemblies. Microarray analysis. DGE. Annotation.",
+    "Proteomics: LC-MS data analysis. Secretomics. Label-free protein quantification.",
+  ]
+
+- name: International collaboration
+  field: Bioinformatics
+  date: May 2016–<em>present</em>
+  supervisor: Dr. Johan Edqvist
+  institution: Linköping University
+  location: Linköping, Sweden
+  image: linköping_university.png
+  url: https://www.ifm.liu.se/biology/molgen/edqvist_lab/
+  description: "After the release of the KAPPA CRP detection program, I got involved in a project developed at Dr. Edqvist's laboratory aiming to study the evolution and diversification of the non-specific lipid-transfer proteins (nsLTPs) across plant taxa. This stay in his lab allowed us to launch this collaboration, which is still active."
+  wetlab_skills: [
+    Protein expression and purification in <em>Pichia pastoris</em>.,
+  ]
+  bioinfo_skills: [
+    Development of a nsLTP prediction tool and a plant nsLTP database.,
+  ]
+
 - name: JSPS Summer Program
   field: Pollen tube microfluidics
   date: June–Aug. 2016
@@ -7,16 +42,10 @@
   image: itbm.png
   url: http://www.itbm.nagoya-u.ac.jp/en/members/t-higashiyama/
   description: "The JSPS summer program is highly selective (10 Canadian students selected) and comes with a ¥534,000 stipend and a ¥158,500 research grant. This experience allowed me to be welcomed for a two-month stay at Prof. Higashiyama's laboratory, and benefit from their expertise to optimize a series of pollen tube guidance microfluidic devices tailored for solanaceous species. These devices allow to monitor both long- and short-distance pollen tube attraction."
-
-- name: International collaboration
-  field: Bioinformatics
-  date: May 2016
-  supervisor: Prof. Johan Edqvist
-  institution: Linköping University
-  location: Linköping, Sweden
-  image: linköping_university.png
-  url: https://www.ifm.liu.se/biology/molgen/edqvist_lab/
-  description: "After the release of the KAPPA CRP detection program, I got involved in a project developed at Prof. Edqvist's laboratory aiming to study the evolution and diversification of the non-specific lipid-transfer proteins (nsLTPs) across plant taxa. This stay in his lab allowed us to launch this collaboration, which is still active."
+  wetlab_skills: [
+    "Development of microfluidic devices for pollen tube guidance assays.",
+    "Introduction to 2-photon confocal microscopy."
+  ]
 
 - name: Research internship
   field: Molecular evolution & Bioinformatics
@@ -26,14 +55,10 @@
   location: Seattle, WA, USA
   image: uofw.png
   url: http://depts.washington.edu/swansonw/Swanson_Lab/Overview.html
-
-- name: International seminar
-  field: Functional protein annotation with BLAST2GO
-  date: July 2012
-  institution: University of California
-  location: Davis, CA, USA
-  image: blast2go.jpg
-  url: https://www.blast2go.com/
+  bioinfo_skills: [
+    "Variant calling (GATK).",
+    "Molecular evolution and positive selection analysis (codeml).",
+  ]
 
 - name: Botanical transect
   field: Collection of <em>Solanum</em> individuals in the Andes
@@ -43,6 +68,9 @@
   location: Córdoba, Argentina
   image: unc.png
   url: http://museobotanico.unc.edu.ar/herbario
+  wetlab_skills: [
+    "Collection of potato individuals in the Andes cordillera.",
+  ]
 
 - name: Research internship
   field: Plant molecular biology
@@ -52,6 +80,9 @@
   location: Montreal, QC, Canada
   image: udem.png
   url: http://www.irbv.umontreal.ca/chercheurs/daniel-philippe-matton
+  wetlab_skills: [
+    "Molecular cloning. Biolistics. Epifluorescence and confocal microscopy.",
+  ]
 
 - name: Research internship
   field: Plant physiology
@@ -61,6 +92,9 @@
   location: Paris, France
   image: upmc.jpg
   url: http://www.ibps.upmc.fr/en/research/developmental-biology-laboratory/seed-biology
+  wetlab_skills: [
+    "Seed dormancy and germination biology.",
+  ]
 
 - name: Short-term introductory research internship
   field: Plant molecular biology
@@ -70,3 +104,6 @@
   location: Paris, France
   image: ens.png
   url: http://www.ibens.ens.fr/spip.php?rubrique36&lang=fr
+  wetlab_skills: [
+    "Protein electrophoresis. Immunoprecipitation. Western Blotting.",
+  ]
