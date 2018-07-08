@@ -8,17 +8,16 @@ banner_image: pollen_MEB.png
 {% assign new_window = '<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>' %}
 {% assign download = '<span class="glyphicon glyphicon-save" aria-hidden="true"></span>' %}
 {% assign bookmark = '<span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span>' %}
-{% assign speaker = '<span class="glyphicon glyphicon-user" aria-hidden="true"></span>' %}
-{% assign speaker_small = "<small>*</small>" | replace: "*", speaker %}
-{% assign co_author = '<span class="glyphicon glyphicon-adjust" aria-hidden="true"></span>' %}
-{% assign co_author_small = "<small>*</small>" | replace: "*", co_author %}
+{% assign speaker = '<small><span class="glyphicon glyphicon-user" aria-hidden="true"></span></small>' %}
+{% assign co_author = '<small><span class="glyphicon glyphicon-adjust" aria-hidden="true"></span></small>' %}
+
 {% assign star = '<span class="glyphicon glyphicon-star" aria-hidden="true"></span>' %}
 
+<div class="row">
 <h1>Publications</h1>
-<br/>
-
 <h2>Articles</h2>
-<h5>{{co_author}} Co-first authors</h5>
+
+<h4>{{co_author}} Co-first authors</h4>
 <hr>
 <ul class="list-unstyled">
   {% for paper in site.data.en.published_papers %}
@@ -26,7 +25,7 @@ banner_image: pollen_MEB.png
       <h4>
         <strong>{{paper.title}}</strong>
         <br/>
-        {{paper.authors | replace: "*", co_author_small}}
+        {{paper.authors | replace: "*", co_author}}
         <br/>
         <em>{{paper.journal}}</em>, {{paper.year}}, {{paper.volume}}({{paper.issue}}):{{paper.pages}}. DOI: {{paper.doi}}
         <br/>
@@ -64,11 +63,9 @@ banner_image: pollen_MEB.png
 </ul>
 
 <br/>
-<br/>
-<br/>
 
 <h2>Oral presentations</h2>
-<h5>{{speaker}} Speaker &nbsp;&nbsp; {{star}} Award</h5>
+<h4>{{speaker}} Speaker &nbsp;&nbsp; {{star}} Award</h4>
 <hr>
 <ul class="list-unstyled">
   {% for talk in site.data.en.oral_presentations %}
@@ -79,7 +76,7 @@ banner_image: pollen_MEB.png
         {% endif %}
         <strong>{{talk.title}}</strong>
         <br/>
-        {{talk.authors | replace: "*", speaker_small}}
+        {{talk.authors | replace: "*", speaker}}
         <br/>
         <em>{{talk.conference}}</em>, {{talk.location}}, {{talk.date}}.
       </h4>
@@ -89,11 +86,9 @@ banner_image: pollen_MEB.png
 </ul>
 
 <br/>
-<br/>
-<br/>
 
 <h2>Poster presentations</h2>
-<h5>{{star}} Award</h5>
+<h4>{{star}} Award</h4>
 <hr>
 <ul class="list-unstyled">
   {% for poster in site.data.en.poster_presentations %}
@@ -112,3 +107,4 @@ banner_image: pollen_MEB.png
     </li>
   {% endfor %}
 </ul>
+</div>
