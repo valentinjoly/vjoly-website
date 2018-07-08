@@ -38,11 +38,14 @@ banner_image: libellule.jpg
           <strong>{{award.name}}</strong>
           <br/>
 
+          {{award.organization}}
+          <!--
           {% if award.amount %}
             {{award.organization}}, {{award.amount}} {{award.currency}}
           {% else %}
             {{award.organization}}
           {% endif %}
+          -->
         </h4>
       </li>
     {% endif %}
