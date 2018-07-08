@@ -4,13 +4,13 @@ title: "CV"
 basename: awards.html
 banner_image: libellule.jpg
 ---
-
-<h1>Scholarships and Awards</h1>
-
 {% assign star = '<span class="glyphicon glyphicon-star" aria-hidden="true"></span>' %}
 {% assign travel = '<span class="glyphicon glyphicon-send" aria-hidden="true"></span>' %}
 
-{{star}} Major scholarship/award {{travel}} Travel scholarship
+<div class="row">
+<h1>Scholarships and Awards</h1>
+<h4>{{star}} Major scholarship/award &nbsp;&nbsp; {{travel}} Travel scholarship</h4>
+<hr>
 
 {% assign years = "" %}
 {% for award in site.data.en.scholarships_awards %}
@@ -50,3 +50,4 @@ banner_image: libellule.jpg
 </ul>
 <hr>
 {% endfor %}
+</div>
