@@ -10,7 +10,7 @@
   pdf: Salminen_2018_LTP.pdf
 
 - title: "KAPPA, a simple algorithm for discovery and clustering of proteins defined by a key amino acid pattern: a case study of the cysteine-rich proteins."
-  authors: Joly V and Matton DP.
+  authors: Joly V et Matton DP.
   journal: Bioinformatics
   year: 2015
   volume: 31
@@ -22,7 +22,7 @@
   supp: Joly_2015_KAPPA_supp.pdf
 
 - title: "The plant ovule secretome: a different view toward pollen-pistil interactions."
-  authors: Liu Y*, Joly V*, Dorion S, Rivoal J and Matton DP.
+  authors: Liu Y*, Joly V*, Dorion S, Rivoal J et Matton DP.
   journal: J. Proteome Res.
   year: 2015
   volume: 14
@@ -32,7 +32,7 @@
   bibtex: Liu_2015_secretome.bib
 
 - title: "The FRK1 mitogen-activated protein kinase kinase kinase (MAPKKK) from <em>Solanum chacoense</em> is involved in embryo sac and pollen development."
-  authors: Lafleur É, Kapfer C, Joly V, Liu Y, Tebbji F, Daigle C, Gray-Mitsumune M, Cappadocia M, Nantel A and Matton DP.
+  authors: Lafleur É, Kapfer C, Joly V, Liu Y, Tebbji F, Daigle C, Gray-Mitsumune M, Cappadocia M, Nantel A et Matton DP.
   journal: J. Exp. Bot.
   year: 2015
   volume: 66

@@ -1,36 +1,36 @@
-- name: Online Bioinformatics Specialization
+- name: Spécialisation en ligne en bioinformatique
   date: 2016–2018
-  institution: University of California San Diego
-  location: on Coursera
+  institution: Université de Californie à San Diego
+  location: sur Coursera
   image: uc_san_diego.jpg
   url: https://www.coursera.org/specializations/bioinformatics
   courses:
-    - name: 6 different courses and a final project
+    - name: 6 cours différents et un projet final
       certificate: H528Q2K9KYB6
       url: https://www.coursera.org/account/accomplishments/specialization/H528Q2K9KYB6
 
-- name: Online Courses
-  field: Bioinformatics
+- name: Cours en ligne
+  field: Bioinformatique
   date: 2016
-  institution: Johns Hopkins University
-  location: on Coursera
+  institution: Université Johns Hopkins
+  location: sur Coursera
   image: johns-hopkins-univ.png
   url: https://www.coursera.org/jhu
   courses:
-    - name: Python for Genomic Data Science
+    - name: Python pour la sciences des données génomiques
       certificate: XHKWDB4XD7
       url: https://www.coursera.org/account/accomplishments/verify/XHKWDB4XD7
-    - name: Introduction to Genomic Technologies
+    - name: Introduction aux technologies génomiques
       certificate: U88T89XKR2
       url: https://www.coursera.org/account/accomplishments/verify/U88T89XKR2
-    - name: R Programming
+    - name: Programmation en R
       certificate: X8NKEQAUU4
       url: https://www.coursera.org/account/accomplishments/verify/X8NKEQAUU4
 
-- name: International seminar
-  field: Functional protein annotation
-  date: July 2012
+- name: Séminaire international
+  field: Annotation fonctionnelle des protéines
+  date: juillet 2012
   institution: BLAST2GO
-  location: University of California Davis, CA, USA
+  location: Université de Californie à Davis, CA, États-Unis
   image: blast2go.jpg
   url: https://www.blast2go.com/

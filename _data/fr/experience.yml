@@ -1,109 +1,109 @@
-- name: Ph.D. Project
-  field: Molecular Biology & Bioinformatics
-  date: 2013–<em>present</em>
-  supervisor: Prof. Daniel P. Matton
-  institution: University of Montreal
-  location: Montreal, QC, Canada
+- name: Projet de doctorat
+  field: Biologie moléculaire et bioinformatique
+  date: depuis 2013
+  supervisor: Pr Daniel P. Matton
+  institution: Université de Montréal
+  location: Montréal, QC, Canada
   image: udem.png
   url: http://www.irbv.umontreal.ca/chercheurs/daniel-philippe-matton
   wetlab_skills: [
-    "DNA/RNA techniques. Cloning. Protein expression and purification.",
-    "Plant cell culture. Pollen tube guidance assays. Microfluidics.",
-    "Microscopy: epifluorescence, confocal, SEM, TEM.",
+    "Manipulation d'ADN et ARN. Clonage. Expression et purification de protéines.",
+    "Cultures cellulaires végétales. Tests de guidage du tube pollinique. Microfluidique.",
+    "Microscopie: épifluorescence, confocal, MEB, MET.",
   ]
   bioinfo_skills: [
-    "Python and R programming. Development of the sequence search tool KAPPA.",
-    "Transcriptomics: RNA-seq assemblies. Microarray analysis. DGE. Annotation.",
-    "Proteomics: LC-MS data analysis. Secretomics. Label-free protein quantification.",
+    "Programmation Python et R. Développement de l'outil de recherche de séquences KAPPA.",
+    "Transcriptomique: Assemblages RNA-seq. Analyse de biopuces. Expression différentielle. Annotation fonctionnelle.",
+    "Protéomique: Analyse de données LC-MS. Sécrétomique. Quantification <em>label-free</em>.",
   ]
 
-- name: International collaboration
-  field: Bioinformatics
-  date: May 2016–<em>present</em>
-  supervisor: Dr. Johan Edqvist
-  institution: Linköping University
-  location: Linköping, Sweden
+- name: Collaboration internationale
+  field: Bioinformatique
+  date: depuis mai 2016
+  supervisor: Dr Johan Edqvist
+  institution: Université de Linköping
+  location: Linköping, Suède
   image: linköping_university.png
   url: https://www.ifm.liu.se/biology/molgen/edqvist_lab/
-  description: "After the release of the KAPPA CRP detection program, I got involved in a project developed at Dr. Edqvist's laboratory aiming to study the evolution and diversification of the non-specific lipid-transfer proteins (nsLTPs) across plant taxa. This stay in his lab allowed us to launch this collaboration, which is still active."
+  description: "Après la publication du programme de recherche de CRP KAPPA, je me suis impliqué dans un projet développé au laboratoire du Dr Edqvist, visant à étudier l'évolution et la diversification des protéines de transfert des lipides non-spécifiques (nsLTP) dans le règne végétal. Ce séjour dans son laboratoire nous a permis de lancer une collaboration, qui est toujours active."
   wetlab_skills: [
-    Protein expression and purification in <em>Pichia pastoris</em>.,
+    "Expression et purification de protéines chez <em>Pichia pastoris</em>.",
   ]
   bioinfo_skills: [
-    Development of a nsLTP prediction tool and a plant nsLTP database.,
+    "Développement d'un outil de prédiction et d'une base de données de nsLTP végétales.",
   ]
 
-- name: JSPS Summer Program
-  field: Pollen tube microfluidics
+- name: Programme d’été de la JSPS
+  field: Microfluidique
   date: June–Aug. 2016
-  supervisor: Prof. Tetsuya Higashiyama
-  institution: Institute for Transformative Bio-Molecules (ITbM), Nagoya University
-  location: Nagoya, Japan
+  supervisor: Pr Tetsuya Higashiyama
+  institution: Institute for Transformative Bio-Molecules (ITbM), Université de Nagoya
+  location: Nagoya, Japon
   image: itbm.png
   url: http://www.itbm.nagoya-u.ac.jp/en/members/t-higashiyama/
-  description: "The JSPS summer program is highly selective (10 Canadian students selected) and comes with a ¥534,000 stipend and a ¥158,500 research grant. This experience allowed me to be welcomed for a two-month stay at Prof. Higashiyama's laboratory, and benefit from their expertise to optimize a series of pollen tube guidance microfluidic devices tailored for solanaceous species. These devices allow to monitor both long- and short-distance pollen tube attraction."
+  description: "Le programme d’été de la JSPS est très sélectif (10 étudiants sélectionnés pour le Canada) et donne accès à une bourse de 534 000 ¥ assortie d’une allocation de recherche de 158 500 ¥. Grâce à ce programme, j’ai intégré pendant deux mois le laboratoire du Pr Higashiyama, dont j’ai pu profiter de l’expertise pour optimiser une série de dispositifs microfluidiques adaptés pour étudier l’attraction du tube pollinique à courte et à longue distance chez les Solanacées."
   wetlab_skills: [
-    "Development of microfluidic devices for pollen tube guidance assays.",
-    "Introduction to 2-photon confocal microscopy."
+    "Développement de dispositifs microfluidiques pour l’étude du guidage des tubes polliniques.",
+    "Introduction à la microscopie confocale à deux photons."
   ]
 
-- name: Research internship
-  field: Molecular evolution & Bioinformatics
-  date: Apr.–May 2014
-  supervisor: Prof. William J. Swanson
+- name: Stage international de recherche
+  field: Évolution moléculaire et bioinformatique
+  date: avr.–mai 2014
+  supervisor: Pr William J. Swanson
   institution: University of Washington
   location: Seattle, WA, USA
   image: uofw.png
   url: http://depts.washington.edu/swansonw/Swanson_Lab/Overview.html
   bioinfo_skills: [
-    "Variant calling (GATK).",
-    "Molecular evolution and positive selection analysis (codeml).",
+    "Détection de variants dans des données de séquençage de masse (GATK).",
+    "Étude de l’évolution moléculaire des séquences, en particulier de la sélection positive (codeml).",
   ]
 
-- name: Botanical transect
-  field: Collection of <em>Solanum</em> individuals in the Andes
-  date: Apr.–May 2012
-  supervisor: Partnership with Dr. Franco Chiarini
+- name: Séjour botanique sur le terrain
+  field: Collecte d’individus de <em>Solanum</em> dans les Andes
+  date: avr.mai 2012
+  supervisor: Partenariat avec le Dr Franco Chiarini
   institution: Universidad Nacional de Córdoba
   location: Córdoba, Argentina
   image: unc.png
   url: http://museobotanico.unc.edu.ar/herbario
   wetlab_skills: [
-    "Collection of potato individuals in the Andes cordillera.",
+    "Collecte d’individus de pommes de terre sauvages dans la cordillère des Andes.",
   ]
 
-- name: Research internship
-  field: Plant molecular biology
-  date: Jan.–Aug. 2011
-  supervisor: Prof. Daniel P. Matton
-  institution: University of Montreal
-  location: Montreal, QC, Canada
+- name: Stage de recherche
+  field: Biologie moléculaire végétale
+  date: janv.–août 2011
+  supervisor: Pr Daniel P. Matton
+  institution: Université de Montréal
+  location: Montréal, QC, Canada
   image: udem.png
   url: http://www.irbv.umontreal.ca/chercheurs/daniel-philippe-matton
   wetlab_skills: [
-    "Molecular cloning. Biolistics. Epifluorescence and confocal microscopy.",
+    "Clonage moléculaire. Biolistique. Microscopie confocale et à épifluorescence.",
   ]
 
-- name: Research internship
-  field: Plant physiology
-  date: June–July 2010
-  supervisor: Prof. Christophe Bailly
-  institution: CNRS (UMR 7622) – Pierre & Marie Curie University (Paris-VI)
+- name: Stage de recherche
+  field: Physiologie végétale
+  date: juin–juill. 2010
+  supervisor: Pr Christophe Bailly
+  institution: CNRS (UMR 7622) – Université Pierre et Marie Curie (Paris-VI)
   location: Paris, France
   image: upmc.jpg
   url: http://www.ibps.upmc.fr/en/research/developmental-biology-laboratory/seed-biology
   wetlab_skills: [
-    "Seed dormancy and germination biology.",
+    "Physiologie de la dormance des semences",
   ]
 
-- name: Short-term introductory research internship
-  field: Plant molecular biology
-  date: Jan. 2009
-  supervisor: Prof. Chris Bowler
+- name: Stage court d’initiation à la recherche
+  field: Biologie moléculaire végétale
+  date: janv. 2009
+  supervisor: Pr Chris Bowler
   institution: CNRS (UMR 8197) – École Normale Supérieure
   location: Paris, France
   image: ens.png
   url: http://www.ibens.ens.fr/spip.php?rubrique36&lang=fr
   wetlab_skills: [
-    "Protein electrophoresis. Immunoprecipitation. Western Blotting.",
+    "Électrophorèse de protéines. Immunoprécipitation. Western Blot.",
   ]

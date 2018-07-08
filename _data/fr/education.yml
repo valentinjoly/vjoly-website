@@ -1,42 +1,42 @@
-- name: Ph.D.
-  field: Biological Sciences
-  year: 2013–present (<em>thesis to be submitted in Dec. 2018</em>)
-  institution: Plant Biology Research Institute, University of Montreal
-  location: Montreal, QC, Canada
+- name: Doctorat
+  field: Sciences biologiques
+  year: depuis 2013 (<em>thèse à soumettre en déc. 2018</em>)
+  institution: Institut de Recherche en Biologie Végétale, Université de Montréal
+  location: Montréal, QC, Canada
   advisor: Prof. Daniel P. Matton
-  project: Molecular communica on between male and female gametophytes, and reproductive barriers in wild potatoes (<em>Solanum</em> sect. <em>Petota</em>).
+  project: Communication moléculaire entre gamétophytes mâle et femelle et maintien des barrières reproductives chez les pommes de terre sauvages (<em>Solanum</em> sect. <em>Petota</em>).
   image: udem.png
-  url: http://en.bio.umontreal.ca/programs/graduate-programs/phd-in-biological-sciences/
-  info: "GPA: 4.3/4.3"
+  url: https://bio.umontreal.ca/programmes-cours/cycles-superieurs/doctorat-sciences-biologiques/
+  info: "Moyenne cumulative: 4,3/4,3"
 
 
-- name: M.Sc.
-  field: Biological Sciences
+- name: Maîtrise
+  field: Sciences biologiques
   year: 2012
-  institution: Plant Biology Research Institute, University of Montreal
-  location: Montreal, QC, Canada
+  institution: Institut de Recherche en Biologie Végétale, Université de Montréal
+  location: Montréal, QC, Canada
   image: udem.png
-  url: http://en.bio.umontreal.ca/programs/graduate-programs/masters-in-biological-sciences/
-  info: "Accelerated transition to Ph.D. in Jan. 2013 <br/> GPA: 4.3/4.3"
+  url: https://bio.umontreal.ca/programmes-cours/cycles-superieurs/maitrise-sciences-biologiques/
+  info: "Passage accéléré au doctorat en janv. 2013 <br/> Moyenne cumulative: 4,3/4,3"
 
 
-- name: B.Sc.
-  field: Biology – International program
+- name: Licence
+  field: Sciences du vivant – Programme international
   year: 2011
-  institution: Pierre & Marie Curie University (Paris VI)
+  institution: Université Pierre et Marie Curie (Paris VI)
   location: Paris, France
-  institution_alt: University of Montreal (one-year exchange)
-  location_alt: Montreal, QC, Canada
+  institution_alt: Université de Montréal (échange d'un an)
+  location_alt: Montréal, QC, Canada
   image: upmc.jpg
   url: http://www.upmc.fr/fr/international/programmes_internationaux/programmes_internationaux_de_licence/licence_sciences_du_vivant.html
-  info: "GPA at Univ. of Montreal: 4.12/4.3 <br/> Last GPA at Univ. of Paris: 17.65/20  (1st out of 513 students)"
+  info: "Moyenne cumulative à l'Université de Montréal: 4,12/4,3 <br/> Dernière moyenne à l'Université Paris-VI: 17,65/20  (1er sur 513 étudiants)"
 
 
-- name: <em>Baccalauréat</em>*
-  field: Sciences (Biology-Geology)
+- name: Baccalauréat*
+  field: Sciences (Sciences de la Vie et de la Terre)
   year: 2008
   institution: Lycée Saint-Sauveur
   location: Redon, France
   image: saint-sau.jpg
   url: http://www.lycee-saint-sauveur-redon.eu/
-  info: "*French high school degree <br/> Summa cum laude (<em>mention Très Bien</em>) <br/> Final grade: 19.94/20 <br/> Bilingual English-French class"
+  info: "*Équivalent français du diplôme d’études collégiales <br/> Mention Très Bien <br/> Note finale: 19,94/20 <br/> Section européenne (classes bilingues français-anglais)"
