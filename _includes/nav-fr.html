@@ -26,6 +26,13 @@
           </a>
         </li>
 
+        <li class="{% if page.url contains 'research.html' %}active{% endif %}">
+          <a href="{{site.baseurl}}/fr/research.html">
+            Recherche
+          </a>
+        </li>
+
+        <!--
         <li class="dropdown" class="{% if page.url contains 'research.html' %}active{% endif %}">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
             Intérêts scientifiques
@@ -55,6 +62,7 @@
             </li>
           </ul>
         </li>
+        -->
 
         <li class="{% if page.url contains 'experience.html' %}active{% endif %}">
           <a href="{{site.baseurl}}/fr/experience.html">
