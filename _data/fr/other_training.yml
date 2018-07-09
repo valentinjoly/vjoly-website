@@ -17,7 +17,7 @@
   image: johns-hopkins-univ.png
   url: https://www.coursera.org/jhu
   courses:
-    - name: Python pour la sciences des données génomiques
+    - name: Python pour la science des données génomiques
       certificate: XHKWDB4XD7
       url: https://www.coursera.org/account/accomplishments/verify/XHKWDB4XD7
     - name: Introduction aux technologies génomiques
