@@ -1,20 +1,20 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container">
-    <a class="navbar-brand" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
-
+    {%- assign homepage_path = "/index.html" | prepend: page.lang | prepend: "/" | relative_url -%}
+    <a class="navbar-brand" rel="author" href="{{ homepage_path }}">{{ site.title | escape }}</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        {%- for path in site.navbar_pages -%}
+        {% for path in site.navbar_pages %}
           {%- assign full_path = path | prepend: "/" | prepend: page.lang -%}
           {%- assign navbar_page = site.pages | where: "path", full_path | first -%}
           {% if navbar_page.title %}
-          <li class="nav-item">
-            <a class="nav-link" href="{{ navbar_page.url | relative_url }}">{{ navbar_page.title | escape }}</a>
-          </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ navbar_page.url | relative_url }}">{{ navbar_page.title | escape }}</a>
+            </li>
           {% endif %}
         {% endfor %}
       </ul>

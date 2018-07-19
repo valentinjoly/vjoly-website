@@ -5,7 +5,15 @@ title: "Home"
 banner_image: pollen_MEB.png
 ---
 
+{%- assign image_url = "/images/valentin-labo.png" | relative-url -%}
+
 {%- assign download = '<span class="fas fa-download"></span>' -%}
+{%- assign phone = '<span class="fas fa-phone"></span>' -%}
+{%- assign skype = '<span class="fab fa-skype"></span>' -%}
+{%- assign email = '<span class="fas fa-envelope"></span>' -%}
+{%- assign github = '<span class="fab fa-github-square"></span>' -%}
+{%- assign linkedin = '<span class="fab fa-linkedin"></span>' -%}
+{%- assign researchgate = '<span class="fab fa-researchgate"></span>' -%}
 
 <div class="row">
   <div class="col-xs-12 col-md-8">
@@ -32,18 +40,11 @@ banner_image: pollen_MEB.png
   </div>
 
   <div class="col-xs-6 col-md-4">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title">Contact</h3>
-      </div>
-      <div class="panel-body">
-
-        <img class="media-object" src="{{site.baseurl}}/images/valentin-labo.png" alt="..." width="100%"/>
-        <h4><strong>Valentin Joly</strong></h4>
-
-        <p>
-          <strong>Ph.D. Student</strong>
-          <br/>
+    <div class="card">
+      <img class="card-img-top" src="{{ image_url }}" alt="Valentin">
+      <div class="card-body">
+        <h4 class="card-title">Contact information</h4>
+        <p class="card-text">
           Prof. D. P. Matton’s laboratory
           <br/>
           Dept. of Biological Sciences
@@ -51,33 +52,28 @@ banner_image: pollen_MEB.png
           University of Montreal
         </p>
 
-        <p>
+        <p class="card-text">
           Plant Biology Research Institute – IRBV<br/>
           Bureau B367<br/>
           4101, rue Sherbrooke Est<br/>
           Montréal (Québec)  H1X 2B2<br/>
           Canada</p>
-        <p>
-          <span class="fas fa-phone"></span>
-          +1 (438) 495-3215<br/>
-          <span class="fab fa-skype"></span>
-          valentin.joly<br/>
-          <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-          <a href="mailto:valentin.joly@gmail.com">valentin.joly@gmail.com</a>
+        <p class="card-text">
+          {{ phone }} &nbsp; +1 (438) 495-3215
           <br/>
+          {{ skype }} &nbsp; valentin.joly
           <br/>
+          {{ email }} &nbsp; <a href="mailto:valentin.joly@gmail.com">valentin.joly@gmail.com</a>
+        </p>
+      </div>
+      <div class="card-footer">
+        <p class="card-text">
           <font size="6">
-            <a href="https://github.com/valentinjoly">
-              <span class="fab fa-github-square"></span>
-            </a>
+            <a href="https://github.com/valentinjoly">{{ github }}</a>
             &nbsp;
-            <a href="https://www.linkedin.com/in/valentinjoly">
-              <span class="fab fa-linkedin"></span>
-            </a>
+            <a href="https://www.linkedin.com/in/valentinjoly">{{ linkedin }}</a>
             &nbsp;
-            <a href="https://www.researchgate.net/profile/Valentin_Joly">
-              <span class="fab fa-researchgate"></span>
-            </a>
+            <a href="https://www.researchgate.net/profile/Valentin_Joly">{{ researchgate }}</a>
           </font>
         </p>
       </div>

@@ -16,12 +16,14 @@ banner_image: argentine.jpg
 
     <ul class="list-unstyled">
       {% for degree in site.data.fr.education %}
-        <div class="media">
-          <div class="media-left">
+        {%- assign image_path = degree.image | prepend: "/images/" | relative_url -%}
+        <li class="media">
+          <div class="align-self-start mr-3">
             <a href="{{degree.url}}">
-              <img class="img-rounded" src="{{site.baseurl}}/images/{{degree.image}}" alt="..." width="100px"/>
+              <img class="rounded" src="{{ image_path }}" alt="..." width="100px"/>
             </a>
           </div>
+
           <div class="media-body">
             <h3 class="media-heading">
               <strong>{{degree.name}}</strong>
@@ -48,7 +50,7 @@ banner_image: argentine.jpg
             {% endif %}
 
           </div>
-        </div>
+        </li>
         <hr>
       {% endfor %}
     </ul>
@@ -67,12 +69,14 @@ banner_image: argentine.jpg
 
     <ul class="list-unstyled">
       {% for experience in site.data.fr.experience %}
-        <div class="media">
-          <div class="media-left">
-            <a href="{{experience.url}}">
-              <img class="img-rounded" src="{{site.baseurl}}/images/{{experience.image}}" alt="..." width="100px"/>
+        {%- assign image_path = experience.image | prepend: "/images/" | relative_url -%}
+        <li class="media">
+          <div class="align-self-start mr-3">
+            <a href="{{degree.url}}">
+              <img class="rounded" src="{{ image_path }}" alt="..." width="100px"/>
             </a>
           </div>
+
           <div class="media-body">
             <h3 class="media-heading">
               <strong>{{experience.name}}</strong>
@@ -104,7 +108,7 @@ banner_image: argentine.jpg
             {% endif %}
 
           </div>
-        </div>
+        </li>
         <hr>
       {% endfor %}
     </ul>
@@ -117,12 +121,14 @@ banner_image: argentine.jpg
     <hr>
     <ul class="list-unstyled">
       {% for training in site.data.fr.other_training %}
-        <div class="media">
-          <div class="media-left">
-            <a href="{{training.url}}">
-              <img class="img-rounded" src="{{site.baseurl}}/images/{{training.image}}" alt="..." width="100px"/>
+        {%- assign image_path = training.image | prepend: "/images/" | relative_url -%}
+        <li class="media">
+          <div class="align-self-start mr-3">
+            <a href="{{degree.url}}">
+              <img class="rounded" src="{{ image_path }}" alt="..." width="100px"/>
             </a>
           </div>
+
           <div class="media-body">
             <h3 class="media-heading">
               <strong>{{training.name}}</strong>
@@ -152,7 +158,7 @@ banner_image: argentine.jpg
             {% endif %}
 
           </div>
-        </div>
+        </li>
         <hr>
       {% endfor %}
     </ul>
@@ -166,12 +172,14 @@ banner_image: argentine.jpg
 
     <ul class="list-unstyled">
       {% for teaching in site.data.fr.teaching %}
-        <div class="media">
-          <div class="media-left">
-            <a href="{{teaching.url}}">
-              <img class="img-rounded" src="{{site.baseurl}}/images/{{teaching.image}}" alt="..." width="100px"/>
+        {%- assign image_path = teaching.image | prepend: "/images/" | relative_url -%}
+        <li class="media">
+          <div class="align-self-start mr-3">
+            <a href="{{degree.url}}">
+              <img class="rounded" src="{{ image_path }}" alt="..." width="100px"/>
             </a>
           </div>
+
           <div class="media-body">
             <h3 class="media-heading">
               <strong>{{teaching.position}}</strong>
@@ -196,7 +204,7 @@ banner_image: argentine.jpg
             {% endif %}
 
           </div>
-        </div>
+        </li>
         <hr>
       {% endfor %}
     </ul>
@@ -210,12 +218,14 @@ banner_image: argentine.jpg
 
     <ul class="list-unstyled">
       {% for volunteering in site.data.fr.volunteering %}
-        <div class="media">
-          <div class="media-left">
-            <a href="{{volunteering.url}}">
-              <img class="img-rounded" src="{{site.baseurl}}/images/{{volunteering.image}}" alt="..." width="100px"/>
+        {%- assign image_path = volunteering.image | prepend: "/images/" | relative_url -%}
+        <li class="media">
+          <div class="align-self-start mr-3">
+            <a href="{{degree.url}}">
+              <img class="rounded" src="{{ image_path }}" alt="..." width="100px"/>
             </a>
           </div>
+
           <div class="media-body">
             <h3 class="media-heading"><strong>{{volunteering.position}}</strong></h3>
             <h4><strong>{{volunteering.period}}</strong></h4>
@@ -226,7 +236,7 @@ banner_image: argentine.jpg
             {% endif %}
 
           </div>
-        </div>
+        </li>
         <hr>
       {% endfor %}
     </ul>
@@ -234,6 +244,3 @@ banner_image: argentine.jpg
 
   </div>
 </div>
-
-<br/>
-

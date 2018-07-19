@@ -8,6 +8,7 @@
 @import "fa-solid";
 @import "fa-brands";
 
+
 .page-content {
   img {
     max-width: 100%;
@@ -15,13 +16,30 @@
 }
 
 * {
-    font-family: source-sans-pro, sans-serif;
+  font-family: source-sans-pro, sans-serif;
 }
 
 h1 {
-	font-weight: bold;
+  font-weight: bold;
+}
+
+h2 {
+  font-weight: bold;
 }
 
 p {
-	font-size: large;
+  font-size: large;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.sandstone {
+  font-size: 110%;
+  font-weight: 600;
+}
+
+.navbar-brand {
+  font-weight: 600;
 }
