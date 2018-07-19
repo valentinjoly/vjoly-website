@@ -1,4 +1,22 @@
 markdown: redcarpet
 baseurl: ""
-exclude: []
+title: Valentin Joly
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - update_boostrap.sh
+
+plugins:
+  - jekyll-feed
+
+navbar_pages:
+  - research.html
+  - experience.html
+  - publications.html
+  - awards.html
+
 google_analytics: UA-122333490-1
+
+languages: [en, fr]

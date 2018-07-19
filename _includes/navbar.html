@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        {%- for path in site.navbar_pages -%}
+          {%- assign full_path = path | prepend: "/" | prepend: page.lang -%}
+          {%- assign navbar_page = site.pages | where: "path", full_path | first -%}
+          {% if navbar_page.title %}
+          <li class="nav-item">
+            <a class="nav-link" href="{{ navbar_page.url | relative_url }}">{{ navbar_page.title | escape }}</a>
+          </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+
+      <ul class="navbar-nav ml-auto">
+        {%- for lang in site.languages -%}
+          {% if lang != page.lang %}
+            {%- assign basename = page.path | split: "/" | last -%}
+            {%- assign transl_page_path = basename | prepend: "/" | prepend: lang -%}
+            {%- assign transl_page = site.pages | where: "path", transl_page_path | first -%}
+            {% if transl_page %}
+              <li class="nav-item">
+                <a class="nav-link" href="{{ transl_page.url | relative_url }}">{{ lang | escape }}</a>
+              </li>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      </ul>
+
+    </div>
+  </div>
+</nav>

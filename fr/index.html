@@ -1,9 +1,11 @@
 ---
-layout: default-fr
-title: "Home"
-basename: index.html
+layout: page
+lang: fr
+title: "Accueil"
 banner_image: pollen_MEB.png
 ---
+
+{%- assign download = '<span class="fas fa-download"></span>' -%}
 
 <div class="row">
   <div class="col-xs-12 col-md-8">
@@ -17,7 +19,7 @@ banner_image: pollen_MEB.png
       </p>
       <br/>
       <a class="btn btn-danger btn-lg" href="https://github.com/valentinjoly/CV/raw/master/en/Valentin_Joly_CV_en.pdf" role="button">
-        <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Télécharger mon CV
+        {{ download }} &nbsp; Télécharger mon CV
       </a>
       <br/>
       <br/>

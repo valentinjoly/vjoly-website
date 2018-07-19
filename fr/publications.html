@@ -1,20 +1,18 @@
 ---
-layout: default-fr
+layout: page
+lang: fr
 title: "Publications"
-basename: publications.html
 banner_image: pollen_MEB.png
 ---
 
-{% assign new_window = '<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>' %}
-{% assign download = '<span class="glyphicon glyphicon-save" aria-hidden="true"></span>' %}
-{% assign bookmark = '<span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span>' %}
-{% assign speaker = '<small><span class="glyphicon glyphicon-user" aria-hidden="true"></span></small>' %}
-{% assign co_author = '<small><span class="glyphicon glyphicon-adjust" aria-hidden="true"></span></small>' %}
+{%- assign link = '<span class="fas fa-external-link-square-alt"></span>' -%}
+{%- assign pdf = '<span class="fas fa-file-pdf"></span>' -%}
+{%- assign file = '<span class="fas fa-file"></span>' -%}
+{%- assign bookmark = '<span class="fas fa-bookmark"></span>' -%}
+{%- assign speaker = '<small><span class="fas fa-chalkboard-teacher"></span></small>' -%}
+{%- assign co_author = '<small><span class="fas fa-adjust"></span></small>' -%}
+{%- assign star = '<span class="fas fa-star"></span>' -%}
 
-{% assign star = '<span class="glyphicon glyphicon-star" aria-hidden="true"></span>' %}
-
-<div class="row">
-<h1>Publications</h1>
 <h2>Articles</h2>
 
 <h4>{{co_author}} Co-premiers auteurs</h4>
@@ -31,14 +29,14 @@ banner_image: pollen_MEB.png
         <br/>
         <small>
           <strong>
-            {{new_window}} <a href="http://dx.doi.org/{{paper.doi}}" target="_new">Lire en ligne</a>
+            {{link}} <a href="http://dx.doi.org/{{paper.doi}}" target="_new">Lire en ligne</a>
           </strong>
         </small>
         |
         {% if paper.pdf %}
         <small>
           <strong>
-            {{download}} <a href="{{site.baseurl}}/papers/{{paper.pdf}}" target="_new">PDF</a>
+            {{pdf}} <a href="{{site.baseurl}}/papers/{{paper.pdf}}" target="_new">PDF</a>
           </strong>
         </small>
         |
@@ -46,7 +44,7 @@ banner_image: pollen_MEB.png
         {% if paper.supp %}
         <small>
           <strong>
-            {{download}} <a href="{{site.baseurl}}/papers/{{paper.supp}}" target="_new">Matériel supplémentaire</a>
+            {{file}} <a href="{{site.baseurl}}/papers/{{paper.supp}}" target="_new">Matériel supplémentaire</a>
           </strong>
         </small>
         |
@@ -107,4 +105,3 @@ banner_image: pollen_MEB.png
     </li>
   {% endfor %}
 </ul>
-</div>

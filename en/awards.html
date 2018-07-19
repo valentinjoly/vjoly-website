@@ -1,14 +1,13 @@
 ---
-layout: default-en
-title: "CV"
-basename: awards.html
+layout: page
+lang: en
+title: "Scholarships & Awards"
 banner_image: libellule.jpg
 ---
-{% assign star = '<span class="glyphicon glyphicon-star" aria-hidden="true"></span>' %}
-{% assign travel = '<span class="glyphicon glyphicon-send" aria-hidden="true"></span>' %}
 
-<div class="row">
-<h1>Scholarships and Awards</h1>
+{%- assign star = '<span class="fas fa-star"></span>' -%}
+{%- assign travel = '<span class="fas fa-globe-africa"></span>' -%}
+
 <h4>{{star}} Major scholarship/award &nbsp;&nbsp; {{travel}} Travel scholarship</h4>
 <hr>
 
@@ -38,14 +37,11 @@ banner_image: libellule.jpg
           <strong>{{award.name}}</strong>
           <br/>
 
-          {{award.organization}}
-          <!--
           {% if award.amount %}
             {{award.organization}}, {{award.currency}} {{award.amount}}
           {% else %}
             {{award.organization}}
           {% endif %}
-          -->
         </h4>
       </li>
     {% endif %}
@@ -53,4 +49,3 @@ banner_image: libellule.jpg
 </ul>
 <hr>
 {% endfor %}
-</div>
