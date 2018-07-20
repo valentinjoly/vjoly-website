@@ -4,7 +4,7 @@
   supervisor: Prof. Daniel P. Matton
   institution: University of Montreal
   location: Montreal, QC, Canada
-  image: udem.png
+  image: logo_udem.png
   url: http://www.irbv.umontreal.ca/chercheurs/daniel-philippe-matton
   molbiol_skills: [
     "DNA/RNA techniques. Cloning. Protein expression and purification.",
@@ -23,7 +23,7 @@
   supervisor: Dr. Johan Edqvist
   institution: Linköping University
   location: Linköping, Sweden
-  image: linköping_university.png
+  image: logo_liu.png
   url: https://www.ifm.liu.se/biology/molgen/edqvist_lab/
   description: "After the release of the KAPPA CRP detection program, I got involved in a project developed at Dr. Edqvist's laboratory aiming to study the evolution and diversification of the non-specific lipid-transfer proteins (nsLTPs) across plant taxa. This stay in his lab allowed us to launch this collaboration, which is still active."
   molbiol_skills: [
@@ -39,7 +39,7 @@
   supervisor: Prof. Tetsuya Higashiyama
   institution: Institute for Transformative Bio-Molecules (ITbM), Nagoya University
   location: Nagoya, Japan
-  image: itbm.png
+  image: logo_itbm.png
   url: http://www.itbm.nagoya-u.ac.jp/en/members/t-higashiyama/
   description: "The JSPS summer program is highly selective (10 Canadian students selected) and comes with a ¥534,000 stipend and a ¥158,500 research grant. This experience allowed me to be welcomed for a two-month stay at Prof. Higashiyama's laboratory, and benefit from their expertise to optimize a series of pollen tube guidance microfluidic devices tailored for solanaceous species. These devices allow to monitor both long- and short-distance pollen tube attraction."
   molbiol_skills: [
@@ -53,7 +53,7 @@
   supervisor: Prof. William J. Swanson
   institution: University of Washington
   location: Seattle, WA, USA
-  image: uofw.png
+  image: logo_uw.png
   url: http://depts.washington.edu/swansonw/Swanson_Lab/Overview.html
   bioinfo_skills: [
     "Variant calling (GATK).",
@@ -66,7 +66,7 @@
   supervisor: Partnership with Dr. Franco Chiarini
   institution: Universidad Nacional de Córdoba
   location: Córdoba, Argentina
-  image: unc.png
+  image: logo_unc.png
   url: http://museobotanico.unc.edu.ar/herbario
   molbiol_skills: [
     "Collection of potato individuals in the Andes cordillera.",
@@ -78,7 +78,7 @@
   supervisor: Prof. Daniel P. Matton
   institution: University of Montreal
   location: Montreal, QC, Canada
-  image: udem.png
+  image: logo_udem.png
   url: http://www.irbv.umontreal.ca/chercheurs/daniel-philippe-matton
   molbiol_skills: [
     "Molecular cloning. Biolistics. Epifluorescence and confocal microscopy.",
@@ -90,7 +90,7 @@
   supervisor: Prof. Christophe Bailly
   institution: CNRS (UMR 7622) – Pierre & Marie Curie University (Paris-VI)
   location: Paris, France
-  image: upmc.jpg
+  image: logo_upmc.png
   url: http://www.ibps.upmc.fr/en/research/developmental-biology-laboratory/seed-biology
   molbiol_skills: [
     "Seed dormancy and germination biology.",
@@ -102,7 +102,7 @@
   supervisor: Prof. Chris Bowler
   institution: CNRS (UMR 8197) – École Normale Supérieure
   location: Paris, France
-  image: ens.png
+  image: logo_ens.png
   url: http://www.ibens.ens.fr/spip.php?rubrique36&lang=fr
   molbiol_skills: [
     "Protein electrophoresis. Immunoprecipitation. Western Blotting.",

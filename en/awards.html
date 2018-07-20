@@ -2,7 +2,7 @@
 layout: page
 lang: en
 title: "Scholarships & Awards"
-banner_image: libellule.jpg
+banner_image: banner_pistils.png
 ---
 
 {%- assign star = '<span class="fas fa-star"></span>' -%}
@@ -19,7 +19,7 @@ banner_image: libellule.jpg
 {% assign years = years | strip | split: " " | uniq | sort | reverse %}
 
 {% for year in years %}
-<h3>{{ year }}</h3>
+<h3><strong>{{ year }}</strong></h3>
 
 <ul class="list-unstyled">
   {% for award in site.data.en.scholarships_awards %}

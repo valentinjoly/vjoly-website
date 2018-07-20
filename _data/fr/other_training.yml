@@ -2,7 +2,7 @@
   date: 2016–2018
   institution: Université de Californie à San Diego
   location: sur Coursera
-  image: uc_san_diego.jpg
+  image: logo_uc_san_diego.png
   url: https://www.coursera.org/specializations/bioinformatics
   courses:
     - name: 6 cours différents et un projet final
@@ -14,7 +14,7 @@
   date: 2016
   institution: Université Johns Hopkins
   location: sur Coursera
-  image: johns-hopkins-univ.png
+  image: logo_jhu.png
   url: https://www.coursera.org/jhu
   courses:
     - name: Python pour la science des données génomiques
@@ -32,5 +32,5 @@
   date: juillet 2012
   institution: BLAST2GO
   location: Université de Californie à Davis, CA, États-Unis
-  image: blast2go.jpg
+  image: logo_blast2go.png
   url: https://www.blast2go.com/
