@@ -6,6 +6,13 @@ banner_image: pollen_MEB.png
 ---
 
 {%- assign image_url = "/images/valentin-labo.png" | relative-url -%}
+{%- assign research_url = "/fr/research.html" | relative-url -%}
+{%- assign cv_url = "https://github.com/valentinjoly/CV/raw/master/en/Valentin_Joly_CV_en.pdf" -%}
+{%- assign matton_lab_url = "http://www.irbv.umontreal.ca/chercheurs/daniel-philippe-matton" -%}
+{%- assign github_url = "https://github.com/valentinjoly" -%}
+{%- assign linkedin_url = "https://www.linkedin.com/in/valentinjoly" -%}
+{%- assign researchgate_url = "https://www.researchgate.net/profile/Valentin_Joly" -%}
+{%- assign email = "valentin.joly@gmail.com" -%}
 
 {%- assign download = '<span class="fas fa-download"></span>' -%}
 {%- assign phone = '<span class="fas fa-phone"></span>' -%}
@@ -23,10 +30,10 @@ banner_image: pollen_MEB.png
         Je suis <strong>Valentin Joly</strong>, biologiste moléculaire et bioinformaticien, doctorant à l’Université de Montréal, au Canada.
       </p>
       <p>
-        Mes travaux au <a href="http://www.irbv.umontreal.ca/chercheurs/daniel-philippe-matton"><strong>laboratoire Matton</strong></a> visent à décrypter les mécanismes moléculaires gouvernant les barrières prézygotiques à l’hybridation chez les pommes de terre sauvages. Je m’intéresse en particulier au <strong>guidage du tube pollinique</strong> en utilisant une approche qui combine la bioinformatique (séquençage de nouvelle génération) et la biologie moléculaire (expression de protéines et test fonctionnels). Vous trouverez plus d’informations sur mon projet à la page <a href="{{site.baseurl}}/fr/research.html"><strong>Recherche</strong></a>.
+        Mes travaux au <a href="{{ matton_lab_url }}"><strong>laboratoire Matton</strong></a> visent à décrypter les mécanismes moléculaires gouvernant les barrières prézygotiques à l’hybridation chez les pommes de terre sauvages. Je m’intéresse en particulier au <strong>guidage du tube pollinique</strong> en utilisant une approche qui combine la bioinformatique (séquençage de nouvelle génération) et la biologie moléculaire (expression de protéines et test fonctionnels). Vous trouverez plus d’informations sur mon projet à la page <a href="{{ research_url }}"><strong>Recherche</strong></a>.
       </p>
       <br/>
-      <a class="btn btn-danger btn-lg" href="https://github.com/valentinjoly/CV/raw/master/en/Valentin_Joly_CV_en.pdf" role="button">
+      <a class="btn btn-danger btn-lg" href="{{ cv_url }}" role="button">
         {{ download }} &nbsp; Télécharger mon CV
       </a>
       <br/>
@@ -58,20 +65,21 @@ banner_image: pollen_MEB.png
           <br/>
           {{ skype }} &nbsp; valentin.joly
           <br/>
-          {{ email }} &nbsp; <a href="mailto:valentin.joly@gmail.com">valentin.joly@gmail.com</a>
+          {{ email }} &nbsp; <a href="mailto:{{ email }}">{{ email }}</a>
         </p>
       </div>
       <div class="card-footer">
         <p class="card-text">
           <font size="6">
-            <a href="https://github.com/valentinjoly">{{ github }}</a>
+            <a href="{{ github_url }}">{{ github }}</a>
             &nbsp;
-            <a href="https://www.linkedin.com/in/valentinjoly">{{ linkedin }}</a>
+            <a href="{{ linkedin_url }}">{{ linkedin }}</a>
             &nbsp;
-            <a href="https://www.researchgate.net/profile/Valentin_Joly">{{ researchgate }}</a>
+            <a href="{{ researchgate_url }}">{{ researchgate }}</a>
           </font>
         </p>
       </div>
     </div>
   </div>
 </div>
+
