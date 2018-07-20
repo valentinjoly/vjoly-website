@@ -1,11 +1,11 @@
 ---
 layout: default
 lang: es
-title: "Home"
+title: "Inicio"
 banner_image: pollen_MEB.png
 ---
 
-{%- assign image_url = "/images/valentin-labo.png" | relative-url -%}
+{%- assign image_path = "/images/valentin-labo.png" | relative-url -%}
 {%- assign research_url = "/es/research.html" | relative-url -%}
 {%- assign cv_url = "https://github.com/valentinjoly/CV/raw/master/en/Valentin_Joly_CV_en.pdf" -%}
 {%- assign matton_lab_url = "http://www.irbv.umontreal.ca/chercheurs/daniel-philippe-matton?lang=en" -%}
@@ -31,17 +31,17 @@ banner_image: pollen_MEB.png
         Soy <strong>Valentin Joly</strong>*, biólogo molecular, bioinformático, y estudiante de doctorado en la Universidad de Montreal, Canadá.
       </p>
       <p>
-        Mi proyecto en el <a href="{{ matton_lab_url }}"><strong>laboratorio Matton</strong></a> se centra en los mecanismos moleculares responsables de la barreras de aislamiento reproductivo prezigótico en papas silvestres. Estoy espcialmente interesado en la <strong>atracción del tubo polínico</strong>, con un doble enfoque utilizando bioinformática (secuenciación de nueva generación) y biología molecular (expresión de proteínas y ensayos funcionales). Lea más sobre mi proyecto en la página <a href="{{ research_url }}"><strong>Investigación</strong></a>.
+        Mi proyecto en el <a href="{{ matton_lab_url }}"><strong>laboratorio Matton</strong></a> se centra en los mecanismos moleculares responsables de la barreras de aislamiento reproductivo prezigótico en papas silvestres. Estoy espcialmente interesado en la <strong>atracción del tubo polínico</strong>, con un doble enfoque utilizando bioinformática (secuenciación de nueva generación) y biología molecular (expresión de proteínas y ensayos funcionales). Lea más sobre mi proyecto en la página <a href="{{ research_url }}"><strong>Investigación</strong></a>.
       </p>
       <br/>
-      <a class="btn btn-danger btn-lg" href="{{ cv_url }}" role="button">
+      <a class="btn btn-danger btn-lg" href="{{ cv_url }}" role="button">
         {{ download }} &nbsp; Descargar mi CV
       </a>
       <br/>
       <br/>
       <p>
         <small>
-          *<a href="{{ phonetics_url }}">[valɑ̃tɛ̃ ʒoli]</a> es la buena pronunciación, pero <em>Valentín</em> me va muy bien. :)
+          *<a href="{{ phonetics_url }}">[valɑ̃tɛ̃ ʒoli]</a> es la buena pronunciación, pero <em>Valentín</em> me va muy bien. :)
         </small>
       </p>
     </div>
@@ -49,7 +49,7 @@ banner_image: pollen_MEB.png
 
   <div class="col-xs-6 col-md-4">
     <div class="card">
-      <img class="card-img-top" src="{{ image_url }}" alt="Valentin">
+      <img class="card-img-top" src="{{ image_path }}" alt="Valentin">
       <div class="card-body">
         <h4 class="card-title">Contacto</h4>
         <p class="card-text">

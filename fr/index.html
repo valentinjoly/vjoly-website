@@ -5,7 +5,7 @@ title: "Accueil"
 banner_image: pollen_MEB.png
 ---
 
-{%- assign image_url = "/images/valentin-labo.png" | relative-url -%}
+{%- assign image_path = "/images/valentin-labo.png" | relative-url -%}
 {%- assign research_url = "/fr/research.html" | relative-url -%}
 {%- assign cv_url = "https://github.com/valentinjoly/CV/raw/master/en/Valentin_Joly_CV_en.pdf" -%}
 {%- assign matton_lab_url = "http://www.irbv.umontreal.ca/chercheurs/daniel-philippe-matton" -%}
@@ -30,7 +30,7 @@ banner_image: pollen_MEB.png
         Je suis <strong>Valentin Joly</strong>, biologiste moléculaire et bioinformaticien, doctorant à l’Université de Montréal, au Canada.
       </p>
       <p>
-        Mes travaux au <a href="{{ matton_lab_url }}"><strong>laboratoire Matton</strong></a> visent à décrypter les mécanismes moléculaires gouvernant les barrières prézygotiques à l’hybridation chez les pommes de terre sauvages. Je m’intéresse en particulier au <strong>guidage du tube pollinique</strong> en utilisant une approche qui combine la bioinformatique (séquençage de nouvelle génération) et la biologie moléculaire (expression de protéines et test fonctionnels). Vous trouverez plus d’informations sur mon projet à la page <a href="{{ research_url }}"><strong>Recherche</strong></a>.
+        Mes travaux au <a href="{{ matton_lab_url }}"><strong>laboratoire Matton</strong></a> visent à décrypter les mécanismes moléculaires gouvernant les barrières prézygotiques à l’hybridation chez les pommes de terre sauvages. Je m’intéresse en particulier au <strong>guidage du tube pollinique</strong> en utilisant une approche qui combine la bioinformatique (séquençage de nouvelle génération) et la biologie moléculaire (expression de protéines et test fonctionnels). Vous trouverez plus d’informations sur mon projet à la page <a href="{{ research_url }}"><strong>Recherche</strong></a>.
       </p>
       <br/>
       <a class="btn btn-danger btn-lg" href="{{ cv_url }}" role="button">
@@ -43,7 +43,7 @@ banner_image: pollen_MEB.png
 
   <div class="col-xs-6 col-md-4">
     <div class="card">
-      <img class="card-img-top" src="{{ image_url }}" alt="Valentin">
+      <img class="card-img-top" src="{{ image_path }}" alt="Valentin">
       <div class="card-body">
         <h4 class="card-title">Contact</h4>
         <p class="card-text">

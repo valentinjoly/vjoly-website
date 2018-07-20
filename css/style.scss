@@ -43,3 +43,18 @@ p {
 .navbar-brand {
   font-weight: 600;
 }
+
+div.desc {
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  color: #ffffff;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  padding: .5em;
+}
+
+.desc_content {
+  font-size: large;
+  font-weight: 600;
+}

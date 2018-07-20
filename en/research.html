@@ -1,66 +1,24 @@
 ---
-layout: construction
+layout: page
 lang: en
 title: "Research"
-banner_image: pistils.jpg
-background_color: white
+background_color: "#F8F5F0"
 ---
 
-{%- assign image_path = "/images/solanum_chacoense.png" | relative_url -%}
-
-<div class="card-deck">
-  <div class="card">
-    <img class="card-img-top" src="{{ image_path }}" alt="Card image cap">
-    <div class="card-body">
-      <h4 class="card-title">Wild potatoes</h4>
-      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="{{ image_path }}" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="{{ image_path }}" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="{{ image_path }}" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+<div class="container mt-3">
+  <div class="row">
+    <div class="card-deck">
+      {% for theme in site.data.en.research %}
+      <div class="card mb-4" style="min-width: 18rem; max-width: 18rem;">
+        {%- assign image_url = theme.image | prepend: site.image_dir | relative-url -%}
+        <a href="#">
+          <img class="card-img" src="{{ image_url }}" alt="{{ theme.title }}">
+          <div class="desc rounded-bottom">
+            <h5 class="desc_content">{{ theme. title }}</h5>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
     </div>
   </div>
 </div>
-
-
-<!--
-<h2>Reproductive isolation</h2>
-
-<p>
-<strong>Wild potatoes</strong> (<em>Solanum</em> sect. <em>Petota</em>) form a large taxon gathering 196 species distributed in Latin America, from New Mexico to Argentina. My PhD project aims at understanding their <strong>reproductive isolation</strong>, i.e. the mechanisms by which they avoid interspecific hybridization.
-</p>
-
-<p>
-In order to narrow down on a more reasonable number of species, we chose one model species —<strong><em>Solanum chacoense</em></strong>, a wild potato relative of agronomical importance— and three of its closest relatives in the phylogeny: <em>S.&nbsp;gandarillasii</em>, <em>S.&nbsp;tarijense</em>, and <em>S.&nbsp;microdontum</em>.
-</p>
-<p>
-As shown on Fig.&nbsp;1, these four species have everything it takes to <strong>hybridize a lot</strong>:
-<ul style="font-size: large">
-  <li><strong>Phylogenetic proximity:</strong></li>
-  <li><strong>Sympatry:</strong></li>
-  <li><strong>Synchronous flowering:</strong></li>
-  <li><strong>Compatible floral morphologies:</strong></li>
-</ul>
-
-</p>
--->

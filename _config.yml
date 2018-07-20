@@ -20,3 +20,6 @@ navbar_pages:
 google_analytics: UA-122333490-1
 
 languages: [en, fr, es]
+
+image_dir: "/images/"
+paper_dir: "/papers/"

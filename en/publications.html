@@ -10,61 +10,75 @@ banner_image: pollen_MEB.png
 {%- assign file = '<span class="fas fa-file"></span>' -%}
 {%- assign bookmark = '<span class="fas fa-bookmark"></span>' -%}
 {%- assign speaker = '<small><span class="fas fa-chalkboard-teacher"></span></small>' -%}
-{%- assign co_author = '<small><span class="fas fa-adjust"></span></small>' -%}
-{%- assign star = '<span class="fas fa-star"></span>' -%}
+{%- assign co_author = '<span class="fas fa-adjust" style="font-size: 80%"></span>' -%}
+{%- assign star = '<span class="fas fa-star" style="font-size: 80%"></span>' -%}
 
 <h2>Articles</h2>
-
-<h4>{{co_author}} Co-first authors</h4>
+<h5>{{co_author}} Co-first authors</h5>
 <hr>
+
 <ul class="list-unstyled">
   {% for paper in site.data.en.published_papers %}
-    <li>
-      <h4>
-        <strong>{{paper.title}}</strong>
-        <br/>
-        {{paper.authors | replace: "*", co_author}}
-        <br/>
-        <em>{{paper.journal}}</em>, {{paper.year}}, {{paper.volume}}({{paper.issue}}):{{paper.pages}}. DOI: {{paper.doi}}
-        <br/>
-        <small>
-          <strong>
-            {{link}} <a href="http://dx.doi.org/{{paper.doi}}" target="_new">Read online</a>
-          </strong>
-        </small>
-        |
-        {% if paper.pdf %}
-        <small>
-          <strong>
-            {{pdf}} <a href="{{site.baseurl}}/papers/{{paper.pdf}}" target="_new">PDF</a>
-          </strong>
-        </small>
-        |
-        {% endif %}
-        {% if paper.supp %}
-        <small>
-          <strong>
-            {{file}} <a href="{{site.baseurl}}/papers/{{paper.supp}}" target="_new">Supplementary</a>
-          </strong>
-        </small>
-        |
-        {% endif %}
-        <small>
-          <strong>
-            {{bookmark}} <a href="{{site.baseurl}}/papers/{{paper.bibtex}}" target="_new">BibTeX entry</a>
-          </strong>
-        </small>
-      </h4>
-      <hr>
+    {%- assign paper_image_path = paper.image | prepend: site.image_dir | relative_url -%}
+    {%- assign paper_url = paper.doi | prepend: "http://dx.doi.org/" -%}
+    <li class="media">
+      <div class="align-self-start mr-3">
+        <a href="{{ paper_url }}" target="_new">
+          <img class="rounded" src="{{ paper_image_path }}" alt="..." width="100px"/>
+        </a>
+      </div>
+      <div class="media-body">
+        <h4>
+          <strong>{{paper.title}}</strong>
+          <br/>
+          {{paper.authors | replace: "*", co_author | replace: "Joly V", "<strong>Joly V</strong>"}}
+          <br/>
+          <em>{{paper.journal}}</em>, {{paper.year}}, {{paper.volume}}({{paper.issue}}):{{paper.pages}}. DOI: {{paper.doi}}
+          <br/>
+          <small>
+            <strong>
+              {{link}} <a href="{{ paper_url }}" target="_new">Read online</a>
+            </strong>
+          </small>
+          |
+          {% if paper.pdf %}
+          {% assign pdf_path = paper.pdf | prepend: site.papers.dir | relative_url %}
+          <small>
+            <strong>
+              {{pdf}} <a href="{{ pdf_path }}" target="_new">PDF</a>
+            </strong>
+          </small>
+          |
+          {% endif %}
+          {% if paper.supp %}
+          {% assign supp_path = paper.supp | prepend: site.papers.dir | relative_url %}
+          <small>
+            <strong>
+              {{file}} <a href="{{ supp_path }}" target="_new">Supplementary</a>
+            </strong>
+          </small>
+          |
+          {% endif %}
+          {% assign bibtex_path = paper.bibtex | prepend: site.papers.dir | relative_url %}
+          <small>
+            <strong>
+              {{bookmark}} <a href="{{ bibtex_path }}" target="_new">BibTeX entry</a>
+            </strong>
+          </small>
+        </h4>
+      </div>
     </li>
+    <hr>
   {% endfor %}
 </ul>
 
 <br/>
+<br/>
 
 <h2>Oral presentations</h2>
-<h4>{{speaker}} Speaker &nbsp;&nbsp; {{star}} Award</h4>
+<h5>{{speaker}} Speaker &nbsp;&nbsp; {{star}} Award</h5>
 <hr>
+
 <ul class="list-unstyled">
   {% for talk in site.data.en.oral_presentations %}
     <li>
@@ -74,7 +88,7 @@ banner_image: pollen_MEB.png
         {% endif %}
         <strong>{{talk.title}}</strong>
         <br/>
-        {{talk.authors | replace: "*", speaker}}
+        {{talk.authors | replace: "*", speaker | replace: "Joly V", "<strong>Joly V</strong>"}}
         <br/>
         <em>{{talk.conference}}</em>, {{talk.location}}, {{talk.date}}.
       </h4>
@@ -84,10 +98,12 @@ banner_image: pollen_MEB.png
 </ul>
 
 <br/>
+<br/>
 
 <h2>Poster presentations</h2>
-<h4>{{star}} Award</h4>
+<h5>{{star}} Award</h5>
 <hr>
+
 <ul class="list-unstyled">
   {% for poster in site.data.en.poster_presentations %}
     <li>
@@ -97,7 +113,7 @@ banner_image: pollen_MEB.png
         {% endif %}
         <strong>{{poster.title}}</strong>
         <br/>
-        {{poster.authors}}
+        {{poster.authors | replace: "Joly V", "<strong>Joly V</strong>"}}
         <br/>
         <em>{{poster.conference}}</em>, {{poster.location}}, {{poster.date}}.
       </h4>
