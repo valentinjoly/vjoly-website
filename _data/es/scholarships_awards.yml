@@ -1,0 +1,259 @@
+- name: "Beca de excelencia Hydro-Québec (2ᵒ año)"
+  year: "2017"
+  organization: "Hydro-Québec (compañía nacional de electricidad)"
+  amount: "25 000"
+  currency: "CAD"
+  major: true
+  travel: false
+
+- name: "Beca de fin de doctorado (BFED)"
+  year: "2017"
+  organization: "Facultad de Estudios de Grado y Posgrado, Universidad de Montreal"
+  amount: "8 400"
+  currency: "CAD"
+  major: false
+  travel: false
+
+- name: "Beca de viaje Jacques-Rousseau"
+  year: "2017"
+  organization: "Instituto de Investigación en Biología Vegetal, Universidad de Montreal"
+  amount: "1 500"
+  currency: "CAD"
+  major: false
+  travel: true
+
+- name: "Beca de viaje (<em>Bourse d'appui à la diffusion des résultats de recherche</em>)"
+  year: "2017"
+  organization: "Facultad de Estudios de Grado y Posgrado, Universidad de Montreal"
+  amount: "500"
+  currency: "CAD"
+  major: false
+  travel: true
+
+- name: "Mención honorífica para una presentación oral estudiante"
+  year: "2017"
+  organization: "CSPB Eastern Regional Meeting"
+  major: false
+  travel: false
+
+- name: "Beca de excelencia Hydro-Québec"
+  year: "2016"
+  organization: "Hydro-Québec (compañía nacional de electricidad)"
+  amount: "25 000"
+  currency: "CAD"
+  major: true
+  travel: false
+
+- name: "Beca de doctorado"
+  year: "2016"
+  organization: "Gobierno de Québec (<em>Fonds Québécois de Recherche – Nature et Technologies</em>)"
+  amount: "13 333"
+  currency: "CAD"
+  major: true
+  travel: false
+
+- name: "Premio MITACS Globalink – Programa de verano de la JSPS"
+  year: "2016"
+  organization: "MITACS / Japanese Society for the Promotion of Science"
+  amount: "534 000"
+  currency: "JPY"
+  major: true
+  travel: true
+
+- name: "Premio del mejor poster estudiante"
+  year: "2016"
+  organization: "Frontiers in Plant Reproduction Biology, conferencia <em>Plant Reproduction 2016</em>"
+  amount: "300"
+  currency: "USD"
+  major: false
+  travel: false
+
+- name: "Beca de viaje Jacques-Rousseau"
+  year: "2016"
+  organization: "Instituto de Investigación en Biología Vegetal, Universidad de Montreal"
+  amount: "1 500"
+  currency: "CAD"
+  major: false
+  travel: true
+
+- name: "Subvención de viaje PARSECS"
+  year: "2016"
+  organization: "FAÉCUM, Universidad de Montreal"
+  amount: "400"
+  currency: "CAD"
+  major: false
+  travel: true
+
+- name: "Beca de excelencia Catherine-Frédette en ciencias biológicas y neurología"
+  year: "2015"
+  organization: "Facultad de Estudios de Grado y Posgrado, Universidad de Montreal"
+  amount: "5 000"
+  currency: "CAD"
+  major: true
+  travel: false
+
+- name: "Beca de doctorado FBSB del Departamento de Ciencias biológicas"
+  year: "2015"
+  organization: "Universidad de Montreal"
+  amount: "1 500"
+  currency: "CAD"
+  major: true
+  travel: false
+
+- name: "Premio del presidente para la mejor presentación oral"
+  year: "2015"
+  organization: "Sociedad Canadiense de Biología Vegetal (CSPB-SCBV), Conferencia Botany 2015"
+  amount: "500"
+  currency: "CAD"
+  major: false
+  travel: false
+
+- name: "Premio de la mejor presentación oral estudiante"
+  year: "2015"
+  organization: "Compute Canada, High Performance Computing Symposium HPCS 2015"
+  amount: "500"
+  currency: "CAD"
+  major: false
+  travel: false
+
+- name: "Beca de viaje G.-H. Duff"
+  year: "2015"
+  organization: "Sociedad Canadiense de Biología Vegetal (CSPB-SCBV)"
+  amount: "340"
+  currency: "CAD"
+  major: false
+  travel: true
+
+- name: "Beca de viaje Jacques-Rousseau"
+  year: "2015"
+  organization: "Instituto de Investigación en Biología Vegetal, Universidad de Montreal"
+  amount: "770"
+  currency: "CAD"
+  major: false
+  travel: true
+
+- name: "Beca de excelencia de la Facultad de Estudios de Grado y Posgrado"
+  year: "2015"
+  organization: "Universidad de Montreal"
+  amount: "3 000"
+  currency: "CAD"
+  major: true
+  travel: false
+
+- name: "Beca Pehr-Kalm"
+  year: "2014"
+  organization: "Jardín Botánico de Montreal"
+  amount: "2 000"
+  currency: "CAD"
+  major: true
+  travel: false
+
+- name: "Beca de viaje para pasantías internacionales"
+  year: "2014"
+  organization: "Gobierno de Québec (FRQNT) – Centre SÈVE"
+  amount: "3 815"
+  currency: "CAD"
+  major: false
+  travel: true
+
+- name: "Beca de viaje Jacques-Rousseau"
+  year: "2014"
+  organization: "Instituto de Investigación en Biología Vegetal, Universidad de Montreal"
+  amount: "1 760"
+  currency: "CAD"
+  major: false
+  travel: true
+
+- name: "Beca de excelencia Marie-Victorin"
+  year: "2013"
+  organization: "Instituto de Investigación en Biología Vegetal, Universidad de Montreal"
+  amount: "3 000"
+  currency: "CAD"
+  major: true
+  travel: false
+
+- name: "Premio de la mejor presentación oral"
+  year: "2013"
+  organization: "Journées du Centre SÈVE"
+  amount: "300"
+  currency: "CAD"
+  major: false
+  travel: false
+
+- name: "Beca de viaje Jacques-Rousseau"
+  year: "2013"
+  organization: "Instituto de Investigación en Biología Vegetal, Universidad de Montreal"
+  amount: "850"
+  currency: "CAD"
+  major: false
+  travel: true
+
+- name: "Premio de la mejor presentación oral estudiante"
+  year: "2013"
+  organization: "Symposium of Biological Sciences, Universidad de Montreal"
+  amount: "100"
+  currency: "CAD"
+  major: false
+  travel: false
+
+- name: "Beca de maestría FBSB del Departamento de Ciencias biológicas"
+  year: "2012"
+  organization: "Universidad de Montreal"
+  amount: "1 200"
+  currency: "CAD"
+  major: true
+  travel: false
+
+- name: "Beca de transición maestría–doctorado acelerada"
+  year: "2012"
+  organization: "Facultad de Estudios de Grado y Posgrado, Universidad de Montreal"
+  amount: "14 000"
+  currency: "CAD"
+  major: true
+  travel: false
+
+- name: "Beca de viaje para un intercambio en Canadá"
+  year: "2011"
+  organization: "Ministerio francés de Investigación (CROUS)"
+  amount: "1 600 "
+  currency: "EUR"
+  major: false
+  travel: true
+
+- name: "Beca de excelencia PIL para intercambios en Canadá"
+  year: "2011"
+  organization: "Universidad Pierre y Marie Curie (París VI)"
+  amount: "1 500"
+  currency: "EUR"
+  major: false
+  travel: true
+
+- name: "Beca de viaje AMIÉ Travel para un intercambio en Canadá"
+  year: "2011"
+  organization: "Autoridad regional de París (<em>Conseil régional</em>)"
+  amount: "2 800"
+  currency: "EUR"
+  major: false
+  travel: true
+
+- name: "Beca de viaje Campus'Trotter para un intercambio en Canadá"
+  year: "2011"
+  organization: "Autoridad local en Francia (<em>Conseil général</em>)"
+  amount: "700"
+  currency: "EUR"
+  major: false
+  travel: true
+
+- name: "Mejor estudiante en el departamento de biología, exámenes de junio 2010"
+  year: "2010"
+  organization: "Universidad Pierre y Marie Curie (París VI)"
+  major: false
+  travel: false
+
+- name: "Beca de excelencia para estudios de licenciatura"
+  year: "2008"
+  organization: "Gobierno francés (CROUS)"
+  amount: "5 400"
+  currency: "EUR"
+  major: true
+  travel: false

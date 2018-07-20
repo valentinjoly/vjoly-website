@@ -6,7 +6,7 @@
   location: Montréal, QC, Canada
   image: udem.png
   url: http://www.irbv.umontreal.ca/chercheurs/daniel-philippe-matton
-  wetlab_skills: [
+  molbiol_skills: [
     "Manipulation d'ADN et ARN. Clonage. Expression et purification de protéines.",
     "Cultures cellulaires végétales. Tests de guidage du tube pollinique. Microfluidique.",
     "Microscopie: épifluorescence, confocal, MEB, MET.",
@@ -26,7 +26,7 @@
   image: linköping_university.png
   url: https://www.ifm.liu.se/biology/molgen/edqvist_lab/
   description: "Après la publication du programme de recherche de CRP KAPPA, je me suis impliqué dans un projet développé au laboratoire du Dr Edqvist, visant à étudier l'évolution et la diversification des protéines de transfert des lipides non-spécifiques (nsLTP) dans le règne végétal. Ce séjour dans son laboratoire nous a permis de lancer une collaboration, qui est toujours active."
-  wetlab_skills: [
+  molbiol_skills: [
     "Expression et purification de protéines chez <em>Pichia pastoris</em>.",
   ]
   bioinfo_skills: [
@@ -42,7 +42,7 @@
   image: itbm.png
   url: http://www.itbm.nagoya-u.ac.jp/en/members/t-higashiyama/
   description: "Le programme d’été de la JSPS est très sélectif (10 étudiants sélectionnés pour le Canada) et donne accès à une bourse de 534 000 ¥ assortie d’une allocation de recherche de 158 500 ¥. Grâce à ce programme, j’ai intégré pendant deux mois le laboratoire du Pr Higashiyama, dont j’ai pu profiter de l’expertise pour optimiser une série de dispositifs microfluidiques adaptés pour étudier l’attraction du tube pollinique à courte et à longue distance chez les Solanacées."
-  wetlab_skills: [
+  molbiol_skills: [
     "Développement de dispositifs microfluidiques pour l’étude du guidage des tubes polliniques.",
     "Introduction à la microscopie confocale à deux photons."
   ]
@@ -68,7 +68,7 @@
   location: Córdoba, Argentina
   image: unc.png
   url: http://museobotanico.unc.edu.ar/herbario
-  wetlab_skills: [
+  molbiol_skills: [
     "Collecte d’individus de pommes de terre sauvages dans la cordillère des Andes.",
   ]
 
@@ -80,7 +80,7 @@
   location: Montréal, QC, Canada
   image: udem.png
   url: http://www.irbv.umontreal.ca/chercheurs/daniel-philippe-matton
-  wetlab_skills: [
+  molbiol_skills: [
     "Clonage moléculaire. Biolistique. Microscopie confocale et à épifluorescence.",
   ]
 
@@ -92,7 +92,7 @@
   location: Paris, France
   image: upmc.jpg
   url: http://www.ibps.upmc.fr/en/research/developmental-biology-laboratory/seed-biology
-  wetlab_skills: [
+  molbiol_skills: [
     "Physiologie de la dormance des semences",
   ]
 
@@ -104,6 +104,6 @@
   location: Paris, France
   image: ens.png
   url: http://www.ibens.ens.fr/spip.php?rubrique36&lang=fr
-  wetlab_skills: [
+  molbiol_skills: [
     "Électrophorèse de protéines. Immunoprécipitation. Western Blot.",
   ]

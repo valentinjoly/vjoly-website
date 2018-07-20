@@ -1,0 +1,39 @@
+- name: Doctorado
+  field: Ciencias biológicas
+  year: 2013–present (<em>presentación de la tesis planeada en diciembre de 2018</em>)
+  institution: Instituto de Investigación en Biología Vegetal, Universidad de Montreal
+  location: Montreal, QC, Canadá
+  advisor: Prof. Daniel P. Matton
+  project: Comunicación molecular entre gametófitos y barreras reproductivas en papas silvestres (<em>Solanum</em> sect. <em>Petota</em>).
+  image: udem.png
+  url: http://en.bio.umontreal.ca/programs/graduate-programs/phd-in-biological-sciences/
+
+
+- name: Maestría
+  field: Ciencias biológicas
+  year: 2012
+  institution: Instituto de Investigación en Biología Vegetal, Universidad de Montreal
+  location: Montreal, QC, Canadá
+  image: udem.png
+  url: http://en.bio.umontreal.ca/programs/graduate-programs/masters-in-biological-sciences/
+
+
+- name: Licenciatura
+  field: Biología – Programa internacional
+  year: 2011
+  institution: Universidad Pierre y Marie Curie (París VI)
+  location: París, Francia
+  institution_alt: Universidad de Montreal (año de intercambio)
+  location_alt: Montreal, QC, Canadá
+  image: upmc.jpg
+  url: http://www.upmc.fr/fr/international/programmes_internationaux/programmes_internationaux_de_licence/licence_sciences_du_vivant.html
+
+
+- name: <em>Baccalauréat</em>*
+  field: Ciencias (Biología-Geología)
+  year: 2008
+  institution: Liceo Saint-Sauveur
+  location: Redon, Francia
+  image: saint-sau.jpg
+  url: http://www.lycee-saint-sauveur-redon.eu/
+  info: "*Bachillerato francés <br/> Summa cum laude (<em>mention Très Bien</em>) <br/> Clase bilingüe inglés-francés"

@@ -5,7 +5,7 @@ title: "Expérience"
 banner_image: argentine.jpg
 ---
 
-{%- assign wetlab = '<span class="fas fa-flask"></span>' -%}
+{%- assign molbiol = '<span class="fas fa-flask"></span>' -%}
 {%- assign bioinfo = '<span class="fas fa-code"></span>' -%}
 {%- assign double_arrow = '<span class="fas fa-angle-double-right"></span>' -%}
 
@@ -62,7 +62,7 @@ banner_image: argentine.jpg
     <h2>Expérience en recherche</h2>
     <h5>
       <strong>Compétences acquises:</strong>
-      {{wetlab}} Travail de labo
+      {{molbiol}} Biologie moléculaire
       {{bioinfo}} Bioinformatique
     </h5>
     <hr>
@@ -91,9 +91,9 @@ banner_image: argentine.jpg
               <h4>{{experience.supervisor}}</h4>
             {% endif %}
 
-            {% if experience.wetlab_skills %}
-              {% for skill in experience.wetlab_skills %}
-                <h4>{{wetlab}} {{skill}}</h4>
+            {% if experience.molbiol_skills %}
+              {% for skill in experience.molbiol_skills %}
+                <h4>{{molbiol}} {{skill}}</h4>
               {% endfor %}
             {% endif %}
 

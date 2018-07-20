@@ -3,7 +3,11 @@
 
   {%- include head.html -%}
 
+  {% if page.background_color %}
+  <body style="background-color:{{ page.background_color }};">
+  {% else %}
   <body>
+  {% endif %}
 
     {%- include navbar.html -%}
     {%- assign image_url = "images/" | append: page.banner_image | relative_url -%}
@@ -11,7 +15,7 @@
 
     <div class="py-5">
       <div class="container page-content">
-          {{ content }}
+        {{ content }}
       </div>
     </div>
 

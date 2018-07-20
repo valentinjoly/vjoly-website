@@ -1,0 +1,82 @@
+---
+layout: default
+lang: es
+title: "Home"
+banner_image: pollen_MEB.png
+---
+
+{%- assign image_url = "/images/valentin-labo.png" | relative-url -%}
+
+{%- assign download = '<span class="fas fa-download"></span>' -%}
+{%- assign phone = '<span class="fas fa-phone"></span>' -%}
+{%- assign skype = '<span class="fab fa-skype"></span>' -%}
+{%- assign email = '<span class="fas fa-envelope"></span>' -%}
+{%- assign github = '<span class="fab fa-github-square"></span>' -%}
+{%- assign linkedin = '<span class="fab fa-linkedin"></span>' -%}
+{%- assign researchgate = '<span class="fab fa-researchgate"></span>' -%}
+
+<div class="row">
+  <div class="col-xs-12 col-md-8">
+    <div class="jumbotron">
+      <h2><strong>¡Bienvenidos!</strong></h2>
+      <p>
+        Soy <strong>Valentin Joly</strong>*, biólogo molecular, bioinformático, y estudiante de doctorado en la Universidad de Montreal, Canadá.
+      </p>
+      <p>
+        Mi proyecto en el <a href="http://www.irbv.umontreal.ca/chercheurs/daniel-philippe-matton?lang=en"><strong>laboratorio Matton</strong></a> se centra en los mecanismos moleculares responsables de la barreras de aislamiento reproductivo prezigótico en papas silvestres. Estoy espcialmente interesado en la <strong>atracción del tubo polínico</strong>, con un doble enfoque utilizando bioinformática (secuenciación de nueva generación) y biología molecular (expresión de proteínas y ensayos funcionales). Lea más sobre mi proyecto en la página <a href="{{site.baseurl}}/es/research.html"><strong>Investigación</strong></a>.
+      </p>
+      <br/>
+      <a class="btn btn-danger btn-lg" href="https://github.com/valentinjoly/CV/raw/master/en/Valentin_Joly_CV_en.pdf" role="button">
+        {{ download }} &nbsp; Descargar mi CV
+      </a>
+      <br/>
+      <br/>
+      <p>
+        <small>
+          *<a href="https://es.wikipedia.org/wiki/Fonolog%C3%ADa_del_franc%C3%A9s">[valɑ̃tɛ̃ ʒoli]</a> es la buena pronunciación, pero <em>Valentín</em> me va muy bien. :)
+        </small>
+      </p>
+    </div>
+  </div>
+
+  <div class="col-xs-6 col-md-4">
+    <div class="card">
+      <img class="card-img-top" src="{{ image_url }}" alt="Valentin">
+      <div class="card-body">
+        <h4 class="card-title">Contacto</h4>
+        <p class="card-text">
+          Laboratorio del Prof. D. P. Matton
+          <br/>
+          Dep. de Ciencias biológicas
+          <br/>
+          Universidad de Montreal
+        </p>
+
+        <p class="card-text">
+          Instituto de Investigación en Biología Vegetal – IRBV<br/>
+          Bureau B367<br/>
+          4101, rue Sherbrooke Est<br/>
+          Montréal (Québec)  H1X 2B2<br/>
+          Canadá</p>
+        <p class="card-text">
+          {{ phone }} &nbsp; +1 (438) 495-3215
+          <br/>
+          {{ skype }} &nbsp; valentin.joly
+          <br/>
+          {{ email }} &nbsp; <a href="mailto:valentin.joly@gmail.com">valentin.joly@gmail.com</a>
+        </p>
+      </div>
+      <div class="card-footer">
+        <p class="card-text">
+          <font size="6">
+            <a href="https://github.com/valentinjoly">{{ github }}</a>
+            &nbsp;
+            <a href="https://www.linkedin.com/in/valentinjoly">{{ linkedin }}</a>
+            &nbsp;
+            <a href="https://www.researchgate.net/profile/Valentin_Joly">{{ researchgate }}</a>
+          </font>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

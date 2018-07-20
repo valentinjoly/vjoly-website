@@ -6,7 +6,7 @@
   location: Montreal, QC, Canada
   image: udem.png
   url: http://www.irbv.umontreal.ca/chercheurs/daniel-philippe-matton
-  wetlab_skills: [
+  molbiol_skills: [
     "DNA/RNA techniques. Cloning. Protein expression and purification.",
     "Plant cell culture. Pollen tube guidance assays. Microfluidics.",
     "Microscopy: epifluorescence, confocal, SEM, TEM.",
@@ -26,7 +26,7 @@
   image: linköping_university.png
   url: https://www.ifm.liu.se/biology/molgen/edqvist_lab/
   description: "After the release of the KAPPA CRP detection program, I got involved in a project developed at Dr. Edqvist's laboratory aiming to study the evolution and diversification of the non-specific lipid-transfer proteins (nsLTPs) across plant taxa. This stay in his lab allowed us to launch this collaboration, which is still active."
-  wetlab_skills: [
+  molbiol_skills: [
     Protein expression and purification in <em>Pichia pastoris</em>.,
   ]
   bioinfo_skills: [
@@ -42,7 +42,7 @@
   image: itbm.png
   url: http://www.itbm.nagoya-u.ac.jp/en/members/t-higashiyama/
   description: "The JSPS summer program is highly selective (10 Canadian students selected) and comes with a ¥534,000 stipend and a ¥158,500 research grant. This experience allowed me to be welcomed for a two-month stay at Prof. Higashiyama's laboratory, and benefit from their expertise to optimize a series of pollen tube guidance microfluidic devices tailored for solanaceous species. These devices allow to monitor both long- and short-distance pollen tube attraction."
-  wetlab_skills: [
+  molbiol_skills: [
     "Development of microfluidic devices for pollen tube guidance assays.",
     "Introduction to 2-photon confocal microscopy."
   ]
@@ -68,7 +68,7 @@
   location: Córdoba, Argentina
   image: unc.png
   url: http://museobotanico.unc.edu.ar/herbario
-  wetlab_skills: [
+  molbiol_skills: [
     "Collection of potato individuals in the Andes cordillera.",
   ]
 
@@ -80,7 +80,7 @@
   location: Montreal, QC, Canada
   image: udem.png
   url: http://www.irbv.umontreal.ca/chercheurs/daniel-philippe-matton
-  wetlab_skills: [
+  molbiol_skills: [
     "Molecular cloning. Biolistics. Epifluorescence and confocal microscopy.",
   ]
 
@@ -92,7 +92,7 @@
   location: Paris, France
   image: upmc.jpg
   url: http://www.ibps.upmc.fr/en/research/developmental-biology-laboratory/seed-biology
-  wetlab_skills: [
+  molbiol_skills: [
     "Seed dormancy and germination biology.",
   ]
 
@@ -104,6 +104,6 @@
   location: Paris, France
   image: ens.png
   url: http://www.ibens.ens.fr/spip.php?rubrique36&lang=fr
-  wetlab_skills: [
+  molbiol_skills: [
     "Protein electrophoresis. Immunoprecipitation. Western Blotting.",
   ]

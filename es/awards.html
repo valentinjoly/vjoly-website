@@ -1,0 +1,51 @@
+---
+layout: page
+lang: es
+title: "Premios y becas"
+banner_image: libellule.jpg
+---
+
+{%- assign star = '<span class="fas fa-star"></span>' -%}
+{%- assign travel = '<span class="fas fa-globe-africa"></span>' -%}
+
+<h4>{{star}} Premio o beca importante &nbsp;&nbsp; {{travel}} Beca de viaje</h4>
+<hr>
+
+{% assign years = "" %}
+{% for award in site.data.es.scholarships_awards %}
+  {% assign years = years | append: award.year %}
+  {% assign years = years | append: " " %}
+{% endfor %}
+{% assign years = years | strip | split: " " | uniq | sort | reverse %}
+
+{% for year in years %}
+<h3>{{ year }}</h3>
+
+<ul class="list-unstyled">
+  {% for award in site.data.es.scholarships_awards %}
+    {% if year == award.year %}
+      <li>
+        <h4>
+          {% if award.major %}
+            {{star}}
+          {% endif %}
+
+          {% if award.travel %}
+            {{travel}}
+          {% endif %}
+
+          <strong>{{award.name}}</strong>
+          <br/>
+
+          {% if award.amount %}
+            {{award.organization}}, {{award.amount}} {{award.currency}}
+          {% else %}
+            {{award.organization}}
+          {% endif %}
+        </h4>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
+<hr>
+{% endfor %}

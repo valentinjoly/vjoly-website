@@ -1,0 +1,107 @@
+- name: Proyecto de doctorado
+  field: Biología molecular & Bioinformática
+  date: 2013–<em>ahora</em>
+  supervisor: Prof. Daniel P. Matton
+  institution: Universidad de Montreal
+  location: Montreal, QC, Canadá
+  image: udem.png
+  url: http://www.irbv.umontreal.ca/chercheurs/daniel-philippe-matton
+  molbiol_skills: [
+    "Manipulación de ADN y ARN. Clonación. Expresión y purificación de proteínas.",
+    "Cultivo de células vegetales. Ensayos de atracción de tubos polínicos. Microfluídica.",
+    "Microscopía: epifluorescencia, confocal, SEM, TEM.",
+  ]
+  bioinfo_skills: [
+    "Programación Python y R. Desarrollo de la herramienta de detección de secuencias KAPPA.",
+    "Transcriptómica: Ensambles RNA-seq. Análisis de microarreglos. Expresión diferencial. Anotación.",
+    "Proteómica: Análisis de datos LC-MS. Secretómica. Cuantificación <em>label-free</em> de proteínas.",
+  ]
+
+- name: Colaboración internacional
+  field: Bioinformática
+  date: May 2016–<em>ahora</em>
+  supervisor: Dr. Johan Edqvist
+  institution: Universidad de Linköping
+  location: Linköping, Suecia
+  image: linköping_university.png
+  url: https://www.ifm.liu.se/biology/molgen/edqvist_lab/
+  molbiol_skills: [
+    "Expresión y purificación de proteínas en <em>Pichia pastoris</em>.",
+  ]
+  bioinfo_skills: [
+    "Desarrollo de una base de datos y de una herramienta de predicción de nsLTPs vegetales.",
+  ]
+
+- name: Programa de verano JSPS
+  field: Microfluídica para tubos polínicos
+  date: Junio–Agosto 2016
+  supervisor: Prof. Tetsuya Higashiyama
+  institution: Institute for Transformative Bio-Molecules (ITbM), Nagoya University
+  location: Nagoya, Japón
+  image: itbm.png
+  url: http://www.itbm.nagoya-u.ac.jp/en/members/t-higashiyama/
+  molbiol_skills: [
+    "Desarrollo de dispositivos microfluídicos para ensayos de atracción del tubo polínico.",
+    "Introducción a la microscopía de excitación de dos fotones."
+  ]
+
+- name: Pasantía de investigación
+  field: Evolución molecular & Bioinformática
+  date: Abril–Mayo 2014
+  supervisor: Prof. William J. Swanson
+  institution: University of Washington
+  location: Seattle, WA, EE UU
+  image: uofw.png
+  url: http://depts.washington.edu/swansonw/Swanson_Lab/Overview.html
+  bioinfo_skills: [
+    "Variant calling (GATK).",
+    "Análisis de evolución molecular y de selección positivas (codeml).",
+  ]
+
+- name: Botanical transect
+  field: Collection of <em>Solanum</em> individuals in the Andes
+  date: Abril–Mayo 2012
+  supervisor: Partnership with Dr. Franco Chiarini
+  institution: Universidad Nacional de Córdoba
+  location: Córdoba, Argentina
+  image: unc.png
+  url: http://museobotanico.unc.edu.ar/herbario
+  molbiol_skills: [
+    "Colecta de individuos de papas silvestres en la cordillera de los Andes.",
+  ]
+
+- name: Pasantía de investigación
+  field: Biología molecular vegetal
+  date: Enero–Agosto 2011
+  supervisor: Prof. Daniel P. Matton
+  institution: Universidad de Montreal
+  location: Montreal, QC, Canadá
+  image: udem.png
+  url: http://www.irbv.umontreal.ca/chercheurs/daniel-philippe-matton
+  molbiol_skills: [
+    "Clonación molecular. Biolística. Epifluorescencia y microscopía confocal.",
+  ]
+
+- name: Pasantía de investigación
+  field: Plant physiology
+  date: Junio–Julio 2010
+  supervisor: Prof. Christophe Bailly
+  institution: CNRS (UMR 7622) – Universidad Pierre y Marie Curie (París-VI)
+  location: París, Francia
+  image: upmc.jpg
+  url: http://www.ibps.upmc.fr/en/research/developmental-biology-laboratory/seed-biology
+  molbiol_skills: [
+    "Biología de la dormancia y de la germinación de semillas.",
+  ]
+
+- name: Pasantía de introducción a la investigación
+  field: Biología molecular vegetal
+  date: Enero 2009
+  supervisor: Prof. Chris Bowler
+  institution: CNRS (UMR 8197) – École Normale Supérieure
+  location: París, Francia
+  image: ens.png
+  url: http://www.ibens.ens.fr/spip.php?rubrique36&lang=fr
+  molbiol_skills: [
+    "Electroforesis de proteínas. Imunoprecipitación. Western Blot.",
+  ]
