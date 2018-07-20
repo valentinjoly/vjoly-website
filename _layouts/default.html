@@ -10,8 +10,15 @@
   {% endif %}
 
     {%- include navbar.html -%}
-    {%- assign image_url = "images/" | append: page.banner_image | relative_url -%}
-    <img class="media-object" src="{{ image_url }}" alt="..." width="100%">
+    {% if page.banner_image %}
+    <div>
+      {%- assign image_url = "images/" | append:  page.banner_image | relative_url -%}
+      <img class="media-object" src="{{ image_url }}" alt="..." width="100%">
+      {% if page.banner_caption %}
+      <figcaption>{{ page.banner_caption }}</figcaption>
+      {% endif %}
+    </div>
+    {% endif %}
 
     <div class="py-5">
       <div class="container page-content">

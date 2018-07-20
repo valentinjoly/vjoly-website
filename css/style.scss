@@ -54,3 +54,17 @@ div.desc {
   font-size: large;
   font-weight: 600;
 }
+
+figcaption {
+  background-color: black;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-bottom: 1px;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  float: right;
+  position: relative;
+  bottom: 25px;
+  right: 10px;
+}
