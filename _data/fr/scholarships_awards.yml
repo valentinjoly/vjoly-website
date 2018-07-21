@@ -1,3 +1,11 @@
+- name: "Bourse de voyage Jacques-Rousseau"
+  year: "2018"
+  organization: "Institut de Recherche en Biologie Végétale, Université de Montréal"
+  amount: "800"
+  currency: "CAD"
+  major: false
+  travel: true
+
 - name: "Bourse d’excellence Hydro-Québec (2e année)"
   year: "2017"
   organization: "Hydro-Québec (compagnie nationale d’électricité)"

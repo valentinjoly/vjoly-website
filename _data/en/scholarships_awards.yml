@@ -1,3 +1,11 @@
+- name: "Jacques-Rousseau Travel Scholarship"
+  year: "2018"
+  organization: "Plant Biology Research Institute, University of Montreal"
+  amount: "800"
+  currency: "CAD"
+  major: false
+  travel: true
+
 - name: "Hydro-Québec Excellence Scholarship (2nd year)"
   year: "2017"
   organization: "Hydro-Québec (national electricity company)"

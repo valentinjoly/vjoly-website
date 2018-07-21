@@ -1,3 +1,11 @@
+- name: "Beca de viaje Jacques-Rousseau"
+  year: "2018"
+  organization: "Instituto de Investigación en Biología Vegetal, Universidad de Montreal"
+  amount: "800"
+  currency: "CAD"
+  major: false
+  travel: true
+
 - name: "Beca de excelencia Hydro-Québec (2ᵒ año)"
   year: "2017"
   organization: "Hydro-Québec (compañía nacional de electricidad)"
