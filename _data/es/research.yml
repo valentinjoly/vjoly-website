@@ -1,0 +1,23 @@
+- title: "Papas silvestres"
+  image: res_wild_potatoes.png
+
+- title: "Aislamiento reproductivo"
+  image: res_reprod_isolation.png
+
+- title: "Atracción del tubo polínico"
+  image: res_pt_guidance.png
+
+- title: "Proteínas ricas en cisteínas"
+  image: res_crps.png
+
+- title: "Programación Python"
+  image: res_python.png
+
+- title: "Secuenciación de ARN"
+  image: res_next-gen_sequencing.png
+
+- title: "Secretómica"
+  image: res_secretomics.png
+
+- title: "Microfluídica"
+  image: res_microfluidics.png

@@ -1,0 +1,23 @@
+- title: "Pommes de terre sauvages"
+  image: res_wild_potatoes.png
+
+- title: "Isolement reproductif"
+  image: res_reprod_isolation.png
+
+- title: "Guidage du tube pollinique"
+  image: res_pt_guidance.png
+
+- title: "Protéines riches en cystéines"
+  image: res_crps.png
+
+- title: "Programmation Python"
+  image: res_python.png
+
+- title: "Séquençage d’ARN"
+  image: res_next-gen_sequencing.png
+
+- title: "Sécrétomique"
+  image: res_secretomics.png
+
+- title: "Microfluidique"
+  image: res_microfluidics.png
