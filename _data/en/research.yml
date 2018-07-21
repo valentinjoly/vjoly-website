@@ -1,23 +1,23 @@
 - title: "Wild potatoes"
-  image: solanum_chacoense.png
+  image: res_wild_potatoes.png
 
 - title: "Reproductive isolation"
-  image: solanum_chacoense.png
+  image: res_reprod_isolation.png
 
 - title: "Pollen tube guidance"
-  image: solanum_chacoense.png
+  image: res_pt_guidance.png
 
 - title: "Cysteine-rich proteins"
-  image: paper_Salminen_2018.png
+  image: res_crps.png
 
 - title: "Python programming"
-  image: solanum_chacoense.png
+  image: res_python.png
 
 - title: "Next-gen sequencing"
-  image: solanum_chacoense.png
+  image: res_next-gen_sequencing.png
 
-- title: "Proteomics"
-  image: solanum_chacoense.png
+- title: "Secretomics"
+  image: res_secretomics.png
 
 - title: "Microfluidics"
-  image: solanum_chacoense.png
+  image: res_microfluidics.png
