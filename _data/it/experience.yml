@@ -14,7 +14,7 @@
   bioinfo_skills: [
     "Programmazione Python e R. Sviluppo dello software KAPPA.",
     "Transcriptomics: RNA-seq assemblies. Microarray analysis. DGE. Annotazione.",
-    "Proteomica: Analisi di dati LC-MS. Secretomica. Quantificazione <em>label-free</ ​​em> delle proteine.",
+    "Proteomica: Analisi di dati LC-MS. Secretomica. Quantificazione <em>label-free</em> delle proteine.",
   ]
 
 - name: Collaborazione internazionale
@@ -26,7 +26,7 @@
   image: logo_liu.png
   url: https://www.ifm.liu.se/biology/molgen/edqvist_lab/
   molbiol_skills: [
-    "Espressione e purificazione di proteine ​​in <em> Pichia pastoris </ em>.",
+    "Espressione e purificazione di proteine ​​in <em>Pichia pastoris </em>.",
   ]
   bioinfo_skills: [
     "Sviluppo di un database e di uno strumento di predizione di nsLTP vegetali.",
@@ -42,7 +42,7 @@
   url: http://www.itbm.nagoya-u.ac.jp/en/members/t-higashiyama/
   molbiol_skills: [
     "Sviluppo di dispositivi microfluidici per test di attrazione di tubi pollinici.",
-    "Introduzione alla microscopia di eccitazione a due fotoni".
+    "Introduzione alla microscopia di eccitazione a due fotoni"
   ]
 
 - name: Stage di ricerca
