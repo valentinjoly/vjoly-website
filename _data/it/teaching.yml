@@ -1,0 +1,41 @@
+- position: Capo assistente di insegnamento
+  field: Fisiologia vegetale
+  course: Fisiologia vegetale (BIO1534)
+  professor: Prof. Jean Rivoal
+  institution: Università di Montreal
+  location: Montreal, QC, Canada
+  period: 2011- <em> ora </ em>
+  image: logo_udem.png
+  url: https://admission.umontreal.ca/cours-et-horaires/cours/bio-1534/
+  description: "Carico di insegnamento: 140 ore per sessione, circa 80 studenti <br/> Corsi settimanali: una lezione (0:45) e una sessione pratica (2:30) <br/> Supervisione di 1-2 assistenti di insegnamento"
+
+- position: Assistente di insegnamento
+  field: Biologia molecolare
+  course: "Biologia molecolare: DNA e RNA (BIO3102)"
+  professor: Prof. Daniel P. Matton
+  institution: Università di Montreal
+  location: Montreal, QC, Canada
+  period: 2014-2016
+  image: logo_udem.png
+  url: https://admission.umontreal.ca/cours-et-horaires/cours/bio-3102/
+  description: "Carico di insegnamento: 110 ore per sessione, 10-20 studenti"
+
+- position: Supervisore di tirocinanti internazionali (livello di master-dottorato)
+  course: Programma Leader emergenti nelle Americhe (ELAP)
+  professor: Prof. Daniel P. Matton
+  institution: Università di Montreal
+  location: Montreal, QC, Canada
+  period: 2015- <em> ora </ em>
+  image: logo_udem.png
+  url: http://www.scholarships-bourses.gc.ca/scholarships-bourses/can/institutions/elap-pfla.aspx?lang=eng
+  description: "Supervisione di studenti universitari latinoamericani per stage da 4 a 6 mesi nel nostro laboratorio (4 studenti provenienti dall'Argentina e dal Messico supervisionati fino ad oggi)"
+
+- position: Supervisore di tirocinanti di ricerca (livello di laurea)
+  course: Introduzione alla ricerca (BIO2050-BIO3050)
+  professor: Prof. Daniel P. Matton
+  institution: Università di Montreal
+  location: Montreal, QC, Canada
+  period: 2012- <em> ora </ em>
+  image: logo_udem.png
+  url: https://admission.umontreal.ca/cours-et-horaires/cours/bio-2050/
+  description: "Supervisione di stagisti estivi per progetti da 2 a 4 mesi nel nostro laboratorio (6 studenti supervisionati finora)"

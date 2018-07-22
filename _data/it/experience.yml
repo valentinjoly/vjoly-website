@@ -1,0 +1,107 @@
+- name: Progetto di dottorato
+  field: Biologia molecolare e bioinformatica
+  date: dal 2013
+  supervisor: Prof. Daniel P. Matton
+  institution: Università di Montreal
+  location: Montreal, QC, Canada
+  image: logo_udem.png
+  url: http://www.irbv.umontreal.ca/chercheurs/daniel-philippe-matton
+  molbiol_skills: [
+    "Manipolazione di DNA e RNA. Clonazione. Espressione e purificazione di proteine.",
+    "Coltivazione di cellule vegetali. Test di attrazione di tubi pollinici. Microfluidica.",
+    "Microscopia: Epifluorescenza. Confocale. SEM. TEM.",
+  ]
+  bioinfo_skills: [
+    "Programmazione Python e R. Sviluppo dello software KAPPA.",
+    "Transcriptomics: RNA-seq assemblies. Microarray analysis. DGE. Annotazione.",
+    "Proteomica: Analisi di dati LC-MS. Secretomica. Quantificazione <em>label-free</ ​​em> delle proteine.",
+  ]
+
+- name: Collaborazione internazionale
+  field: Bioinformatica
+  date: da maggio 2016
+  supervisor: Dr. Johan Edqvist
+  institution: Università di Linköping
+  location: Linköping, Svezia
+  image: logo_liu.png
+  url: https://www.ifm.liu.se/biology/molgen/edqvist_lab/
+  molbiol_skills: [
+    "Espressione e purificazione di proteine ​​in <em> Pichia pastoris </ em>.",
+  ]
+  bioinfo_skills: [
+    "Sviluppo di un database e di uno strumento di predizione di nsLTP vegetali.",
+  ]
+
+- name: Programma estivo JSPS
+  field: Microfluidica per tubi pollinici
+  date: giugno–agosto 2016
+  supervisor: Prof. Tetsuya Higashiyama
+  institution: Institute for Transformative Bio-Molecules (ITbM), Nagoya University
+  location: Nagoya, Giappone
+  image: logo_itbm.png
+  url: http://www.itbm.nagoya-u.ac.jp/en/members/t-higashiyama/
+  molbiol_skills: [
+    "Sviluppo di dispositivi microfluidici per test di attrazione di tubi pollinici.",
+    "Introduzione alla microscopia di eccitazione a due fotoni".
+  ]
+
+- name: Stage di ricerca
+  field: Evoluzione molecolare e bioinformatica
+  date: aprile–maggio 2014
+  supervisor: Prof. William J. Swanson
+  institution: University of Washington
+  location: Seattle, WA, Stati Uniti
+  image: logo_uw.png
+  url: http://depts.washington.edu/swansonw/Swanson_Lab/Overview.html
+  bioinfo_skills: [
+    "Variant calling (GATK).",
+    "Analisi dell'evoluzione molecolare e selezione positiva (codeml).",
+  ]
+
+- name: Transetto botanico
+  field: Raccolta di <em>Solanum</em> nelle Ande
+  date: aprile–maggio 2012
+  supervisor: partnership con il dott. Franco Chiarini
+  institution: Università Nazionale di Córdoba
+  location: Córdoba, Argentina
+  image: logo_unc.png
+  url: http://museobotanico.unc.edu.ar/herbario
+  molbiol_skills: [
+    "Raccolta di patate selvatiche nelle Ande.",
+  ]
+
+- name: Stage di ricerca
+  field: Biologia molecolare vegetale
+  date: gennaio–agosto 2011
+  supervisor: Prof. Daniel P. Matton
+  institution: Università di Montreal
+  location: Montreal, QC, Canada
+  image: logo_udem.png
+  url: http://www.irbv.umontreal.ca/chercheurs/daniel-philippe-matton
+  molbiol_skills: [
+    "Clonaggio molecolare. Biolistica. Epifluorescenza e microscopia confocale.",
+  ]
+
+- name: Stage di ricerca
+  field: Fisiologia vegetale
+  date: giugno–luglio 2010
+  supervisor: Prof. Christophe Bailly
+  institution: CNRS (UMR 7622) - Università Pierre e Marie Curie (Parigi VI)
+  location: Parigi, Francia
+  image: logo_upmc.png
+  url: http://www.ibps.upmc.fr/en/research/developmental-biology-laboratory/seed-biology
+  molbiol_skills: [
+    "Biologia della dormienza e della germinazione dei semi.",
+  ]
+
+- name: Stage di introduzione alla ricerca
+  field: Biologia molecolare vegetale
+  date: gennaio 2009
+  supervisor: Prof. Chris Bowler
+  institution: CNRS (UMR 8197) - École Normale Supérieure
+  location: Parigi, Francia
+  image: logo_ens.png
+  url: http://www.ibens.ens.fr/spip.php?rubrique36&lang=fr
+  molbiol_skills: [
+    "Elettroforesi di proteine. Immunoprecipitazione. Western Blot.",
+  ]

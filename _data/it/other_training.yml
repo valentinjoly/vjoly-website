@@ -1,0 +1,36 @@
+- name: Specializzazione online in bioinformatica
+  date: 2016–2018
+  institution: University of California San Diego
+  location: su Coursera
+  image: logo_uc_san_diego.png
+  url: https://www.coursera.org/specializations/bioinformatics
+  courses:
+    - name: 6 cursos diferentes y un proyecto final
+      certificate: H528Q2K9KYB6
+      url: https://www.coursera.org/account/accomplishments/specialization/H528Q2K9KYB6
+
+- name: Corsi online
+  field: Bioinformática
+  date: 2016
+  institution: Johns Hopkins University
+  location: su Coursera
+  image: logo_jhu.png
+  url: https://www.coursera.org/jhu
+  courses:
+    - name: Python per la scienza dei dati genomici
+      certificate: XHKWDB4XD7
+      url: https://www.coursera.org/account/accomplishments/verify/XHKWDB4XD7
+    - name: Introduzione alle tecnologie genomiche
+      certificate: U88T89XKR2
+      url: https://www.coursera.org/account/accomplishments/verify/U88T89XKR2
+    - name: Programmazione con R
+      certificate: X8NKEQAUU4
+      url: https://www.coursera.org/account/accomplishments/verify/X8NKEQAUU4
+
+- name: Seminario internazionale
+  field: Annotazione funzionale delle proteine
+  date: Julio 2012
+  institution: BLAST2GO
+  location: University of California Davis, CA, USA
+  image: logo_blast2go.png
+  url: https://www.blast2go.com/
