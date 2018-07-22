@@ -1,0 +1,52 @@
+---
+layout: page
+lang: it
+title: "Premi e borse"
+banner_image: banner_flowers.png
+banner_caption: "Fiori di patate selvatiche: <em>S. chacoense</em>, <em>S. gandarillasii</em>, <em>S. tarijense</em>, <em>S. megistacrolobum</em>"
+---
+
+{%- assign star = '<span class="fas fa-star"></span>' -%}
+{%- assign travel = '<span class="fas fa-globe-africa"></span>' -%}
+
+<h4>{{star}} Premio o borsa importante &nbsp;&nbsp; {{travel}} Borsa di viaggio</h4>
+<hr>
+
+{% assign years = "" %}
+{% for award in site.data.it.scholarships_awards %}
+  {% assign years = years | append: award.year %}
+  {% assign years = years | append: " " %}
+{% endfor %}
+{% assign years = years | strip | split: " " | uniq | sort | reverse %}
+
+{% for year in years %}
+<h3>{{ year }}</h3>
+
+<ul class="list-unstyled">
+  {% for award in site.data.it.scholarships_awards %}
+    {% if year == award.year %}
+      <li>
+        <h4>
+          {% if award.major %}
+            {{star}}
+          {% endif %}
+
+          {% if award.travel %}
+            {{travel}}
+          {% endif %}
+
+          <strong>{{award.name}}</strong>
+          <br/>
+
+          {% if award.amount %}
+            {{award.organization}}, {{award.amount}} {{award.currency}}
+          {% else %}
+            {{award.organization}}
+          {% endif %}
+        </h4>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
+<hr>
+{% endfor %}

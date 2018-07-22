@@ -1,0 +1,247 @@
+---
+layout: page
+lang: it
+title: "Esperienza"
+banner_image: banner_argentina.png
+banner_caption: Habitat tipico delle patate selvatiche nella provincia di Salta, in Argentina
+---
+
+{%- assign molbiol = '<span class="fas fa-flask"></span>' -%}
+{%- assign bioinfo = '<span class="fas fa-code"></span>' -%}
+{%- assign double_arrow = '<span class="fas fa-angle-double-right"></span>' -%}
+
+<div class="row">
+  <div class="col-xs-12 col-md-9">
+    <h2>Formazione accademica</h2>
+    <hr>
+
+    <ul class="list-unstyled">
+      {% for degree in site.data.it.education %}
+        {%- assign image_path = degree.image | prepend: "/images/" | relative_url -%}
+        <li class="media">
+          <div class="align-self-start mr-3">
+            <a href="{{degree.url}}">
+              <img class="rounded" src="{{ image_path }}" alt="..." width="100px"/>
+            </a>
+          </div>
+
+          <div class="media-body">
+            <h3 class="media-heading">
+              <strong>{{degree.name}}</strong>
+              {% if degree.field %}
+                – {{degree.field}}
+              {% endif %}
+            </h3>
+            <h4><strong>{{degree.year}}</strong></h4>
+            <h4><strong>{{degree.institution}}</strong>, <em>{{degree.location}}</em></h4>
+            {% if degree.institution_alt %}
+              <h4><strong>{{degree.institution_alt}}</strong>, <em>{{degree.location_alt}}</em></h4>
+            {% endif %}
+
+            {% if degree.advisor %}
+              <h4><strong>Advisor:</strong> {{degree.advisor}}</h4>
+            {% endif %}
+
+            {% if degree.project %}
+              <h4><strong>Project:</strong> {{degree.project}}</h4>
+            {% endif %}
+
+            {% if degree.info %}
+              <h4 style="color:#808080">{{degree.info}}</h4>
+            {% endif %}
+
+          </div>
+        </li>
+        <hr>
+      {% endfor %}
+    </ul>
+
+    <br/>
+    <br/>
+    <br/>
+
+    <h2>Esperienza scientifica</h2>
+    <h5>
+      <strong>Competenze acquisite:</strong>
+      {{molbiol}} Biologia moleculare
+      {{bioinfo}} Bioinformatica
+    </h5>
+    <hr>
+
+    <ul class="list-unstyled">
+      {% for experience in site.data.it.experience %}
+        {%- assign image_path = experience.image | prepend: "/images/" | relative_url -%}
+        <li class="media">
+          <div class="align-self-start mr-3">
+            <a href="{{degree.url}}">
+              <img class="rounded" src="{{ image_path }}" alt="..." width="100px"/>
+            </a>
+          </div>
+
+          <div class="media-body">
+            <h3 class="media-heading">
+              <strong>{{experience.name}}</strong>
+              {% if experience.field %}
+                – {{experience.field}}
+              {% endif %}
+            </h3>
+            <h4><strong>{{experience.date}}</strong></h4>
+            <h4><strong>{{experience.institution}}</strong>, <em>{{experience.location}}</em></h4>
+
+            {% if experience.supervisor %}
+              <h4>{{experience.supervisor}}</h4>
+            {% endif %}
+
+            {% if experience.molbiol_skills %}
+              {% for skill in experience.molbiol_skills %}
+                <h4>{{molbiol}} {{skill}}</h4>
+              {% endfor %}
+            {% endif %}
+
+            {% if experience.bioinfo_skills %}
+              {% for skill in experience.bioinfo_skills %}
+                <h4>{{bioinfo}} {{skill}}</h4>
+              {% endfor %}
+            {% endif %}
+
+            {% if experience.description %}
+              <h4 style="color:#808080">{{experience.description}}</h4>
+            {% endif %}
+
+          </div>
+        </li>
+        <hr>
+      {% endfor %}
+    </ul>
+
+    <br/>
+    <br/>
+    <br/>
+
+    <h2>Formazione complementare in bioinformatica</h2>
+    <hr>
+    <ul class="list-unstyled">
+      {% for training in site.data.it.other_training %}
+        {%- assign image_path = training.image | prepend: "/images/" | relative_url -%}
+        <li class="media">
+          <div class="align-self-start mr-3">
+            <a href="{{degree.url}}">
+              <img class="rounded" src="{{ image_path }}" alt="..." width="100px"/>
+            </a>
+          </div>
+
+          <div class="media-body">
+            <h3 class="media-heading">
+              <strong>{{training.name}}</strong>
+              {% if training.field %}
+                – {{training.field}}
+              {% endif %}
+            </h3>
+            <h4><strong>{{training.date}}</strong></h4>
+            <h4><strong>{{training.institution}}</strong>, <em>{{training.location}}</em></h4>
+
+            {% if training.courses %}
+              <h4>{{training.supervisor}}</h4>
+            {% endif %}
+
+            {% if training.courses %}
+              {% for course in training.courses %}
+                <h4>
+                  {{double_arrow}}
+                  <strong>{{course.name}}</strong>
+                  &nbsp;&nbsp;
+                  Certificato
+                  <a href="{{course.url}}">
+                    {{course.certificate}}
+                  </a>
+                </h4>
+              {% endfor %}
+            {% endif %}
+
+          </div>
+        </li>
+        <hr>
+      {% endfor %}
+    </ul>
+
+    <br/>
+    <br/>
+    <br/>
+
+    <h2>Insegnamento</h2>
+    <hr>
+
+    <ul class="list-unstyled">
+      {% for teaching in site.data.it.teaching %}
+        {%- assign image_path = teaching.image | prepend: "/images/" | relative_url -%}
+        <li class="media">
+          <div class="align-self-start mr-3">
+            <a href="{{degree.url}}">
+              <img class="rounded" src="{{ image_path }}" alt="..." width="100px"/>
+            </a>
+          </div>
+
+          <div class="media-body">
+            <h3 class="media-heading">
+              <strong>{{teaching.position}}</strong>
+              {% if teaching.field %}
+                – {{teaching.field}}
+              {% endif %}
+            </h3>
+            <h4><strong>{{teaching.period}}</strong></h4>
+            <h4><strong>{{teaching.institution}}</strong>, <em>{{teaching.location}}</em></h4>
+
+            {% if teaching.course %}
+              <h4>
+                {{teaching.course}}
+                {% if teaching.professor %}
+                  – {{teaching.professor}}
+                {% endif %}
+              </h4>
+            {% endif %}
+
+            {% if teaching.description %}
+              <h4 style="color:#808080">{{teaching.description}}</h4>
+            {% endif %}
+
+          </div>
+        </li>
+        <hr>
+      {% endfor %}
+    </ul>
+
+    <br/>
+    <br/>
+    <br/>
+
+    <h2>Volontariato</h2>
+    <hr>
+
+    <ul class="list-unstyled">
+      {% for volunteering in site.data.it.volunteering %}
+        {%- assign image_path = volunteering.image | prepend: "/images/" | relative_url -%}
+        <li class="media">
+          <div class="align-self-start mr-3">
+            <a href="{{degree.url}}">
+              <img class="rounded" src="{{ image_path }}" alt="..." width="100px"/>
+            </a>
+          </div>
+
+          <div class="media-body">
+            <h3 class="media-heading"><strong>{{volunteering.position}}</strong></h3>
+            <h4><strong>{{volunteering.period}}</strong></h4>
+            <h4><strong>{{volunteering.institution}}</strong>, <em>{{volunteering.location}}</em></h4>
+
+            {% if volunteering.description %}
+              <h4 style="color:#808080">{{volunteering.description}}</h4>
+            {% endif %}
+
+          </div>
+        </li>
+        <hr>
+      {% endfor %}
+    </ul>
+
+
+  </div>
+</div>
