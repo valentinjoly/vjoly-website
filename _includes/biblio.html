@@ -1,0 +1,42 @@
+<hr/>
+<div class="row">
+<div class="col-12">
+<h3>Literature cited</h3>
+<ol class="biblio">
+  {%- assign refmax = biblio | size | minus: 1 -%}
+  {%- for i in (0..refmax) -%}
+  	{%- assign ref = biblio[i] -%}
+	{%- assign nauth = ref.authors | size -%}
+	{%- if nauth == 1 -%}
+	  {%- assign authors = ref.authors[0] -%}
+	{%- elsif nauth == 2 -%}
+	  {%- assign authors = ref.authors | join: " and " -%}
+	{%- else -%}
+	  {%- if nauth <= 5 -%}
+	  	{%- assign authmax = nauth | minus: 1 -%}
+	    {%- assign authors_end = ref.authors | last | prepend: " and " -%}
+	  {%- else -%}
+	    {%- assign authmax = 4 -%}
+	    {%- assign authors_end = " <em>et al.</em>" -%}
+	  {%- endif -%}
+	  {%- assign authors = ref.authors | slice: 0, authmax | join: ", " | append: authors_end -%}
+	{%- endif -%}
+
+  {%- if ref.issue -%}
+  	{%- assign issue = ref.issue | prepend: "(" | append: ")" -%}
+  {%- else -%}
+    {%- assign issue = nil -%}
+  {%- endif -%}
+  {%- assign location = ref.volume | append: issue | append: ": " | append: ref.pages -%}
+
+  <li id="ref{{i}}">
+  	<a href="#cite{{i}}" title="Go back to citation in the text">↑</a>
+  	{{authors}} ({{ref.year}}). {{ref.title}} <em>{{ref.journal}}</em>, {{location}}.
+  	{% if ref.doi %}
+  	  DOI: <a href="https://doi.org/{{ref.doi}}">{{ref.doi}}</a>.
+  	{% endif %}
+  </li>
+  {%- endfor -%}
+</ol>
+</div>
+</div>
