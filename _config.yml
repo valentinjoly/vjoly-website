@@ -2,14 +2,14 @@ markdown: redcarpet
 baseurl: ""
 title: Valentin Joly
 
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - update_boostrap.sh
-
 plugins:
-  - jekyll-feed
+  - jekyll/scholar
+
+scholar:
+  style: /_bibliography/vjoly.csl
+  sort_by: authors, date
+  bibliography_list_tag: ol
+
 
 navbar_pages:
   - research.html
