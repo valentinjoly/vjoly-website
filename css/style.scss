@@ -15,9 +15,19 @@
   }
 }
 
+
+// FONTS
+
 * {
   font-family: source-sans-pro, sans-serif;
 }
+
+.monospace {
+  font-family: inconsolata, monospace;
+}
+
+
+// FONT SETTINGS
 
 h1, h2, h3 {
   font-weight: bold;
@@ -33,12 +43,100 @@ p {
 
 .sandstone {
   font-size: 110%;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 .navbar-brand {
-  font-weight: 600;
+  font-weight: bold;
 }
+
+
+// COLORS
+
+$red:           #FF7D7D;
+$lightred:      #FFCCCC;
+
+$darkgreen:     #339900;
+$green:         #77FF33;
+$lightgreen:    #AAFF80;
+
+$darkblue:      #004DE6;
+$blue:          #8AB1FF;
+$lightblue:     #B3CCFF;
+
+$yellow:        #FFDF3D;
+$lightyellow:   #FFEA80;
+
+$gray:          #B2B2B2;
+$lightgray:     #D2D2D2;
+
+$lightpurple:   #F0A3FF;
+
+.red-bg         {background-color: $red;}
+.lightred-bg    {background-color: $lightred;}
+
+.green-text     {color: $green;}
+.green-bg       {background-color: $green;}
+.lightgreen-bg  {background-color: $lightgreen;}
+
+.blue-text      {color: $blue;}
+.blue-bg        {background-color: $blue;}
+.lightblue-bg   {background-color: $lightblue;}
+
+.yellow-bg      {background-color: $yellow;}
+.lightyellow-bg {background-color: $lightyellow;}
+
+.gray-bg        {background-color: $gray;}
+.lightgray-bg   {background-color: $lightgray;}
+
+.lightpurple-bg {background-color: $lightpurple;}
+
+
+// SEQUENCES
+
+.seq-card {
+  border-width: 0 0 0 thick;
+  border-color: gray;
+  background-color: rgba(0, 0, 0, 0.04);
+  font-weight: bold;
+  font-family: inconsolata, monospace;
+  width: 47.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.seq-card .card-body {
+  padding: ($spacer * .75)
+}
+
+.seq-card p {
+  font-family: inconsolata, monospace;
+}
+
+.seq-card span {
+  font-family: inconsolata, monospace;
+}
+
+.seq-card u {
+  font-family: inconsolata, monospace;
+}
+
+.seq-no-space {
+  line-height: 110%;
+  margin-bottom: 0mm;
+}
+
+.seq-space {
+  line-height: 110%;
+  margin-bottom: 2mm;
+}
+
+.seq-large-space {
+  line-height: 110%;
+  margin-bottom: 10mm;
+}
+
+
+// CAPTIONS
 
 div.desc {
   background-color: rgba(0, 0, 0, 0.5);
@@ -55,7 +153,11 @@ div.desc {
   font-weight: 600;
 }
 
-figcaption {
+figcaption.figure-caption {
+  color: $gray-800;
+}
+
+figcaption.banner-caption {
   background-color: black;
   padding-left: 4px;
   padding-right: 4px;
@@ -67,4 +169,31 @@ figcaption {
   position: relative;
   bottom: 25px;
   right: 10px;
+}
+
+
+// BIBLIOGRAPHIES
+
+ol.bibliography {
+  margin: 0 0 3em;
+  padding: 0;
+  counter-reset: item;
+}
+
+ol.bibliography > li {
+  margin: 0 0 0 0.75em;
+  padding: 0.25em 0 0.25em 2em;
+  text-indent: -2em;
+  list-style-type: none;
+  counter-increment: item;
+  line-height: 100%;
+}
+
+ol.bibliography > li:before {
+  display: inline-block;
+  width: 1em;
+  padding-right: 0.4em;
+  font-weight: bold;
+  text-align: right;
+  content: counter(item) ".";
 }
