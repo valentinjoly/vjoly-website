@@ -53,6 +53,7 @@ p {
 
 // COLORS
 
+$darkred:       #B30000;
 $red:           #FF7D7D;
 $lightred:      #FFCCCC;
 
@@ -64,32 +65,39 @@ $darkblue:      #004DE6;
 $blue:          #8AB1FF;
 $lightblue:     #B3CCFF;
 
+$darkyellow:    #998000;
 $yellow:        #FFDF3D;
 $lightyellow:   #FFEA80;
 
+$darkgray:      #505050;
 $gray:          #B2B2B2;
 $lightgray:     #D2D2D2;
 
-$lightpurple:   #F0A3FF;
+$lightpurple:   #EB99FF;
+$lightorange:   #FFBF80;
 
+.red-text       {color: $darkred;}
 .red-bg         {background-color: $red;}
-.lightred-bg    {background-color: $lightred;}
 
-.green-text     {color: $green;}
+.green-text     {color: $darkgreen;}
 .green-bg       {background-color: $green;}
 .lightgreen-bg  {background-color: $lightgreen;}
 
-.blue-text      {color: $blue;}
+.blue-text      {color: $darkblue;}
 .blue-bg        {background-color: $blue;}
 .lightblue-bg   {background-color: $lightblue;}
 
+.yellow-text    {color: $darkyellow;}
 .yellow-bg      {background-color: $yellow;}
 .lightyellow-bg {background-color: $lightyellow;}
 
+.darkgray-text  {color: $darkgray;}
+.gray-text      {color: $gray;}
 .gray-bg        {background-color: $gray;}
 .lightgray-bg   {background-color: $lightgray;}
 
 .lightpurple-bg {background-color: $lightpurple;}
+.lightorange-bg {background-color: $lightorange;}
 
 
 // SEQUENCES
@@ -196,4 +204,24 @@ ol.bibliography > li:before {
   font-weight: bold;
   text-align: right;
   content: counter(item) ".";
+}
+
+
+// BLOG
+
+.blog-header {
+  background-color: $gray-200;
+}
+
+.blog-body h1, h2, h3 {
+  padding-top: 0.5em;
+}
+
+.blog-abstract {
+  color: $gray-600;
+  line-height: 120%
+}
+
+a {
+  font-weight: bold;
 }

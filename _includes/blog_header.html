@@ -1,0 +1,12 @@
+<header class="blog-header">
+  <div class="py-5">
+    <div class="container page-content">
+      <h1>{{ page.title | escape }}</h1>
+      <p>{%- include format_date.html date=page.date -%}</p>
+
+      {%- if page.abstract -%}
+        <p class="blog-abstract">{{ page.abstract }}</p>
+      {%- endif -%}
+    </div>
+  </div>
+</header>

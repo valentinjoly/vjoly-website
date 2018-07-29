@@ -1,0 +1,36 @@
+---
+layout: page
+---
+
+<div class="row">
+  <div class="col-12">
+    <ul class="list-unstyled">
+      {%- for post in site.posts -%}
+      {%- assign post_image_path = post.image | prepend: site.image_dir | relative_url -%}
+      <li class="media">
+        <div class="align-self-start mr-3">
+          <a href="{{ post.url | relative_url }}" target="_new">
+            <img class="rounded" src="{{ post_image_path }}" alt="..." width="100px"/>
+          </a>
+        </div>
+        <div class="media-body">
+          <h4>
+            <a href="{{ post.url | relative_url }}">
+              <strong>{{ post.title | escape }}</strong>
+            </a>
+          </h4>
+          <h5>
+            {%- include format_date.html date=post.date -%}
+          </h5>
+          {%- if post.abstract -%}
+          <p class="blog-abstract">
+            {{ post.abstract }}
+          </p>
+          {%- endif -%}
+        </div>
+      </li>
+      <hr>
+      {%- endfor -%}
+    </ul>
+  </div>
+</div>

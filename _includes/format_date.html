@@ -1,0 +1,63 @@
+{%- if page.lang == "en" -%}
+  {{ include.date | date: "%B %-d, %Y" }}
+{%- else -%}
+  {%- assign day = include.date | date: "%-d" -%}
+  {%- assign month = include.date | date: "%-m" -%}
+  {%- assign year = include.date | date: "%Y" -%}
+  {%- if page.lang == "fr" -%}
+    {%- if day == "1" -%}
+      {%- assign day = "1er" -%}
+    {%- endif -%}
+    {%- case month -%}
+      {%- when  "1" -%} {%- assign month = "janvier" -%}
+      {%- when  "2" -%} {%- assign month = "février" -%}
+      {%- when  "3" -%} {%- assign month = "mars" -%}
+      {%- when  "4" -%} {%- assign month = "avril" -%}
+      {%- when  "5" -%} {%- assign month = "mai" -%}
+      {%- when  "6" -%} {%- assign month = "juin" -%}
+      {%- when  "7" -%} {%- assign month = "juillet" -%}
+      {%- when  "8" -%} {%- assign month = "août" -%}
+      {%- when  "9" -%} {%- assign month = "septembre" -%}
+      {%- when "10" -%} {%- assign month = "octobre" -%}
+      {%- when "11" -%} {%- assign month = "novembre" -%}
+      {%- when "12" -%} {%- assign month = "décembre" -%}
+    {%- endcase -%}
+  {%- elsif page.lang == "es" -%}
+    {%- if day == "1" -%}
+      {%- assign day = "1º" -%}
+    {%- endif -%}
+    {%- case month -%}
+      {%- when  "1" -%} {%- assign month = "enero" -%}
+      {%- when  "2" -%} {%- assign month = "febrero" -%}
+      {%- when  "3" -%} {%- assign month = "marzo" -%}
+      {%- when  "4" -%} {%- assign month = "abril" -%}
+      {%- when  "5" -%} {%- assign month = "mayo" -%}
+      {%- when  "6" -%} {%- assign month = "junio" -%}
+      {%- when  "7" -%} {%- assign month = "julio" -%}
+      {%- when  "8" -%} {%- assign month = "agosto" -%}
+      {%- when  "9" -%} {%- assign month = "septiembre" -%}
+      {%- when "10" -%} {%- assign month = "octubre" -%}
+      {%- when "11" -%} {%- assign month = "noviembre" -%}
+      {%- when "12" -%} {%- assign month = "diciembre" -%}
+    {%- endcase -%}
+  {%- elsif page.lang == "it" -%}
+    {%- if day == "1" -%}
+      {%- assign day = "1º" -%}
+    {%- endif -%}
+    {%- case month -%}
+      {%- when  "1" -%} {%- assign month = "gennaio" -%}
+      {%- when  "2" -%} {%- assign month = "febbraio" -%}
+      {%- when  "3" -%} {%- assign month = "marzo" -%}
+      {%- when  "4" -%} {%- assign month = "aprile" -%}
+      {%- when  "5" -%} {%- assign month = "maggio" -%}
+      {%- when  "6" -%} {%- assign month = "giugnio" -%}
+      {%- when  "7" -%} {%- assign month = "luglio" -%}
+      {%- when  "8" -%} {%- assign month = "agosto" -%}
+      {%- when  "9" -%} {%- assign month = "settembre" -%}
+      {%- when "10" -%} {%- assign month = "ottobre" -%}
+      {%- when "11" -%} {%- assign month = "novembre" -%}
+      {%- when "12" -%} {%- assign month = "dicembre" -%}
+    {%- endcase -%}
+  {%- endif -%}
+  {{ day }} {{ month }} {{ year }}
+{%- endif -%}

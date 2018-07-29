@@ -1,0 +1,1029 @@
+---
+layout: post
+lang: en
+title: "Illumina TruSeq stranded mRNA sequencing: How it works"
+banner_image: banner_pollen_MEB.png
+image: post_illumina.png
+abstract: My research project involves a lot of RNA sequencing, mostly Illumina HiSeq paired-end. I have long sought to understand how exactly the sequencing reads listed in the FASTQ files were actually positioned relative to the starting RNA molecule. After some research on the internet, I made this illustrated explanation based on a concrete example. I hope it can help those who—like me—were a bit lost in the beginning!
+---
+
+<h2>Introduction</h2>
+
+<p>
+  This post aims to explain how Illumina paired-end sequencing reads are produced with the <a href="https://www.illumina.com/products/by-type/sequencing-kits/library-prep-kits/truseq-stranded-mrna.html">TruSeq Stranded mRNA</a> kit. Information was taken from the <a href="https://support.illumina.com/content/dam/illumina-support/documents/documentation/chemistry_documentation/samplepreps_truseq/truseqstrandedmrna/truseq-stranded-mrna-sample-prep-guide-15031047-e.pdf">Sample Preparation Guide</a> and the <a href="https://support.illumina.com/content/dam/illumina-support/documents/documentation/chemistry_documentation/samplepreps_truseq/truseq-stranded-mrna-workflow/truseq-stranded-mrna-workflow-reference-1000000040498-00.pdf">Reference Guide</a> provided by Illumina, as well as from <a href="http://tucf-genomics.tufts.edu/documents/protocols/TUCF_Understanding_Illumina_TruSeq_Adapters.pdf">this well-detailed document</a> from Tufts University. The great <a href="https://rnaseq.uoregon.edu/">RNA-seqlopedia</a> edited by researchers from the University of Oregon is another gold mine of information for those interested in all aspects of RNA-seq technologies.
+</p>
+
+<p>
+  All <a href="https://support.illumina.com/content/dam/illumina-support/documents/documentation/chemistry_documentation/experiment-design/illumina-adapter-sequences-1000000002694-07.pdf">oligonucleotide sequences</a> given in this post (primers, adapters, flow cell-bound oligos) are proprietary to Illumina. They are subject to the following legal copyright notice:
+</p>
+<p style="line-height: 120%; font-style: italic; padding-left: 2em">
+  Oligonucleotide sequences © 2018 Illumina, Inc.  All rights reserved. Derivative works created by Illumina customers are authorized for use with Illumina instruments and products only. All other uses are strictly prohibited.
+</p>
+
+<h2>RNA cleavage and priming</h2>
+
+<p>
+  Consider a fictional mRNA having the following sequence:
+</p>
+
+<div class="card seq-card">
+  <div class="card-body">
+  <p class="seq-space">
+    5’ <span class="darkgray-text">GAACUGAUAAAGAGGAAACUAAAGCCACCCCAGAGUAUUUCUGAUUGCAGCCAUUGGUGCCUGCCUGGAAUGCCC</span>
+  </p>
+  <p class="seq-space">
+       <span class="darkgray-text">GAUACAUGGAAUAGGUUACUAUAUGCAUCUCUGCUUUUGGAUCACCCCAUUGAUUCCCCUAGUCUAUCACAUUUG</span>
+  </p>
+  <p class="seq-space">
+       <span class="darkgray-text">GUCUCUUGAAAAUCAGAGAUUUACCAUCAGUAGGCUAUAUUAGUUGUUGUAUUAGUGUGGAUAGUGGUGGCAAUU</span>
+  </p>
+  <p class="seq-space">
+       <span class="darkgray-text">UCAACCCAUAUUUUCUUAACCAGCCCGUCAUAAACCCAUUUGGGUUAACCCAUUUUCAACCCGCAAUAUAAUGGA</span>
+  </p>
+  <p class="seq-space">
+       <span class="darkgray-text">UCAAAUGUGAUUUCAUAUUUCUAUUGGAUUCCUCCUGCUAGCCUAAGCGAGAUAUCUACUGAGGGAACUUUUGAA</span>
+  </p>
+  <p class="seq-no-space">
+       <span class="darkgray-text">CUUUCAUAUGAGUGUAUAAACGUGUAUGUUGAUUGUUAAAAAAAAAAAAAAAAAA</span> 3’
+  </p>
+  </div>
+</div>
+
+<p>
+RNAs are first heated (8 min at 94 °C) to generate fragments of random sizes. Let’s work with the following 200-bp fragment in the rest of this post:
+</p>
+
+<div class="card seq-card">
+  <div class="card-body">
+  <p class="seq-space">
+    5’ <span class="darkgray-text">CAGAGAUUUACCAUCAGUAGGCUAUAUUAGUUGUUGUAUUAGUGUGGAUAGUGGUGGCAAUUUCAACCCAUAUUU</span>
+  </p>
+  <p class="seq-space">
+       <span class="darkgray-text">UCUUAACCAGCCCGUCAUAAACCCAUUUGGGUUAACCCAUUUUCAACCCGCAAUAUAAUGGAUCAAAUGUGAUUU</span>
+  </p>
+  <p class="seq-no-space">
+       <span class="darkgray-text">CAUAUUUCUAUUGGAUUCCUCCUGCUAGCCUAAGCGAGAUAUCUACUGAG</span> 3’
+  </p>
+  </div>
+</div>
+
+<p>
+mRNA fragments are hybridized to a mix of random hexamers, which will be used as primers for the cDNA first strand synthesis:
+</p>
+<div class="card seq-card">
+  <div class="card-body">
+  <p class="seq-space">
+    5’ <span class="darkgray-text">CAGAGAUUUACCAUCAGUAGGCUAUAUUAGUUGUUGUAUUAGUGUGGAUAGUGGUGGCAAUUUCAACCCAUAUUU</span>
+  </p>
+  <p class="seq-space">
+       <span class="darkgray-text">UCUUAACCAGCCCGUCAUAAACCCAUUUGGGUUAACCCAUUUUCAACCCGCAAUAUAAUGGAUCAAAUGUGAUUU</span>
+  </p>
+  <p class="seq-no-space">
+       <span class="darkgray-text">CAUAUUUCUAUUGGAUUCCUCCUGCUAGCCUAAGCGAGAUAUCUACUGAG</span> 3’
+  </p>
+  <p class="seq-no-space">
+                                 ← 3’ <span class="gray-bg">TTCGCT</span> 5’
+  </p>
+  </div>
+</div>
+
+<p>
+When sequencing mRNAs, random primers allow to get a more uniform distribution of fragments along RNA molecules. Using oligo-dT primers would obviously lead to an over-representation of polyA-containing fragments stemming from 3′ ends of mRNAs. Even if fragmentation were performed after oligo-dT-primed cDNA synthesis, we would still get a 3′-enriched distribution of fragments, due to the low processivity of reverse transcriptases.
+</p>
+
+<h2>Reverse transcription</h2>
+
+<h3>First strand synthesis</h3>
+
+<p>
+The SuperScriptII reverse transcriptase is used to synthesize the first cDNA strand, which is complementary to the initial mRNA. Actinomycin D is included to prevent DNA-dependent DNA synthesis.
+</p>
+
+<div class="card seq-card">
+  <div class="card-body">
+  <p class="seq-no-space">
+    5’ <span class="darkgray-text">CAGAGAUUUACCAUCAGUAGGCUAUAUUAGUUGUUGUAUUAGUGUGGAUAGUGGUGGCAAUUUCAACCCAUAUUU</span>
+  </p>
+  <p class="seq-space">
+    3’ <span class="gray-bg">GTCTCTAAATGGTAGTCATCCGATATAATCAACAACATAATCACACCTATCACCACCGTTAAAGTTGGGTATAAA</span>
+  </p>
+  <p class="seq-no-space">
+       <span class="darkgray-text">UCUUAACCAGCCCGUCAUAAACCCAUUUGGGUUAACCCAUUUUCAACCCGCAAUAUAAUGGAUCAAAUGUGAUUU</span>
+  </p>
+  <p class="seq-space">
+       <span class="gray-bg">AGAATTGGTCGGGCAGTATTTGGGTAAACCCAATTGGGTAAAAGTTGGGCGTTATATTACCTAGTTTACACTAAA</span>
+  </p>
+  <p class="seq-no-space">
+       <span class="darkgray-text">CAUAUUUCUAUUGGAUUCCUCCUGCUAGCCUAAGCGAGAUAUCUACUGAG</span> 3’
+  </p>
+  <p class="seq-no-space">
+       <span class="gray-bg">GTATAAAGATAACCTAAGGAGGACGATCGGATTCGCT</span> 5’
+  </p>
+  </div>
+</div>
+
+
+<h3>Second strand synthesis</h3>
+
+<p>
+RNase H is used to nick the template mRNA strand by hydrolyzing phosphodiester bonds randomly along the RNA-DNA duplex. This produces new 3′-OH ends available to prime synthesis of the second strand.
+</p>
+
+<div class="card seq-card">
+  <div class="card-body">
+  <p class="seq-no-space">
+    5’ <span class="darkgray-text">CAGAGAUUUACCAUCAGUAGGCU</span> <span class="darkgray-text">AUAUUAGUUGUUGUAUUAGUGUGGAUAGUGGU</span> <span class="darkgray-text">GGCAAUUUCAACCCAUA</span>
+  </p>
+  <p class="seq-space">
+    3’ <span class="gray-bg">GTCTCTAAATGGTAGTCATCCGA TATAATCAACAACATAATCACACCTATCACCA CCGTTAAAGTTGGGTAT</span>
+  </p>
+  <p class="seq-no-space">
+       <span class="darkgray-text">UUUUCU</span> <span class="darkgray-text">UAACCAGCCCGUCAUAAACCCAUUUGGGUU</span> <span class="darkgray-text">AACCCAUUUUCAACCCGCAAUAUAAUGGAUCAAAUG</span>
+  </p>
+  <p class="seq-space">
+       <span class="gray-bg">AAAAGA ATTGGTCGGGCAGTATTTGGGTAAACCCAA TTGGGTAAAAGTTGGGCGTTATATTACCTAGTTTAC</span>
+  </p>
+  <p class="seq-no-space">
+       <span class="darkgray-text">UGAUUUCAUAUUU</span> <span class="darkgray-text">CUAUUGGAUUCCUCCUGCUAGCCUAAGCGAGAUAUCUACUGAG</span> 3’
+  </p>
+  <p class="seq-no-space">
+       <span class="gray-bg">ACTAAAGTATAAA GATAACCTAAGGAGGACGATCGGATTCGCT</span> 5’
+  </p>
+  </div>
+</div>
+
+<p>
+DNA polymerase I synthesizes complementary DNA fragments, starting at each 3′-OH end (5′ → 3′ polymerase activity) while degrading the RNA as it moves forward (5′ → 3′ exonuclease activity). Importantly, the nucleotide mix used for second strand synthesis includes d<strong><span class="monospace red-text">U</span></strong>TP instead of dTTP. This is will be used later to ensure the “strandedness” of the library. After this step, the initial 5′ mRNA remains bound to the cDNA.
+</p>
+
+<div class="card seq-card">
+  <div class="card-body">
+  <p class="seq-no-space">
+    5’ <span class="darkgray-text">CAGAGAUUUACCAUCAGUAGGCU</span> <span class="lightgray-bg">A<span class="red-text">U</span>A<span class="red-text">U</span><span class="red-text">U</span>AG<span class="red-text">U</span><span class="red-text">U</span>G<span class="red-text">U</span><span class="red-text">U</span>G<span class="red-text">U</span>A<span class="red-text">U</span><span class="red-text">U</span>AG<span class="red-text">U</span>G<span class="red-text">U</span>GGA<span class="red-text">U</span>AG<span class="red-text">U</span>GG<span class="red-text">U</span></span> <span class="lightgray-bg">GGCAA<span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span>CAACCCA<span class="red-text">U</span>A</span>
+  </p>
+  <p class="seq-space">
+    3’ <span class="gray-bg">GTCTCTAAATGGTAGTCATCCGA TATAATCAACAACATAATCACACCTATCACCA CCGTTAAAGTTGGGTAT</span>
+  </p>
+  <p class="seq-no-space">
+       <span class="lightgray-bg"><span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span>C<span class="red-text">U</span></span> <span class="lightgray-bg"><span class="red-text">U</span>AACCAGCCCG<span class="red-text">U</span>CA<span class="red-text">U</span>AAACCCA<span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span>GGG<span class="red-text">U</span><span class="red-text">U</span></span> <span class="lightgray-bg">AACCCA<span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span>CAACCCGCAA<span class="red-text">U</span>A<span class="red-text">U</span>AA<span class="red-text">U</span>GGA<span class="red-text">U</span>CAAA<span class="red-text">U</span>G</span>
+  </p>
+  <p class="seq-space">
+       <span class="gray-bg">AAAAGA ATTGGTCGGGCAGTATTTGGGTAAACCCAA TTGGGTAAAAGTTGGGCGTTATATTACCTAGTTTAC</span>
+  </p>
+  <p class="seq-no-space">
+       <span class="lightgray-bg"><span class="red-text">U</span>GA<span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span>CA<span class="red-text">U</span>A<span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span></span> <span class="lightgray-bg">C<span class="red-text">U</span>A<span class="red-text">U</span><span class="red-text">U</span>GGA<span class="red-text">U</span><span class="red-text">U</span>CC<span class="red-text">U</span>CC<span class="red-text">U</span>GC<span class="red-text">U</span>AGCC<span class="red-text">U</span>AAGCGAGA<span class="red-text">U</span>A<span class="red-text">U</span>C<span class="red-text">U</span>AC<span class="red-text">U</span>GAG</span> 3’
+  </p>
+  <p class="seq-no-space">
+       <span class="gray-bg">ACTAAAGTATAAA GATAACCTAAGGAGGACGATCGGATTCGCT</span> 5’
+  </p>
+  </div>
+</div>
+
+<p>
+DNA ligase then reestablishes phosphodiester bonds between second strand cDNA fragments.
+</p>
+
+<div class="card seq-card">
+  <div class="card-body">
+  <p class="seq-no-space">
+    5’ <span class="darkgray-text">CAGAGAUUUACCAUCAGUAGGCU</span> <span class="lightgray-bg">A<span class="red-text">U</span>A<span class="red-text">U</span><span class="red-text">U</span>AG<span class="red-text">U</span><span class="red-text">U</span>G<span class="red-text">U</span><span class="red-text">U</span>G<span class="red-text">U</span>A<span class="red-text">U</span><span class="red-text">U</span>AG<span class="red-text">U</span>G<span class="red-text">U</span>GGA<span class="red-text">U</span>AG<span class="red-text">U</span>GG<span class="red-text">U</span>GGCAA<span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span>CAACCCA<span class="red-text">U</span>A<span class="red-text">U</span></span>
+  </p>
+  <p class="seq-space">
+    3’ <span class="gray-bg">GTCTCTAAATGGTAGTCATCCGA TATAATCAACAACATAATCACACCTATCACCACCGTTAAAGTTGGGTATA</span>
+  </p>
+  <p class="seq-no-space">
+       <span class="lightgray-bg"><span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span>C<span class="red-text">U</span><span class="red-text">U</span>AACCAGCCCG<span class="red-text">U</span>CA<span class="red-text">U</span>AAACCCA<span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span>GGG<span class="red-text">U</span><span class="red-text">U</span>AACCCA<span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span>CAACCCGCAA<span class="red-text">U</span>A<span class="red-text">U</span>AA<span class="red-text">U</span>GGA<span class="red-text">U</span>CAAA<span class="red-text">U</span>G<span class="red-text">U</span>GA</span>
+  </p>
+  <p class="seq-space">
+       <span class="gray-bg">AAAGAATTGGTCGGGCAGTATTTGGGTAAACCCAATTGGGTAAAAGTTGGGCGTTATATTACCTAGTTTACACT</span>
+  </p>
+  <p class="seq-no-space">
+       <span class="lightgray-bg"><span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span>CA<span class="red-text">U</span>A<span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span>C<span class="red-text">U</span>A<span class="red-text">U</span><span class="red-text">U</span>GGA<span class="red-text">U</span><span class="red-text">U</span>CC<span class="red-text">U</span>CC<span class="red-text">U</span>GC<span class="red-text">U</span>AGCC<span class="red-text">U</span>AAGCGA</span> 3’
+  </p>
+  <p class="seq-no-space">
+       <span class="gray-bg">AAAGTATAAAGATAACCTAAGGAGGACGATCGGATTCGCT</span> 5’
+  </p>
+  </div>
+</div>
+
+<p>
+The cDNA then undergoes a blunting step, after which the RNA fragment in 5′ is lost.
+</p>
+
+<div class="card seq-card">
+  <div class="card-body">
+  <p class="seq-no-space">
+    5’ <span class="lightgray-bg">A<span class="red-text">U</span>A<span class="red-text">U</span><span class="red-text">U</span>AG<span class="red-text">U</span><span class="red-text">U</span>G<span class="red-text">U</span><span class="red-text">U</span>G<span class="red-text">U</span>A<span class="red-text">U</span><span class="red-text">U</span>AG<span class="red-text">U</span>G<span class="red-text">U</span>GGA<span class="red-text">U</span>AG<span class="red-text">U</span>GG<span class="red-text">U</span>GGCAA<span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span>CAACCCA<span class="red-text">U</span>A<span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span>C<span class="red-text">U</span><span class="red-text">U</span>AACCAGCCCG<span class="red-text">U</span>CA<span class="red-text">U</span>AAAC</span>
+  </p>
+  <p class="seq-space">
+    3’ <span class="gray-bg">TATAATCAACAACATAATCACACCTATCACCACCGTTAAAGTTGGGTATAAAAGAATTGGTCGGGCAGTATTTG</span>
+  </p>
+  <p class="seq-no-space">
+       <span class="lightgray-bg">CCA<span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span>GGG<span class="red-text">U</span><span class="red-text">U</span>AACCCA<span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span>CAACCCGCAA<span class="red-text">U</span>A<span class="red-text">U</span>AA<span class="red-text">U</span>GGA<span class="red-text">U</span>CAAA<span class="red-text">U</span>G<span class="red-text">U</span>GA<span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span>CA<span class="red-text">U</span>A<span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span>C<span class="red-text">U</span>A<span class="red-text">U</span><span class="red-text">U</span>GGA<span class="red-text">U</span><span class="red-text">U</span>CC<span class="red-text">U</span>C</span>
+  </p>
+  <p class="seq-space">
+       <span class="gray-bg">GGTAAACCCAATTGGGTAAAAGTTGGGCGTTATATTACCTAGTTTACACTAAAGTATAAAGATAACCTAAGGAG</span>
+  </p>
+  <p class="seq-no-space">
+       <span class="lightgray-bg">C<span class="red-text">U</span>GC<span class="red-text">U</span>AGCC<span class="red-text">U</span>AAGCGA</span> 3’
+  </p>
+  <p class="seq-no-space">
+       <span class="gray-bg">GACGATCGGATTCGCT</span> 5’
+  </p>
+  </div>
+</div>
+
+<p>
+If we rotate the cDNA by 180°, we get:
+</p>
+
+<div class="card seq-card">
+  <div class="card-body">
+  <p class="seq-no-space">
+    5’ <span class="gray-bg">TCGCTTAGGCTAGCAGGAGGAATCCAATAGAAATATGAAATCACATTTGATCCATTATATTGCGGGTTGAAAAT</span>
+  </p>
+  <p class="seq-space">
+    3’ <span class="lightgray-bg">AGCGAA<span class="red-text">U</span>CCGA<span class="red-text">U</span>CG<span class="red-text">U</span>CC<span class="red-text">U</span>CC<span class="red-text">U</span><span class="red-text">U</span>AGG<span class="red-text">U</span><span class="red-text">U</span>A<span class="red-text">U</span>C<span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span>A<span class="red-text">U</span>AC<span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span>AG<span class="red-text">U</span>G<span class="red-text">U</span>AAAC<span class="red-text">U</span>AGG<span class="red-text">U</span>AA<span class="red-text">U</span>A<span class="red-text">U</span>AACGCCCAAC<span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span>A</span>
+  </p>
+  <p class="seq-no-space">
+       <span class="gray-bg">GGGTTAACCCAAATGGGTTTATGACGGGCTGGTTAAGAAAATATGGGTTGAAATTGCCACCACTATCCACACTA</span>
+  </p>
+  <p class="seq-space">
+       <span class="lightgray-bg">CCCAA<span class="red-text">U</span><span class="red-text">U</span>GGG<span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span>ACCCAAA<span class="red-text">U</span>AC<span class="red-text">U</span>GCCCGACCAA<span class="red-text">U</span><span class="red-text">U</span>C<span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span>A<span class="red-text">U</span>ACCCAAC<span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span>AACGG<span class="red-text">U</span>GG<span class="red-text">U</span>GA<span class="red-text">U</span>AGG<span class="red-text">U</span>G<span class="red-text">U</span>GA<span class="red-text">U</span></span>
+  </p>
+  <p class="seq-no-space">
+       <span class="gray-bg">ATACAACAACTAATAT</span> 3’
+  </p>
+  <p class="seq-no-space">
+       <span class="lightgray-bg"><span class="red-text">U</span>A<span class="red-text">U</span>G<span class="red-text">U</span><span class="red-text">U</span>G<span class="red-text">U</span><span class="red-text">U</span>GA<span class="red-text">U</span><span class="red-text">U</span>A<span class="red-text">U</span>A</span> 5’
+  </p>
+  </div>
+</div>
+
+<h2>Adapter ligation</h2>
+<h3>3′ adenylation</h3>
+
+<p>
+The cDNA 3′ ends are adenylated to facilitate subsequent adapter ligation:
+</p>
+
+<div class="card seq-card">
+  <div class="card-body">
+  <p class="seq-no-space">
+    5’  <span class="gray-bg">TCGCTTAGGCTAGCAGGAGGAATCCAATAGAAATATGAAATCACATTTGATCCATTATATTGCGGGTTGAAAAT</span>
+  </p>
+  <p class="seq-space">
+    3’ <span class="red-bg">A</span><span class="lightgray-bg">AGCGAA<span class="red-text">U</span>CCGA<span class="red-text">U</span>CG<span class="red-text">U</span>CC<span class="red-text">U</span>CC<span class="red-text">U</span><span class="red-text">U</span>AGG<span class="red-text">U</span><span class="red-text">U</span>A<span class="red-text">U</span>C<span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span>A<span class="red-text">U</span>AC<span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span>AG<span class="red-text">U</span>G<span class="red-text">U</span>AAAC<span class="red-text">U</span>AGG<span class="red-text">U</span>AA<span class="red-text">U</span>A<span class="red-text">U</span>AACGCCCAAC<span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span>A</span>
+  </p>
+  <p class="seq-no-space">
+        <span class="gray-bg">GGGTTAACCCAAATGGGTTTATGACGGGCTGGTTAAGAAAATATGGGTTGAAATTGCCACCACTATCCACACTA</span>
+  </p>
+  <p class="seq-space">
+        <span class="lightgray-bg">CCCAA<span class="red-text">U</span><span class="red-text">U</span>GGG<span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span>ACCCAAA<span class="red-text">U</span>AC<span class="red-text">U</span>GCCCGACCAA<span class="red-text">U</span><span class="red-text">U</span>C<span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span>A<span class="red-text">U</span>ACCCAAC<span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span>AACGG<span class="red-text">U</span>GG<span class="red-text">U</span>GA<span class="red-text">U</span>AGG<span class="red-text">U</span>G<span class="red-text">U</span>GA<span class="red-text">U</span></span>
+  </p>
+  <p class="seq-no-space">
+        <span class="gray-bg">ATACAACAACTAATAT</span><span class="red-bg">A</span> 3’
+  </p>
+  <p class="seq-no-space">
+        <span class="lightgray-bg"><span class="red-text">U</span>A<span class="red-text">U</span>G<span class="red-text">U</span><span class="red-text">U</span>G<span class="red-text">U</span><span class="red-text">U</span>GA<span class="red-text">U</span><span class="red-text">U</span>A<span class="red-text">U</span>A</span> 5’
+  </p>
+  </div>
+</div>
+
+<h3>Sequences of Illumina TruSeq adapters</h3>
+
+<p>
+  <strong>TruSeq Universal Adapter</strong>
+</p>
+
+<div class="card seq-card">
+  <div class="card-body">
+  <p class="seq-no-space">
+    5’ <span class="lightgreen-bg"><u>AATGATACGGCGACCACCGA</u>GATCTACACTCTTTCCCTACACGACGCTCTTCCGATC*T</span> 3’
+  </p>
+  </div>
+</div>
+
+<p>
+The part underlined will bind to complementary oligos on the flow cell. The asterisk (<span class="monospace">*</span>) represents a phosphorothioate bond, which protects the final thymidine against exonucleasic degradation. This is particularly important, since this thymidine is the one that will hybridize to the adenosine we have just added to the cDNA 3′ ends.
+</p>
+
+<p>
+  <strong>TruSeq Index Adapter</strong> (here with index 1)
+</p>
+
+<div class="card seq-card">
+  <div class="card-body">
+  <p class="seq-no-space">
+    5’  P-<span class="lightblue-bg">GATCGGAAGAGCACACGTCTGAACTCCAGTCAC</span><span class="lightyellow-bg">ATCACG</span><span class="lightblue-bg">ATCT<u>CGTATGCCGTCTTCTGCTTG</u></span>  3’
+  </p>
+  </div>
+</div>
+
+<p>
+The part underlined will bind to complementary oligos on the flow cell. The <span class="monospace">P-</span> represents a phosphate group added to the adapter’s 5′ end to allow ligation to the extra 3′ adenosines on the cDNA. The yellow region in the multiplexing index, a “barcode” which allows to specifically tag fragments from different libraries that will be sequenced at the same time. There are 24 indexes:
+</p>
+
+<table class="table table-sm table-bordered">
+<thead>
+<tr>
+  <td><strong>Index 1</strong></td>
+  <td class="monospace">ATCACG</td>
+  <td><strong>Index 7</strong></td>
+  <td class="monospace">CAGATC</td>
+  <td><strong>Index 13</strong></td>
+  <td class="monospace">AGTCAACA</td>
+  <td><strong>Index 20</strong></td>
+  <td class="monospace">GTGGCCTT</td>
+</tr>
+<tr>
+  <td><strong>Index 2</strong></td>
+  <td class="monospace">CGATGT</td>
+  <td><strong>Index 8</strong></td>
+  <td class="monospace">ACTTGA</td>
+  <td><strong>Index 14</strong></td>
+  <td class="monospace">AGTTCCGT</td>
+  <td><strong>Index 21</strong></td>
+  <td class="monospace">GTTTCGGA</td>
+</tr>
+<tr>
+  <td><strong>Index 3</strong></td>
+  <td class="monospace">TTAGGC</td>
+  <td><strong>Index 9</strong></td>
+  <td class="monospace">GATCAG</td>
+  <td><strong>Index 15</strong></td>
+  <td class="monospace">ATGTCAGA</td>
+  <td><strong>Index 22</strong></td>
+  <td class="monospace">CGTACGTA</td>
+</tr>
+<tr>
+  <td><strong>Index 4</strong></td>
+  <td class="monospace">TGACCA</td>
+  <td><strong>Index 10</strong></td>
+  <td class="monospace">TAGCTT</td>
+  <td><strong>Index 16</strong></td>
+  <td class="monospace">CCGTCCCG</td>
+  <td><strong>Index 23</strong></td>
+  <td class="monospace">GAGTGGAT</td>
+</tr>
+<tr>
+  <td><strong>Index 5</strong></td>
+  <td class="monospace">ACAGTG</td>
+  <td><strong>Index 11</strong></td>
+  <td class="monospace">GGCTAC</td>
+  <td><strong>Index 18</strong></td>
+  <td class="monospace">GTCCGCAC</td>
+  <td><strong>Index 25</strong></td>
+  <td class="monospace">ACTGATAT</td>
+</tr>
+<tr>
+  <td><strong>Index 6</strong></td>
+  <td class="monospace">GCCAAT</td>
+  <td><strong>Index 12</strong></td>
+  <td class="monospace">CTTGTA</td>
+  <td><strong>Index 19</strong></td>
+  <td class="monospace">GTGAAACG</td>
+  <td><strong>Index 27</strong></td>
+  <td class="monospace">ATTCCTTT</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Formation of “Y-shaped” adapter complexes</h3>
+
+<p>
+Both adapters are mixed in equal amounts and denaturated at 95 °C. The temperature is then lowered to 70 °C in order for the adapters to anneal to each other along a short 12-nt terminal region. This forms “Y-shaped” complexes that will be ligated to both extremities of all cDNA fragments.
+</p>
+
+<div class="card seq-card">
+  <div class="card-body">
+  <p class="seq-no-space">
+          5’ <span class="lightgreen-bg">AATGATACGGCGACCACCGAGATCTACACTCTTTCCCTACACGACGCTCTTCCGATC*T</span> 3’
+  </p>
+  <p class="seq-no-space">
+                                                          ············
+  </p>
+  <p class="seq-no-space">
+    3’ <span class="lightblue-bg">GTTCGTCTTCTGCCGTATGCTCTA</span><span class="lightyellow-bg">GCACTA</span><span class="lightblue-bg">CACTGACCTCAAGTCTGCACACGAGAAGGCTAG</span>-P 5’
+  </p>
+  </div>
+</div>
+
+
+<p>
+After the ligation, the “left end” of the cDNA (5′ end of the first strand) looks like this:
+</p>
+
+<div class="card seq-card">
+  <div class="card-body">
+  <p class="seq-no-space">
+          5’ <span class="lightgreen-bg">AATGATACGGCGACCACCGAGATCTACACTCTTTCCCTACACGACGCTCTTCCGATCT</span><span class="gray-bg">TCGCTTAG…</span> 3’
+  </p>
+  <p class="seq-no-space">
+                                                          ······················
+  </p>
+  <p class="seq-no-space">
+    3’ <span class="lightblue-bg">GTTCGTCTTCTGCCGTATGCTCTA</span><span class="lightyellow-bg">GCACTA</span><span class="lightblue-bg">CACTGACCTCAAGTCTGCACACGAGAAGGCTAG</span><span class="red-bg">A</span><span class="lightgray-bg">AGCGAA<span class="red-text">U</span>C…</span> 5’
+  </p>
+  </div>
+</div>
+
+<p>
+The “right end” of the cDNA (3′ end of the first strand) looks like this:
+</p>
+
+<div class="card seq-card">
+  <div class="card-body">
+  <p class="seq-no-space">
+    5’ <span class="gray-bg">…ACTAATAT</span><span class="red-bg">A</span><span class="lightblue-bg">GATCGGAAGAGCACACGTCTGAACTCCAGTCAC</span><span class="lightyellow-bg">ATCACG</span><span class="lightblue-bg">ATCTCGTATGCCGTCTTCTGCTTG</span> 3’
+  </p>
+  <p class="seq-no-space">
+       ······················
+  </p>
+  <p class="seq-no-space">
+    3’ <span class="lightgray-bg">…<span class="red-text">U</span>GA<span class="red-text">U</span><span class="red-text">U</span>A<span class="red-text">U</span>A</span><span class="lightgreen-bg">TCTAGCCTTCTCGCAGCACATCCCTTTCTCACATCTAGAGCCACCAGCGGCATAGTAA</span> 5’
+  </p>
+  </div>
+</div>
+
+<h2>PCR enrichment</h2>
+
+<p>
+The library can now be amplified by PCR. Here, the TruSeq protocol involves a particular polymerase that stops right after meeting a U base on the template. Since the cDNA second strand was synthesized with Us instead of Ts, only the cDNA first strand can be used as a template for PCR, which makes the library stranded.
+</p>
+
+<p>
+The primers used for this PCR are:
+</p>
+
+<p>
+<strong>Primer 1:</strong> identical to the first (5′-most) 40 bases of the universal adapter.
+</p>
+
+<div class="card seq-card">
+  <div class="card-body">
+  <p class="seq-no-space">
+    5’ <span class="green-text">AATGATACGGCGACCACCGAGATCTACACTCTTTCCCTACACGA</span> 3’
+  </p>
+  </div>
+</div>
+
+<p>
+<strong>Primer 2:</strong> complementary to the last (3′-most) 24 bases of the indexed adapter.
+</p>
+
+<div class="card seq-card">
+  <div class="card-body">
+  <p class="seq-no-space">
+    5’ <span class="blue-text">CAAGCAGAAGACGGCATACGAGAT</span> 3’
+  </p>
+  </div>
+</div>
+
+<h3>First round of PCR</h3>
+
+<p>
+At the first round, only <strong><span class="blue-text">primer 2</span></strong> can anneal to cDNA fragments, at the 3′ end of indexed adapters. The PCR begins along both strands (light gray letters: <strong><span class="monospace gray-text">ATCG</span></strong>), but the presence of dUTPs in the second cDNA strand interrupts the reaction (<strong><span class="monospace red-text">*</span></strong>). In the end, only the first cDNA strand is completely amplified and available for subsequent PCR rounds.
+
+</p>
+
+<div class="card seq-card">
+  <div class="card-body">
+  <p class="seq-no-space">
+          <span class="gray-text">3’ TTACTATGCCGCTGGTGGCTCTAGATGTGAGAAAGGGATGTGCTGCGAGAAGGCTAGAAGCGAATCC</span>
+  </p>
+  <p class="seq-space">
+          5’ <span class="lightgreen-bg">AATGATACGGCGACCACCGAGATCTACACTCTTTCCCTACACGACGCTCTTCCGATCT</span><span class="gray-bg">TCGCTTAGG</span>
+  </p>
+  <p class="seq-no-space">
+    3’ <span class="lightblue-bg">GTTCGTCTTCTGCCGTATGCTCTA</span><span class="lightyellow-bg">GCACTA</span><span class="lightblue-bg">CACTGACCTCAAGTCTGCACACGAGAAGGCTAG</span><span class="red-bg">A</span><span class="lightgray-bg">AGCGAA<span class="red-text">U</span>CC</span>
+  </p>
+  <p class="seq-large-space">
+    <span class="blue-text">5’ CAAGCAGAAGACGGCATACGAGAT</span><span class="gray-text">CGTGATGTGACTGGAGTTCAGACGTGTGCTCTTCCGATCTATACTT</span><span class="red-text">*</span>
+  </p>
+  <p class="seq-no-space">
+       <span class="gray-text">GATCGTCCTCCTTAGGTTATCTTTATACTTTAGTGTAAACTAGGTAATATAACGCCCAACTTTTACCCAATTG</span>
+  </p>
+  <p class="seq-space">
+       <span class="gray-bg">CTAGCAGGAGGAATCCAATAGAAATATGAAATCACATTTGATCCATTATATTGCGGGTTGAAAATGGGTTAAC</span>
+  </p>
+  <p class="seq-large-space">
+       <span class="lightgray-bg">GA<span class="red-text">U</span>CG<span class="red-text">U</span>CC<span class="red-text">U</span>CC<span class="red-text">U</span><span class="red-text">U</span>AGG<span class="red-text">U</span><span class="red-text">U</span>A<span class="red-text">U</span>C<span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span>A<span class="red-text">U</span>AC<span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span>AG<span class="red-text">U</span>G<span class="red-text">U</span>AAAC<span class="red-text">U</span>AGG<span class="red-text">U</span>AA<span class="red-text">U</span>A<span class="red-text">U</span>AACGCCCAAC<span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span>ACCCAA<span class="red-text">U</span><span class="red-text">U</span>G</span>
+  </p>
+  <p class="seq-no-space">
+       <span class="gray-text">GGTTTACCCAAATACTGCCCGACCAATTCTTTTATACCCAACTTTAACGGTGGTGATAGGTGTGATTATGTTG</span>
+  </p>
+  <p class="seq-space">
+       <span class="gray-bg">CCAAATGGGTTTATGACGGGCTGGTTAAGAAAATATGGGTTGAAATTGCCACCACTATCCACACTAATACAAC</span>
+  </p>
+  <p class="seq-large-space">
+       <span class="lightgray-bg">GG<span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span>ACCCAAA<span class="red-text">U</span>AC<span class="red-text">U</span>GCCCGACCAA<span class="red-text">U</span><span class="red-text">U</span>C<span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span>A<span class="red-text">U</span>ACCCAAC<span class="red-text">U</span><span class="red-text">U</span><span class="red-text">U</span>AACGG<span class="red-text">U</span>GG<span class="red-text">U</span>GA<span class="red-text">U</span>AGG<span class="red-text">U</span>G<span class="red-text">U</span>GA<span class="red-text">U</span><span class="red-text">U</span>A<span class="red-text">U</span>G<span class="red-text">U</span><span class="red-text">U</span>G</span>
+  </p>
+  <p class="seq-no-space">
+    <span class="gray-text">   TTGATTATATCTAGCCTTCTCGTGTGCAGACTTGAGGTCAGTGTAGTGC</span><span class="blue-text">TAGAGCATACGGCAGAAGACGAAC 5’</span>
+  </p>
+  <p class="seq-space">
+       <span class="gray-bg">AACTAATAT</span><span class="red-bg">A</span><span class="lightblue-bg">GATCGGAAGAGCACACGTCTGAACTCCAGTCAC</span><span class="lightyellow-bg">ATCACG</span><span class="lightblue-bg">ATCTCGTATGCCGTCTTCTGCTTG</span> 3’
+  </p>
+  <p class="seq-no-space">
+       <span class="lightgray-bg"><span class="red-text">U</span><span class="red-text">U</span>GA<span class="red-text">U</span><span class="red-text">U</span>A<span class="red-text">U</span>A</span><span class="lightgreen-bg">TCTAGCCTTCTCGCAGCACATCCCTTTCTCACATCTAGAGCCACCAGCGGCATAGTAA</span> 5’
+  </p>
+  </div>
+</div>
+
+<h3>Subsequent rounds of PCR</h3>
+
+<p>
+<strong><span class="green-text">Primer 1</span></strong> can now anneal to the universal adapter. The number of cycles is controlled (~15) to avoid skewing relative abundance of transcripts in the library.
+</p>
+
+<div class="card seq-card">
+  <div class="card-body">
+  <p class="seq-no-space">
+    <span class="gray-text">3’ TTACTATGCCGCTGGTGGCTCTAGATGTGAGAAAGGGATGTGCTGCGAGAAGGCTAGAAGCGAATCCGATCGT</span>
+  </p>
+  <p class="seq-space">
+    5’ <span class="lightgreen-bg">AATGATACGGCGACCACCGAGATCTACACTCTTTCCCTACACGACGCTCTTCCGATCT</span><span class="gray-bg">TCGCTTAGGCTAGCA</span>
+  </p>
+  <p class="seq-no-space">
+    3’ <span class="lightgreen-bg">TTACTATGCCGCTGGTGGCTCTAGATGTGAGAAAGGGATGTGCTGCGAGAAGGCTAGA</span><span class="lightgray-bg">AGCGAATCCGATCGT</span>
+  </p>
+  <p class="seq-large-space">
+    <span class="green-text">5’ AATGATACGGCGACCACCGAGATCTACACTCTTTCCCTACACGA</span><span class="gray-text">CGCTCTTCCGATCTTCGCTTAGGCTAGCA</span>
+  </p>
+
+  <p class="seq-no-space">
+       <span class="gray-text">CCTCCTTAGGTTATCTTTATACTTTAGTGTAAACTAGGTAATATAACGCCCAACTTTTACCCAATTGGGTTTA</span>
+  </p>
+  <p class="seq-space">
+       <span class="gray-bg">GGAGGAATCCAATAGAAATATGAAATCACATTTGATCCATTATATTGCGGGTTGAAAATGGGTTAACCCAAAT</span>
+  </p>
+  <p class="seq-no-space">
+       <span class="lightgray-bg">CCTCCTTAGGTTATCTTTATACTTTAGTGTAAACTAGGTAATATAACGCCCAACTTTTACCCAATTGGGTTTA</span>
+  </p>
+  <p class="seq-large-space">
+       <span class="gray-text">GGAGGAATCCAATAGAAATATGAAATCACATTTGATCCATTATATTGCGGGTTGAAAATGGGTTAACCCAAAT</span>
+  </p>
+
+  <p class="seq-no-space">
+       <span class="gray-text">CCCAAATACTGCCCGACCAATTCTTTTATACCCAACTTTAACGGTGGTGATAGGTGTGATTATGTTGTTGATT</span>
+  <p class="seq-space">
+       <span class="gray-bg">GGGTTTATGACGGGCTGGTTAAGAAAATATGGGTTGAAATTGCCACCACTATCCACACTAATACAACAACTAA</span>
+  </p>
+  <p class="seq-no-space">
+       <span class="lightgray-bg">CCCAAATACTGCCCGACCAATTCTTTTATACCCAACTTTAACGGTGGTGATAGGTGTGATTATGTTGTTGATT</span>
+  </p>
+  <p class="seq-large-space">
+       <span class="gray-text">GGGTTTATGACGGGCTGGTTAAGAAAATATGGGTTGAAATTGCCACCACTATCCACACTAATACAACAACTAA</span>
+  </p>
+
+  <p class="seq-no-space">
+       <span class="gray-text">ATATCTAGCCTTCTCGTGTGCAGACTTGAGGTCAGTGTAGTGC</span><span class="blue-text">TAGAGCATACGGCAGAAGACGAAC</span>
+  <p class="seq-space">
+       <span class="gray-bg">TAT</span><span class="red-bg">A</span><span class="lightblue-bg"
+    >GATCGGAAGAGCACACGTCTGAACTCCAGTCAC</span><span class="lightyellow-bg">ATCACG</span><span class="lightblue-bg">ATCTCGTATGCCGTCTTCTGCTTG</span> 3’
+  </p>
+  <p class="seq-no-space">
+       <span class="lightgray-bg">ATA</span><span class="red-bg">T</span><span class="lightblue-bg"
+    >CTAGCCTTCTCGTGTGCAGACTTGAGGTCAGTG</span><span class="lightyellow-bg">TAGTGC</span><span class="lightblue-bg">TAGAGCATACGGCAGAAGACGAAC</span> 5’
+  </p>
+  <p class="seq-no-space">
+       <span class="gray-text">TATAGATCGGAAGAGCACACGTCTGAACTCCAGTCACATCACGATCTCGTATGCCGTCTTCTGCTTG 3’</span>
+  </p>
+  </div>
+</div>
+
+<p>
+In the end, cDNA fragments are oriented: the universal and the indexed adapters are located to the 5′-most and 3′-most regions of the first cDNA strand, respectively.
+</p>
+
+<div class="card seq-card">
+  <div class="card-body">
+  <p class="seq-no-space">
+    5’ <span class="lightgreen-bg">AATGATACGGCGACCACCGAGATCTACACTCTTTCCCTACACGACGCTCTTCCGATCT</span><span class="gray-bg">TCGCTTAGGCTAGCA</span>
+  </p>
+  <p class="seq-space">
+    3’ <span class="lightgreen-bg">TTACTATGCCGCTGGTGGCTCTAGATGTGAGAAAGGGATGTGCTGCGAGAAGGCTAGA</span><span class="lightgray-bg">AGCGAATCCGATCGT</span>
+  </p>
+  <p class="seq-no-space">
+       <span class="gray-bg">GGAGGAATCCAATAGAAATATGAAATCACATTTGATCCATTATATTGCGGGTTGAAAATGGGTTAACCCAAAT</span>
+  </p>
+  <p class="seq-space">
+       <span class="lightgray-bg">CCTCCTTAGGTTATCTTTATACTTTAGTGTAAACTAGGTAATATAACGCCCAACTTTTACCCAATTGGGTTTA</span>
+  </p>
+  <p class="seq-no-space">
+       <span class="gray-bg">GGGTTTATGACGGGCTGGTTAAGAAAATATGGGTTGAAATTGCCACCACTATCCACACTAATACAACAACTAA</span>
+  </p>
+  <p class="seq-space">
+       <span class="lightgray-bg">CCCAAATACTGCCCGACCAATTCTTTTATACCCAACTTTAACGGTGGTGATAGGTGTGATTATGTTGTTGATT</span>
+  </p>
+  <p class="seq-no-space">
+       <span class="gray-bg">TAT</span><span class="red-bg">A</span><span class="lightblue-bg"
+    >GATCGGAAGAGCACACGTCTGAACTCCAGTCAC</span><span class="lightyellow-bg">ATCACG</span><span class="lightblue-bg">ATCTCGTATGCCGTCTTCTGCTTG</span> 3’
+  </p>
+  <p class="seq-no-space">
+       <span class="lightgray-bg">ATA</span><span class="red-bg">T</span><span class="lightblue-bg"
+    >CTAGCCTTCTCGTGTGCAGACTTGAGGTCAGTG</span><span class="lightyellow-bg">TAGTGC</span><span class="lightblue-bg">TAGAGCATACGGCAGAAGACGAAC</span> 5’
+  </p>
+  </div>
+</div>
+
+
+<h2>Binding to flow cell</h2>
+
+<p>
+The cDNA library can now be introduced in the Illumina flow cell, which is coated with two different kinds of oligos. The bullet points (<strong><span class="monospace">•••</span></strong>) represent the bond to the flow cell.
+</p>
+
+<p>
+  <strong>Universal adapter oligo:</strong> complementary to the first (5′-most) 20 bases of the universal adaptor:
+</p>
+
+<div class="card seq-card">
+  <div class="card-body">
+  <p class="seq-no-space">
+    5’ <span class="lightorange-bg">TCGGTGGTCGCCGTATCATT</span>••• 3’
+  </p>
+  </div>
+</div>
+
+<p>
+  <strong>Index adapter oligo:</strong> identical to the last (3′-most) 20 bases of the index adaptor.
+</p>
+
+<div class="card seq-card">
+  <div class="card-body">
+  <p class="seq-no-space">
+    5’ <span class="lightpurple-bg">CGTATGCCGTCTTCTGCTTG</span>••• 3’
+  </p>
+  </div>
+</div>
+
+<p>
+At first, cDNAs are bound to the flow cell by both extremities, forming a horseshoe- or brige-like structure:
+</p>
+
+<div class="card seq-card">
+  <div class="card-body">
+  <p class="seq-no-space">
+    •••<span class="lightorange-bg">TTACTATGCCGCTGGTGGCT</span>
+  </p>
+  <p class="seq-space">
+    5’ <span class="lightgreen-bg">AATGATACGGCGACCACCGAGATCTACACTCTTTCCCTACACGACGCTCTTCCGATCT</span><span class="gray-bg">TCGCTTAGGCTAGCA</span>
+  </p>
+  <p class="seq-large-space">
+    3’ <span class="lightgreen-bg">TTACTATGCCGCTGGTGGCTCTAGATGTGAGAAAGGGATGTGCTGCGAGAAGGCTAGA</span><span class="lightgray-bg">AGCGAATCCGATCGT</span>
+  </p>
+  <p class="seq-space">
+       <span class="gray-bg">GGAGGAATCCAATAGAAATATGAAATCACATTTGATCCATTATATTGCGGGTTGAAAATGGGTTAACCCAAAT</span>
+  </p>
+  <p class="seq-large-space">
+       <span class="lightgray-bg">CCTCCTTAGGTTATCTTTATACTTTAGTGTAAACTAGGTAATATAACGCCCAACTTTTACCCAATTGGGTTTA</span>
+  </p>
+  <p class="seq-space">
+       <span class="gray-bg">GGGTTTATGACGGGCTGGTTAAGAAAATATGGGTTGAAATTGCCACCACTATCCACACTAATACAACAACTAA</span>
+  </p>
+  <p class="seq-large-space">
+       <span class="lightgray-bg">CCCAAATACTGCCCGACCAATTCTTTTATACCCAACTTTAACGGTGGTGATAGGTGTGATTATGTTGTTGATT</span>
+  </p>
+  <p class="seq-space">
+       <span class="gray-bg">TAT</span><span class="red-bg">A</span><span class="lightblue-bg"
+    >GATCGGAAGAGCACACGTCTGAACTCCAGTCAC</span><span class="lightyellow-bg">ATCACG</span><span class="lightblue-bg">ATCTCGTATGCCGTCTTCTGCTTG</span> 3’
+  </p>
+  <p class="seq-no-space">
+       <span class="lightgray-bg">ATA</span><span class="red-bg">T</span><span class="lightblue-bg"
+    >CTAGCCTTCTCGTGTGCAGACTTGAGGTCAGTG</span><span class="lightyellow-bg">TAGTGC</span><span class="lightblue-bg">TAGAGCATACGGCAGAAGACGAAC</span> 5’
+  </p>
+  <p class="seq-no-space">
+                                                      <span class="lightpurple-bg">CGTATGCCGTCTTCTGCTTG</span>•••
+  </p>
+  </div>
+</div>
+
+<p>
+  Bridge PCR (not covered here) allows to form clusters of flow cell-bound cDNA molecules that correspond to the same initial mRNA fragment. After denaturation of cDNA double strands, bridge-like structures are linearized. Clusters are then made of a balanced mix of two types of fragments, used for the first and second round of sequencing, respectively.
+</p>
+
+<p>
+  <strong>Fragment containing the second cDNA strand,</strong> used for the first round of sequencing:
+</p>
+
+<div class="card seq-card">
+  <div class="card-body">
+  <p class="seq-large-space">
+    3’ <span class="lightgreen-bg">TTACTATGCCGCTGGTGGCTCTAGATGTGAGAAAGGGATGTGCTGCGAGAAGGCTAGA</span><span class="lightgray-bg">AGCGAATCCGATCGT</span>
+  </p>
+  <p class="seq-large-space">
+       <span class="lightgray-bg">CCTCCTTAGGTTATCTTTATACTTTAGTGTAAACTAGGTAATATAACGCCCAACTTTTACCCAATTGGGTTTA</span>
+  </p>
+  <p class="seq-large-space">
+       <span class="lightgray-bg">CCCAAATACTGCCCGACCAATTCTTTTATACCCAACTTTAACGGTGGTGATAGGTGTGATTATGTTGTTGATT</span>
+  </p>
+  <p class="seq-no-space">
+       <span class="lightgray-bg">ATA</span><span class="red-bg">T</span><span class="lightblue-bg"
+    >CTAGCCTTCTCGTGTGCAGACTTGAGGTCAGTG</span><span class="lightyellow-bg">TAGTGC</span><span class="lightblue-bg">TAGAGCATACGGCAGAAGACGAAC</span> 5’
+  </p>
+  <p class="seq-no-space">
+                                                      <span class="lightpurple-bg">CGTATGCCGTCTTCTGCTTG</span>•••
+  </p>
+  </div>
+</div>
+
+<p>
+  <strong>Fragment containing the first cDNA strand,</strong> used for the second round of sequencing:
+</p>
+
+<div class="card seq-card">
+  <div class="card-body">
+  <p class="seq-large-space">
+    3’ <span class="lightblue-bg">GTTCGTCTTCTGCCGTATGCTCTA</span><span class="lightyellow-bg">GCACTA</span><span class="lightblue-bg">CACTGACCTCAAGTCTGCACACGAGAAGGCTAGA</span><span class="gray-bg">TATAATCAA</span>
+  </p>
+  <p class="seq-large-space">
+       <span class="gray-bg">CAACATAATCACACCTATCACCACCGTTAAAGTTGGGTATAAAAGAATTGGTCGGGCAGTATTTGGGTAAACC</span>
+  </p>
+  <p class="seq-large-space">
+       <span class="gray-bg">CAATTGGGTAAAAGTTGGGCGTTATATTACCTAGTTTACACTAAAGTATAAAGATAACCTAAGGAGGACGATC</span>
+  </p>
+  <p class="seq-no-space">
+       <span class="gray-bg">GGATTCGCT</span><span class="lightgreen-bg">TCTAGCCTTCTCGCAGCACATCCCTTTCTCACATCTAGAGCCACCAGCGGCATAGTAA</span> 5’
+  </p>
+  <p class="seq-no-space">
+                                                      <span class="lightorange-bg">TCGGTGGTCGCCGTATCATT</span>•••
+  </p>
+  </div>
+</div>
+
+
+
+<h2>Sequencing</h2>
+
+<h3>Illumina TruSeq sequencing primers</h3>
+
+<p>
+  <strong>Read 1 primer:</strong> identical to the last (3′-most) 33 bases of the universal adaptor:
+</p>
+
+<div class="card seq-card">
+  <div class="card-body">
+  <p class="seq-no-space">
+    5’ <span class="green-bg">ACACTCTTTCCCTACACGACGCTCTTCCGATCT</span> 3’
+  </p>
+  </div>
+</div>
+
+<p>
+  This primer anneals to the second cDNA strand and allows to synthesize a strand that is sense relative to the first cDNA strand. Read 1 will therefore be antisense relative to the initial mRNA molecule.
+</p>
+
+<p>
+  <strong>Read 2 primer:</strong> identical to the last (3′-most) 33 bases of the indexed adaptor, followed by a thymidine:
+</p>
+
+<div class="card seq-card">
+  <div class="card-body">
+  <p class="seq-no-space">
+    5’ <span class="blue-bg">GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT</span> 3’
+  </p>
+  </div>
+</div>
+
+<p>
+  This primer anneals to the first cDNA strand and allows to synthesize a strand that is sens relative to the second cDNA strand. Read 2 will therefore be sense relative to the initial mRNA molecule.
+</p>
+
+<p>
+  <strong>Index read primer:</strong> complementary to the first (5′-most) 33 bases of the indexed adaptor:
+</p>
+
+<div class="card seq-card">
+  <div class="card-body">
+  <p class="seq-no-space">
+    5’ <span class="yellow-bg">GATCGGAAGAGCACACGTCTGAACTCCAGTCAC</span> 3’
+  </p>
+  </div>
+</div>
+
+
+<p>
+  To sum up, the 3 sequencing primers anneal to the cDNA fragment in the following way:
+</p>
+
+<div class="card seq-card">
+  <div class="card-body">
+  <p class="seq-no-space">
+    5’ <span class="lightgreen-bg">AATGATACGGCGACCACCGAGATCTACACTCTTTCCCTACACGACGCTCTTCCGATCT</span><span class="gray-bg">TCGCTTAGGCTAGCA…</span>
+  </p>
+  <p class="seq-space">
+    3’ <span class="lightgreen-bg">TTACTATGCCGCTGGTGGCTCTAGATGTGAGAAAGGGATGTGCTGCGAGAAGGCTAGA</span><span class="lightgray-bg">AGCGAATCCGATCGT…</span>
+  </p>
+  <p class="seq-large-space">
+                             5’ <span class="green-bg">ACACTCTTTCCCTACACGACGCTCTTCCGATCT</span> 3’ →
+  </p>
+  <p class="seq-space">
+      ← 3’ <span class="blue-bg">TCTAGCCTTCTCGTGTGCAGACTTGAGGTCAGTG</span> 5’
+  <p class="seq-no-space">
+       <span class="gray-bg">…TAT</span><span class="red-bg">A</span><span class="lightblue-bg">GATCGGAAGAGCACACGTCTGAACTCCAGTCAC</span><span class="lightyellow-bg">ATCACG</span><span class="lightblue-bg">ATCTCGTATGCCGTCTTCTGCTTG</span> 3’
+  </p>
+  <p class="seq-space">
+       <span class="lightgray-bg">…ATA</span><span class="red-bg">T</span><span class="lightblue-bg">CTAGCCTTCTCGTGTGCAGACTTGAGGTCAGTG</span><span class="lightyellow-bg">TAGTGC</span><span class="lightblue-bg">TAGAGCATACGGCAGAAGACGAAC</span> 5’
+  </p>
+  <p class="seq-no-space">
+         5’ <span class="yellow-bg">GATCGGAAGAGCACACGTCTGAACTCCAGTCAC</span> 3’ →
+  </p>
+  </div>
+</div>
+
+<h3>First round of sequencing</h3>
+
+<p>
+  Read 1 primer anneals to the universal adapter and the sequencing reaction is performed for a specific number of rounds (here, 100 rounds for a final 100-nt read). After the generation of read 1 (green letters: <strong><span class="monospace green-text">ATCG</span></strong>), the newly synthesized strand is discarded.
+</p>
+
+<div class="card seq-card">
+  <div class="card-body">
+  <p class="seq-space">
+    3’ <span class="lightgreen-bg">TTACTATGCCGCTGGTGGCTCTAGATGTGAGAAAGGGATGTGCTGCGAGAAGGCTAGA</span><span class="lightgray-bg">AGCGAATCCGATCGT</span>
+  </p>
+  <p class="seq-large-space">
+                             5’ <span class="green-bg">ACACTCTTTCCCTACACGACGCTCTTCCGATCT</span><span class="green-text">TCGCTTAGGCTAGCA</span>
+  </p>
+  <p class="seq-space">
+       <span class="lightgray-bg">CCTCCTTAGGTTATCTTTATACTTTAGTGTAAACTAGGTAATATAACGCCCAACTTTTACCCAATTGGGTTTA</span>
+  </p>
+  <p class="seq-large-space">
+       <span class="green-text">GGAGGAATCCAATAGAAATATGAAATCACATTTGATCCATTATATTGCGGGTTGAAAATGGGTTAACCCAAAT</span>
+  </p>
+  <p class="seq-space">
+       <span class="lightgray-bg">CCCAAATACTGCCCGACCAATTCTTTTATACCCAACTTTAACGGTGGTGATAGGTGTGATTATGTTGTTGATT</span>
+  </p>
+  <p class="seq-large-space">
+       <span class="green-text">GGGTTTATGACG</span> 3’
+  </p>
+  <p class="seq-space">
+       <span class="lightgray-bg">ATA</span><span class="red-bg">T</span><span class="lightblue-bg">CTAGCCTTCTCGTGTGCAGACTTGAGGTCAGTG</span><span class="lightyellow-bg">TAGTGC</span><span class="lightblue-bg">TAGAGCATACGGCAGAAGACGAAC</span> 5’
+  </p>
+  <p class="seq-no-space">
+                                                      <span class="lightpurple-bg">CGTATGCCGTCTTCTGCTTG</span>•••
+  </p>
+  </div>
+</div>
+
+<p>
+  This is how read 1 sequence will appear in the FASTQ file:
+</p>
+
+<div class="card seq-card">
+  <div class="card-body">
+  <p class="seq-no-space">
+    <span class="green-text">TCGCTTAGGCTAGCAGGAGGAATCCAATAGAAATATGAAATCACATTTGATCCATTATATTGCGGGTTGAAAATGG</span>
+  </p>
+  <p class="seq-no-space">
+    <span class="green-text">GTTAACCCAAATGGGTTTATGACG</span>
+  </p>
+  </div>
+</div>
+
+<p>
+  If the insert is too short, read 1 may span over the indexed adaptor sequence. Therefore, the right end of read 1 sequences must be trimmed to remove the following sequence:
+</p>
+
+<div class="card seq-card">
+  <div class="card-body">
+  <p class="seq-no-space">
+    <span class="red-bg">A</span><span class="lightblue-bg">GATCGGAAGAGCACACGTCTGAACTCCAGTCAC</span><span class="lightyellow-bg">NNNNNN</span><span class="lightblue-bg">ATCTCGTATGCCGTCTTCTGCTTG</span>
+  </p>
+  </div>
+</div>
+
+<h3>Index sequencing</h3>
+
+<p>
+  If multiplexing is used in the sequencing experiment, the index read primer is annealed to the same second cDNA strand-containing fragment. A short sequencing reaction is performed to get the index sequence (yellow letters <strong><span class="monospace yellow-text">ATCACG</span></strong>). The newly synthesized strand is then discarded.
+</p>
+
+<div class="card seq-card">
+  <div class="card-body">
+  <p class="seq-large-space">
+    3’ <span class="lightgreen-bg">TTACTATGCCGCTGGTGGCTCTAGATGTGAGAAAGGGATGTGCTGCGAGAAGGCTAGA</span><span class="lightgray-bg">AGCGAATCCGATCGT</span>
+  </p>
+  <p class="seq-large-space">
+       <span class="lightgray-bg">CCTCCTTAGGTTATCTTTATACTTTAGTGTAAACTAGGTAATATAACGCCCAACTTTTACCCAATTGGGTTTA</span>
+  </p>
+  <p class="seq-large-space">
+       <span class="lightgray-bg">CCCAAATACTGCCCGACCAATTCTTTTATACCCAACTTTAACGGTGGTGATAGGTGTGATTATGTTGTTGATT</span>
+  </p>
+  <p class="seq-space">
+       <span class="lightgray-bg">ATA</span><span class="red-bg">T</span><span class="lightblue-bg">CTAGCCTTCTCGTGTGCAGACTTGAGGTCAGTG</span><span class="lightyellow-bg">TAGTGC</span><span class="lightblue-bg">TAGAGCATACGGCAGAAGACGAAC</span> 5’
+  </p>
+  <p class="seq-no-space">
+        5’ <span class="yellow-bg">GATCGGAAGAGCACACGTCTGAACTCCAGTCAC</span><span class="yellow-text">ATCACG</span>    <span class="lightpurple-bg">CGTATGCCGTCTTCTGCTTG</span>•••
+  </p>
+  </div>
+</div>
+
+<h3>Second round of sequencing</h3>
+
+<p>
+  If paired-end sequencing is performed, read 2 primer is annealed to the indexed adapter on fragment containing the first cDNA strand. Again, the sequencing reaction is performed for a specific number of rounds (here, 100 rounds for a final 100-nt read). After the generation of read 2 (green letters: <strong><span class="monospace blue-text">ATCG</span></strong>), the newly synthesized strand is discarded.
+</p>
+
+<div class="card seq-card">
+  <div class="card-body">
+  <p class="seq-space">
+    3’ <span class="lightblue-bg">GTTCGTCTTCTGCCGTATGCTCTA</span><span class="lightyellow-bg">GCACTA</span><span class="lightblue-bg">CACTGACCTCAAGTCTGCACACGAGAAGGCTAGA</span><span class="gray-bg">TATAATCAA</span>
+  </p>
+  <p class="seq-large-space">
+                                5’ <span class="blue-bg">GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT</span><span class="blue-text">ATATTAGTT</span>
+  </p>
+  <p class="seq-space">
+       <span class="gray-bg">CAACATAATCACACCTATCACCACCGTTAAAGTTGGGTATAAAAGAATTGGTCGGGCAGTATTTGGGTAAACC</span>
+  </p>
+  <p class="seq-large-space">
+       <span class="blue-text">GTTGTATTAGTGTGGATAGTGGTGGCAATTTCAACCCATATTTTCTTAACCAGCCCGTCATAAACCCATTTGG</span>
+  </p>
+  <p class="seq-space">
+       <span class="gray-bg">CAATTGGGTAAAAGTTGGGCGTTATATTACCTAGTTTACACTAAAGTATAAAGATAACCTAAGGAGGACGATC</span>
+  </p>
+  <p class="seq-large-space">
+       <span class="blue-text">GTTAACCCATTTTCAACC</span> 3’
+  </p>
+  <p class="seq-space">
+       <span class="gray-bg">GGATTCGCT</span><span class="lightgreen-bg">TCTAGCCTTCTCGCAGCACATCCCTTTCTCACATCTAGAGCCACCAGCGGCATAGTAA</span> 5’
+  </p>
+  <p class="seq-no-space">
+                                                      <span class="lightorange-bg">TCGGTGGTCGCCGTATCATT</span>•••
+  </p>
+  </div>
+</div>
+
+<p>
+  This is how read 1 sequence will appear in the FASTQ file:
+</p>
+
+<div class="card seq-card">
+  <div class="card-body">
+  <p class="seq-no-space">
+    <span class="blue-text">ATATTAGTTGTTGTATTAGTGTGGATAGTGGTGGCAATTTCAACCCATATTTTCTTAACCAGCCCGTCATAAACCC</span>
+  </p>
+  <p class="seq-no-space">
+    <span class="blue-text">ATTTGGGTTAACCCATTTTCAACC</span>
+  </p>
+  </div>
+</div>
+
+<p>
+  Again, if the insert is too short, read 2 may span over the universal adaptor sequence. Therefore, the right end of read 2 sequences must be trimmed to remove the following sequence:
+</p>
+
+<div class="card seq-card">
+  <div class="card-body">
+  <p class="seq-no-space">
+    <span class="lightgreen-bg">AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT</span>
+  </p>
+  </div>
+</div>
+
+<h2>Conclusion</h2>
+
+<p>
+  The sequencing reads 1 and 2 are then arranged as follows:
+</p>
+
+<div class="card seq-card">
+  <div class="card-body">
+  <p class="seq-space">
+    5’ <span class="darkgray-text">GAACUGAUAAAGAGGAAACUAAAGCCACCCCAGAGUAUUUCUGAUUGCAGCCAUUGGUGCCUGCCUGGAAUGCCC</span>
+  </p>
+  <p class="seq-space">
+       <span class="darkgray-text">GAUACAUGGAAUAGGUUACUAUAUGCAUCUCUGCUUUUGGAUCACCCCAUUGAUUCCCCUAGUCUAUCACAUUUG</span>
+  </p>
+  <p class="seq-no-space">
+       <span class="darkgray-text">GUCUCUUGAAAAUCAGAGAUUUACCAUCAGUAGGCUAUAUUAGUUGUUGUAUUAGUGUGGAUAGUGGUGGCAAUU</span>
+  </p>
+  <p class="seq-large-space">
+                                  <span class="blue-text">Read 2 → ATATTAGTTGTTGTATTAGTGTGGATAGTGGTGGCAATT</span>
+  </p>
+  <p class="seq-no-space">
+       <span class="darkgray-text">UCAACCCAUAUUUUCUUAACCAGCCCGUCAUAAACCCAUUUGGGUUAACCCAUUUUCAACCCGCAAUAUAAUGGA</span>
+  </p>
+  <p class="seq-no-space">
+       <span class="blue-text">TCAACCCATATTTTCTTAACCAGCCCGTCATAAACCCATTTGGGTTAACCCATTTTCAACC</span
+  </p>
+  <p class="seq-space">
+                                <span class="green-text">CGTCATAAACCCATTTGGGTTAACCCATTTTCAACCCGCAATATAATGGA</span>
+  </p>
+  <p class="seq-no-space">
+       <span class="darkgray-text">UCAAAUGUGAUUUCAUAUUUCUAUUGGAUUCCUCCUGCUAGCCUAAGCGAGAUAUCUACUGAGGGAACUUUUGAA</span>
+  </p>
+  <p class="seq-large-space">
+       <span class="green-text">TCAAATGTGATTTCATATTTCTATTGGATTCCTCCTGCTAGCCTAAGCGA ← Read 1</span>
+  </p>
+  <p class="seq-no-space">
+       <span class="darkgray-text">CUUUCAUAUGAGUGUAUAAACGUGUAUGUUGAUUGUUAAAAAAAAAAAAAAAAAA</span> 3’
+  </p>
+  </div>
+</div>
+
+<p>
+  Reads 1 and 2 are antisense and sense relative to the initial mRNA, respectively. Therefore, the library orientation is “reverse-forward”. This is why, for instance, option <strong><span class="monospace">--SS_lib_type RF</span></strong> must be used when performing a <em>de novo</em> assembly with the Trinity assembler.
+</p>
