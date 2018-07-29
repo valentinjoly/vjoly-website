@@ -1,0 +1,44 @@
+---
+layout: page
+lang: en
+title: "Wild potatoes"
+background_color: "#F8F5F0"
+---
+
+{%- assign image_path = "/images/wild_potato_distribution_map_alt.png" | relative-url -%}
+
+<div class="row">
+<div class="col-8">
+
+<p>
+<strong>Wild potatoes</strong> (<em>Solanum</em> sect. <em>Petota</em>) form a large taxon gathering 196 species distributed in Latin America, from New Mexico to Patagonia {% cite BravoAlmonacid2012 %}. My PhD project aims at understanding their <strong>reproductive isolation</strong>, i.e. the mechanisms by which they avoid interspecific hybridization {% cite Ashkenazi2001 %}.
+</p>
+<p>
+I am especially interested in <strong><em>Solanum chacoense</em></strong>, a wild potato relative of agronomical importance, and three of its closest relatives in the phylogeny: <em>S. gandarillasii</em>, <em>S. tarijense</em>, and <em>S. microdontum</em> {% cite Chen2014 Qin2005 %}.
+</p>
+</div>
+
+<div class="col-4 text-right">
+<figure class="figure img-thumbnail">
+  <img src="{{ image_path }}" class="figure-img img-fluid rounded" alt="...">
+  <figcaption class="figure-caption text-left">
+  	<strong>Figure 1.</strong> Repartition of wild potato species in Latin America established by Hijmans and Spooner.
+  </figcaption>
+</figure>
+</div>
+</div>
+
+{%- include research_nav.html -%}
+
+<hr/>
+<div class="row">
+  <div class="col-12">
+
+    <h3>Literature cited</h3>
+
+    {% bibliography --cited_in_order %}
+
+  </div>
+
+
+</div>

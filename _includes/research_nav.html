@@ -1,0 +1,55 @@
+{%- assign basename = page.url | split: "/" | last -%}
+
+{%- assign topics = site.data.en.research -%}
+{%- assign ntopics = topics | size -%}
+{%- assign last_i = ntopics | minus: 1 -%}
+{%- assign i = -1 -%}
+
+{%- for topic in topics -%}
+  {%- assign i = i | plus: 1 -%}
+  {%- if topic.subpage == basename -%}
+    {%- break -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- if i > 0 -%}
+  {%- assign prev_i = i | minus: 1 -%}
+  {%- assign prev_topic = topics[prev_i] -%}
+  {%- if prev_topic.subpage -%}
+    {%- assign prev_subpage = prev_topic.subpage -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- if i < last_i -%}
+  {%- assign next_i = i | plus: 1 -%}
+  {%- assign next_topic = topics[next_i] -%}
+  {%- if next_topic.subpage -%}
+    {%- assign next_subpage = next_topic.subpage -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- if prev_subpage or next_subpage -%}
+
+<div class="row">
+  <div class="col-12">
+    <center>
+      {%- if prev_subpage -%}
+      <a href="{{ prev_subpage | relative-url }}" class="btn btn-secondary btn-sm" role="button">
+        <span class="fas fa-angle-left"></span>
+        &nbsp;&nbsp;Prev
+      </a>
+      {%- endif -%}
+      {%- if prev_subpage and next_subpage -%}
+      &nbsp;&nbsp;&nbsp;
+      {%- endif -%}
+      {%- if next_subpage -%}
+      <a href="{{ next_subpage | relative-url }}" class="btn btn-secondary btn-sm" role="button">
+        Next&nbsp;&nbsp;
+        <span class="fas fa-angle-right"></span>
+      </a>
+      {%- endif -%}
+    </center>
+  </div>
+</div>
+
+{%- endif -%}
