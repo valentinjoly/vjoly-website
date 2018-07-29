@@ -1,31 +1,6 @@
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+---
+layout: base
+---
 
-  {%- include head.html -%}
-
-  {% if page.background_color %}
-  <body style="background-color:{{ page.background_color }};">
-  {% else %}
-  <body>
-  {% endif %}
-
-    {%- include navbar.html -%}
-    {% if page.banner_image %}
-    <div>
-      {%- assign image_url = "images/" | append:  page.banner_image | relative_url -%}
-      <img class="media-object" src="{{ image_url }}" alt="..." width="100%">
-      {% if page.banner_caption %}
-        <figcaption class="banner-caption">{{ page.banner_caption }}</figcaption>
-      {% endif %}
-    </div>
-    {% endif %}
-
-    <div class="py-5">
-      <div class="container page-content">
-        {{ content }}
-      </div>
-    </div>
-
-  </body>
-
-</html>
+{%- include banner.html -%}
+{%- include body.html -%}

@@ -1,12 +1,7 @@
 ---
-layout: default
+layout: base
 ---
 
-<header>
-  <h1>{{ page.title | escape }}</h1>
-</header>
-<br/>
-
-<section>
-  {{ content }}
-</section>
+{%- include banner.html -%}
+{%- include page_header.html -%}
+{%- include body.html -%}
