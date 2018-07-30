@@ -1,7 +1,7 @@
 {%- if page.banner_image -%}
 <div>
   {%- assign image_url = "images/" | append:  page.banner_image | relative_url -%}
-  <img class="media-object" src="{{ image_url }}" alt="..." width="100%">
+  <img class="img-fluid banner-image" src="{{ image_url }}" alt="...">
   {%- if page.banner_caption -%}
   <figcaption class="banner-caption">
     {{ page.banner_caption }}

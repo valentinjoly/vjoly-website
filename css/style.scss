@@ -165,18 +165,29 @@ figcaption.figure-caption {
   color: $gray-800;
 }
 
-figcaption.banner-caption {
+
+// BANNERS
+
+.banner-caption {
   background-color: black;
   padding-left: 4px;
   padding-right: 4px;
-  padding-bottom: 1px;
+  padding-bottom: 0px;
+  margin-bottom: 10px;
   color: white;
   font-size: 12px;
   font-weight: 600;
   float: right;
-  position: relative;
-  bottom: 25px;
+  position: absolute;
+  top: 375px;
   right: 10px;
+}
+
+.banner-image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  object-position: center;
 }
 
 
@@ -213,7 +224,15 @@ ol.bibliography > li:before {
   background-color: $gray-200;
 }
 
-.blog-body h1, h2, h3 {
+.blog-body h1 {
+  padding-top: 0.5em;
+}
+
+.blog-body h2 {
+  padding-top: 0.5em;
+}
+
+.blog-body h3 {
   padding-top: 0.5em;
 }
 
