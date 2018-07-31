@@ -163,6 +163,8 @@ div.desc {
 
 figcaption.figure-caption {
   color: $gray-800;
+  font-size: 100%;
+  line-height: 110%;
 }
 
 figcaption.banner-caption {
@@ -183,6 +185,7 @@ figcaption.banner-caption {
 // BIBLIOGRAPHIES
 
 ol.bibliography {
+  font-size: 100%;
   margin: 0 0 3em;
   padding: 0;
   counter-reset: item;
