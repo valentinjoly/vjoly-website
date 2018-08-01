@@ -1,11 +1,14 @@
 - title: "Wild potatoes"
   image: res_wild_potatoes.png
+  subpage: wild_potatoes.html
 
 - title: "Reproductive isolation"
   image: res_reprod_isolation.png
+  subpage: reproductive_isolation.html
 
 - title: "Pollen tube guidance"
   image: res_pt_guidance.png
+  subpage: pt_guidance.html
 
 - title: "Cysteine-rich proteins"
   image: res_crps.png
