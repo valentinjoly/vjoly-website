@@ -1,5 +1,5 @@
-{%- if page.body_class -%}
-<body class="{{ page.body_class }}">
+{%- if page.layout == "post" -%}
+<body class="blog-body">
 {%- else -%}
 <body>
 {%- endif -%}
