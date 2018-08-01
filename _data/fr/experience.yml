@@ -4,7 +4,7 @@
   supervisor: Pr Daniel P. Matton
   institution: Université de Montréal
   location: Montréal, QC, Canada
-  image: logo_udem.png
+  image: logo_udem.jpg
   url: http://www.irbv.umontreal.ca/chercheurs/daniel-philippe-matton
   molbiol_skills: [
     "Manipulation d'ADN et ARN. Clonage. Expression et purification de protéines.",
@@ -23,7 +23,7 @@
   supervisor: Dr Johan Edqvist
   institution: Université de Linköping
   location: Linköping, Suède
-  image: logo_liu.png
+  image: logo_liu.jpg
   url: https://www.ifm.liu.se/biology/molgen/edqvist_lab/
   description: "Après la publication du programme de recherche de CRP KAPPA, je me suis impliqué dans un projet développé au laboratoire du Dr Edqvist, visant à étudier l'évolution et la diversification des protéines de transfert des lipides non-spécifiques (nsLTP) dans le règne végétal. Ce séjour dans son laboratoire nous a permis de lancer une collaboration, qui est toujours active."
   molbiol_skills: [
@@ -39,7 +39,7 @@
   supervisor: Pr Tetsuya Higashiyama
   institution: Institute for Transformative Bio-Molecules (ITbM), Université de Nagoya
   location: Nagoya, Japon
-  image: logo_itbm.png
+  image: logo_itbm.jpg
   url: http://www.itbm.nagoya-u.ac.jp/en/members/t-higashiyama/
   description: "Le programme d’été de la JSPS est très sélectif (10 étudiants sélectionnés pour le Canada) et donne accès à une bourse de 534 000 ¥ assortie d’une allocation de recherche de 158 500 ¥. Grâce à ce programme, j’ai intégré pendant deux mois le laboratoire du Pr Higashiyama, dont j’ai pu profiter de l’expertise pour optimiser une série de dispositifs microfluidiques adaptés pour étudier l’attraction du tube pollinique à courte et à longue distance chez les Solanacées."
   molbiol_skills: [
@@ -53,7 +53,7 @@
   supervisor: Pr William J. Swanson
   institution: University of Washington
   location: Seattle, WA, USA
-  image: logo_uw.png
+  image: logo_uw.jpg
   url: http://depts.washington.edu/swansonw/Swanson_Lab/Overview.html
   bioinfo_skills: [
     "Détection de variants dans des données de séquençage de masse (GATK).",
@@ -66,7 +66,7 @@
   supervisor: Partenariat avec le Dr Franco Chiarini
   institution: Universidad Nacional de Córdoba
   location: Córdoba, Argentina
-  image: logo_unc.png
+  image: logo_unc.jpg
   url: http://museobotanico.unc.edu.ar/herbario
   molbiol_skills: [
     "Collecte d’individus de pommes de terre sauvages dans la cordillère des Andes.",
@@ -78,7 +78,7 @@
   supervisor: Pr Daniel P. Matton
   institution: Université de Montréal
   location: Montréal, QC, Canada
-  image: logo_udem.png
+  image: logo_udem.jpg
   url: http://www.irbv.umontreal.ca/chercheurs/daniel-philippe-matton
   molbiol_skills: [
     "Clonage moléculaire. Biolistique. Microscopie confocale et à épifluorescence.",
@@ -90,7 +90,7 @@
   supervisor: Pr Christophe Bailly
   institution: CNRS (UMR 7622) – Université Pierre et Marie Curie (Paris-VI)
   location: Paris, France
-  image: logo_upmc.png
+  image: logo_upmc.jpg
   url: http://www.ibps.upmc.fr/en/research/developmental-biology-laboratory/seed-biology
   molbiol_skills: [
     "Physiologie de la dormance des semences",
@@ -102,7 +102,7 @@
   supervisor: Pr Chris Bowler
   institution: CNRS (UMR 8197) – École Normale Supérieure
   location: Paris, France
-  image: logo_ens.png
+  image: logo_ens.jpg
   url: http://www.ibens.ens.fr/spip.php?rubrique36&lang=fr
   molbiol_skills: [
     "Électrophorèse de protéines. Immunoprécipitation. Western Blot.",

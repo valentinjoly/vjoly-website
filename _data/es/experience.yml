@@ -4,7 +4,7 @@
   supervisor: Prof. Daniel P. Matton
   institution: Universidad de Montreal
   location: Montreal, QC, Canadá
-  image: logo_udem.png
+  image: logo_udem.jpg
   url: http://www.irbv.umontreal.ca/chercheurs/daniel-philippe-matton
   molbiol_skills: [
     "Manipulación de ADN y ARN. Clonación. Expresión y purificación de proteínas.",
@@ -23,7 +23,7 @@
   supervisor: Dr. Johan Edqvist
   institution: Universidad de Linköping
   location: Linköping, Suecia
-  image: logo_liu.png
+  image: logo_liu.jpg
   url: https://www.ifm.liu.se/biology/molgen/edqvist_lab/
   molbiol_skills: [
     "Expresión y purificación de proteínas en <em>Pichia pastoris</em>.",
@@ -38,7 +38,7 @@
   supervisor: Prof. Tetsuya Higashiyama
   institution: Institute for Transformative Bio-Molecules (ITbM), Nagoya University
   location: Nagoya, Japón
-  image: logo_itbm.png
+  image: logo_itbm.jpg
   url: http://www.itbm.nagoya-u.ac.jp/en/members/t-higashiyama/
   molbiol_skills: [
     "Desarrollo de dispositivos microfluídicos para ensayos de atracción del tubo polínico.",
@@ -51,7 +51,7 @@
   supervisor: Prof. William J. Swanson
   institution: University of Washington
   location: Seattle, WA, EE UU
-  image: logo_uw.png
+  image: logo_uw.jpg
   url: http://depts.washington.edu/swansonw/Swanson_Lab/Overview.html
   bioinfo_skills: [
     "Variant calling (GATK).",
@@ -64,7 +64,7 @@
   supervisor: Partnership with Dr. Franco Chiarini
   institution: Universidad Nacional de Córdoba
   location: Córdoba, Argentina
-  image: logo_unc.png
+  image: logo_unc.jpg
   url: http://museobotanico.unc.edu.ar/herbario
   molbiol_skills: [
     "Colecta de individuos de papas silvestres en la cordillera de los Andes.",
@@ -76,7 +76,7 @@
   supervisor: Prof. Daniel P. Matton
   institution: Universidad de Montreal
   location: Montreal, QC, Canadá
-  image: logo_udem.png
+  image: logo_udem.jpg
   url: http://www.irbv.umontreal.ca/chercheurs/daniel-philippe-matton
   molbiol_skills: [
     "Clonación molecular. Biolística. Epifluorescencia y microscopía confocal.",
@@ -88,7 +88,7 @@
   supervisor: Prof. Christophe Bailly
   institution: CNRS (UMR 7622) – Universidad Pierre y Marie Curie (París-VI)
   location: París, Francia
-  image: logo_upmc.png
+  image: logo_upmc.jpg
   url: http://www.ibps.upmc.fr/en/research/developmental-biology-laboratory/seed-biology
   molbiol_skills: [
     "Biología de la dormancia y de la germinación de semillas.",
@@ -100,7 +100,7 @@
   supervisor: Prof. Chris Bowler
   institution: CNRS (UMR 8197) – École Normale Supérieure
   location: París, Francia
-  image: logo_ens.png
+  image: logo_ens.jpg
   url: http://www.ibens.ens.fr/spip.php?rubrique36&lang=fr
   molbiol_skills: [
     "Electroforesis de proteínas. Imunoprecipitación. Western Blot.",

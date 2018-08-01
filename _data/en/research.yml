@@ -1,26 +1,26 @@
 - title: "Wild potatoes"
-  image: res_wild_potatoes.png
+  image: res_wild_potatoes.jpg
   subpage: wild_potatoes.html
 
 - title: "Reproductive isolation"
-  image: res_reprod_isolation.png
+  image: res_reprod_isolation.jpg
   subpage: reproductive_isolation.html
 
 - title: "Pollen tube guidance"
-  image: res_pt_guidance.png
+  image: res_pt_guidance.jpg
   subpage: pt_guidance.html
 
 - title: "Cysteine-rich proteins"
-  image: res_crps.png
+  image: res_crps.jpg
 
 - title: "Python programming"
-  image: res_python.png
+  image: res_python.jpg
 
 - title: "Next-gen sequencing"
-  image: res_next-gen_sequencing.png
+  image: res_next-gen_sequencing.jpg
 
 - title: "Secretomics"
-  image: res_secretomics.png
+  image: res_secretomics.jpg
 
 - title: "Microfluidics"
-  image: res_microfluidics.png
+  image: res_microfluidics.jpg
