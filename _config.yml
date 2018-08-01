@@ -1,10 +1,12 @@
 markdown: redcarpet
 baseurl: ""
 title: Valentin Joly
+url: "http://vjoly.net"
 
 plugins:
   - jekyll/scholar
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 scholar:
   style: /_bibliography/vjoly.csl
