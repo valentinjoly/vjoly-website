@@ -4,6 +4,7 @@ title: Valentin Joly
 
 plugins:
   - jekyll/scholar
+  - jekyll-seo-tag
 
 scholar:
   style: /_bibliography/vjoly.csl
