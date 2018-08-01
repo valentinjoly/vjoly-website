@@ -26,3 +26,13 @@ languages: [en, fr, es, it]
 
 image_dir: "/images/"
 paper_dir: "/papers/"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - images/raw/
+
