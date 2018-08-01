@@ -1,9 +1,9 @@
-markdown: redcarpet
 baseurl: ""
 title: Valentin Joly
 url: "http://vjoly.net"
 
 plugins:
+  - jekyll-minifier
   - jekyll/scholar
   - jekyll-seo-tag
   - jekyll-sitemap
