@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="never" page-range-format="expanded">
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="never" page-range-format="minimal">
   <info>
-    <title>American Psychological Association 6th edition</title>
-    <title-short>APA</title-short>
-    <id>http://www.zotero.org/styles/apa</id>
-    <link href="http://www.zotero.org/styles/apa" rel="self"/>
-    <link href="http://owl.english.purdue.edu/owl/resource/560/01/" rel="documentation"/>
+    <title>American Psychological Association 6th edition - vjoly's fork</title>
+    <title-short>apa-vjoly</title-short>
     <author>
       <name>Simon Kornblith</name>
       <email>simon@simonster.com</email>
@@ -28,10 +25,14 @@
       <name> Brenton M. Wiernik</name>
       <email>zotero@wiernik.org</email>
     </contributor>
+    <contributor>
+      <name>Valentin Joly</name>
+      <uri>http://vjoly.net</uri>
+    </contributor>
     <category citation-format="author-date"/>
     <category field="psychology"/>
     <category field="generic-base"/>
-    <updated>2016-09-28T13:09:49+00:00</updated>
+    <updated>2018-08-01</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="en">
@@ -158,12 +159,20 @@
       <choose>
         <if variable="DOI" match="any">
           <group suffix=".">
-            <text variable="DOI" prefix="DOI: "/>
+            <text variable="DOI" prefix="DOI: &lt;a target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; href=&quot;https://doi.org/"/>
+            <text variable="DOI" prefix="&quot;&gt;" suffix="&lt;/a&gt;"/>
+          </group>
+        </if>
+        <if variable="PMID" match="any">
+          <group suffix=".">
+            <text variable="PMID" prefix="PMID: &lt;a target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; href=&quot;https://www.ncbi.nlm.nih.gov/pubmed/"/>
+            <text variable="PMID" prefix="&quot;&gt;" suffix="&lt;/a&gt;"/>
           </group>
         </if>
         <if variable="URL" match="any">
             <group delimiter=" " suffix=".">
-              <text variable="URL" prefix="URL: "/>
+              <text variable="URL" prefix="URL: &lt;a target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; href=&quot;"/>
+              <text variable="URL" prefix="&quot;&gt;" suffix="&lt;/a&gt;"/>
               <choose>
                 <if variable="accessed" match="any">
                   <group prefix="(" suffix=")" delimiter=" ">
@@ -174,15 +183,15 @@
               </choose>
           </group>
         </if>
-          <else-if variable="archive" match="any">
+        <if variable="archive" match="any">
             <group>
               <text term="retrieved" text-case="capitalize-first" suffix=" "/>
               <text term="from" suffix=" "/>
               <text variable="archive" suffix="."/>
               <text variable="archive_location" prefix=" (" suffix=")"/>
             </group>
-          </else-if>
-        </choose>
+        </if>
+      </choose>
     </group>
   </macro>
   <macro name="title">
@@ -521,31 +530,12 @@
   </macro>
   <macro name="locators">
     <choose>
-      <if type="article-journal article-magazine" match="any">
-        <group prefix=", " delimiter=": ">
-          <group>
-            <text variable="volume"/>
-            <text variable="issue" prefix="(" suffix=")"/>
-          </group>
-          <text variable="page"/>
-        </group>
-        <choose>
-          <!--for advanced online publication-->
-          <if variable="issued">
-            <choose>
-              <if variable="page issue" match="none">
-                <text variable="status" text-case="capitalize-first" prefix=". "/>
-              </if>
-            </choose>
-          </if>
-        </choose>
-      </if>
-      <else-if type="article-newspaper">
+      <if type="article-newspaper">
         <group delimiter=" " prefix=", ">
           <label variable="page" form="short"/>
           <text variable="page"/>
         </group>
-      </else-if>
+      </if>
       <else-if type="book graphic motion_picture report song chapter paper-conference entry-encyclopedia entry-dictionary" match="any">
         <group prefix=" (" suffix=")" delimiter=", ">
           <choose>
@@ -593,6 +583,25 @@
           <date-part name="year"/>
         </date>
       </else-if>
+      <else>
+        <group prefix=", " delimiter=": ">
+          <group>
+            <text variable="volume"/>
+            <text variable="issue" prefix="(" suffix=")"/>
+          </group>
+          <text variable="page"/>
+        </group>
+        <choose>
+          <!--for advanced online publication-->
+          <if variable="issued">
+            <choose>
+              <if variable="page issue" match="none">
+                <text variable="status" text-case="capitalize-first" prefix=". "/>
+              </if>
+            </choose>
+          </if>
+        </choose>
+      </else>
     </choose>
   </macro>
   <macro name="citation-locator">
