@@ -1,6 +1,24 @@
 {%- assign basename = page.url | split: "/" | last -%}
 
-{%- assign topics = site.data.en.research -%}
+{%- case page.lang -%}
+  {%- when  "en" -%}
+    {%- assign topics = site.data.en.research -%}
+    {%- assign prev = "Prev" -%}
+    {%- assign next = "Next" -%}
+  {%- when  "fr" -%}
+    {%- assign topics = site.data.fr.research -%}
+    {%- assign prev = "Préc." -%}
+    {%- assign next = "Suiv." -%}
+  {%- when  "es" -%}
+    {%- assign topics = site.data.es.research -%}
+    {%- assign prev = "Anterior" -%}
+    {%- assign next = "Siguiente" -%}
+  {%- when  "it" -%}
+    {%- assign topics = site.data.it.research -%}
+    {%- assign prev = "Precedente" -%}
+    {%- assign next = "Successivo" -%}
+{%- endcase -%}
+
 {%- assign ntopics = topics | size -%}
 {%- assign last_i = ntopics | minus: 1 -%}
 {%- assign i = -1 -%}
@@ -36,7 +54,7 @@
       {%- if prev_subpage -%}
       <a href="{{ prev_subpage | relative-url }}" class="btn btn-secondary btn-sm" role="button">
         <span class="fas fa-angle-left"></span>
-        &nbsp;&nbsp;Prev
+        &nbsp;&nbsp;{{ prev }}
       </a>
       {%- endif -%}
       {%- if prev_subpage and next_subpage -%}
@@ -44,7 +62,7 @@
       {%- endif -%}
       {%- if next_subpage -%}
       <a href="{{ next_subpage | relative-url }}" class="btn btn-secondary btn-sm" role="button">
-        Next&nbsp;&nbsp;
+        {{ next }}&nbsp;&nbsp;
         <span class="fas fa-angle-right"></span>
       </a>
       {%- endif -%}
