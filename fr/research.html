@@ -8,17 +8,23 @@ background_color: "#F8F5F0"
 <div class="container mt-3">
   <div class="row">
     <div class="card-deck">
-      {% for theme in site.data.fr.research %}
+      {%- for theme in site.data.fr.research -%}
       <div class="card mb-4" style="min-width: 15rem; max-width: 15rem;">
         {%- assign image_url = theme.image | prepend: site.image_dir | relative-url -%}
-        <a href="#">
+        {%- if theme.subpage -%}
+          {%- assign subpage_url = theme.subpage | relative-url -%}
+        {%- else -%}
+          {%- assign subpage_url = "&#35;" -%}
+        {%- endif -%}
+        <a href="{{ subpage_url }}">
           <img class="card-img" src="{{ image_url }}" alt="{{ theme.title }}">
           <div class="desc rounded-bottom">
             <h5 class="desc_content">{{ theme. title }}</h5>
           </div>
         </a>
       </div>
-      {% endfor %}
+      {%- endfor -%}
     </div>
   </div>
 </div>
+
