@@ -9,7 +9,6 @@ plugins:
 
 scholar:
   style: /_bibliography/vjoly.csl
-  sort_by: authors, date
   bibliography_list_tag: ol
 
 navbar_pages:
