@@ -144,7 +144,7 @@ $lightorange:   #FFBF80;
 }
 
 
-// CAPTIONS
+// FIGURES & CAPTIONS
 
 div.desc {
   background-color: rgba(0, 0, 0, 0.5);
@@ -159,6 +159,10 @@ div.desc {
 .desc_content {
   font-size: large;
   font-weight: 600;
+}
+
+img.figure-img {
+  margin-bottom: 0.2rem;
 }
 
 figcaption.figure-caption {
