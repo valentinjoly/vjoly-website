@@ -20,9 +20,9 @@ banner_caption: SEM picture of <em>Solanum chacoense</em> pollen grains
 {%- assign phone = '<span class="fas fa-phone"></span>' -%}
 {%- assign skype = '<span class="fab fa-skype"></span>' -%}
 {%- assign email = '<span class="fas fa-envelope"></span>' -%}
-{%- assign github = '<span class="fab fa-github-square"></span>' -%}
-{%- assign linkedin = '<span class="fab fa-linkedin"></span>' -%}
-{%- assign researchgate = '<span class="fab fa-researchgate"></span>' -%}
+{%- assign github = '<span class="fab fa-github-square" style="font-size: 200%"></span>' -%}
+{%- assign linkedin = '<span class="fab fa-linkedin" style="font-size: 200%"></span>' -%}
+{%- assign researchgate = '<span class="fab fa-researchgate" style="font-size: 200%"></span>' -%}
 
 <div class="row py-3">
   <div class="col-md-8">
@@ -77,13 +77,11 @@ banner_caption: SEM picture of <em>Solanum chacoense</em> pollen grains
       </div>
       <div class="card-footer">
         <p class="card-text">
-          <font size="6">
-            <a href="{{ github_url }}">{{ github }}</a>
-            &nbsp;
-            <a href="{{ linkedin_url }}">{{ linkedin }}</a>
-            &nbsp;
-            <a href="{{ researchgate_url }}">{{ researchgate }}</a>
-          </font>
+          <a href="{{ github_url }}" style="font-weight: normal;">{{ github }}</a>
+          &nbsp;
+          <a href="{{ linkedin_url }}" style="font-weight: normal;">{{ linkedin }}</a>
+          &nbsp;
+          <a href="{{ researchgate_url }}" style="font-weight: normal;">{{ researchgate }}</a>
         </p>
       </div>
     </div>
