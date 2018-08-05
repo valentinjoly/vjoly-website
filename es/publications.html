@@ -51,15 +51,6 @@ banner_caption: Dispositivo experimental para el cultivo semi-<em>in vivo</em> d
           </small>
           |
           {% endif %}
-          {% if paper.supp %}
-          {% assign pdf_path = paper.pdf | prepend: site.papers.dir | relative_url %}
-          <small>
-            <strong>
-              {{file}} <a href="{{ supp_path }}" target="_new">Material complementario</a>
-            </strong>
-          </small>
-          |
-          {% endif %}
           {% assign bibtex_path = paper.bibtex | prepend: site.papers.dir | relative_url %}
           <small>
             <strong>
