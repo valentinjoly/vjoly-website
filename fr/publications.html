@@ -68,7 +68,7 @@ banner_caption: Dispositif expérimental de culture semi-<em>in vivo</em> de tub
 <br/>
 
 <h2>Présentations orales</h2>
-<h5>{{speaker}} Orateur &nbsp;&nbsp; {{star}} Prix</h5>
+<h5>{{star}} Prix</h5>
 <hr>
 
 <ul class="list-unstyled">
@@ -80,7 +80,7 @@ banner_caption: Dispositif expérimental de culture semi-<em>in vivo</em> de tub
         {% endif %}
         <strong>{{talk.title}}</strong>
         <br/>
-        {{talk.authors | replace: "*", speaker | replace: "Joly V", "<strong>Joly V</strong>"}}
+        {{talk.authors | replace: "Joly V", "<strong>Joly V</strong>"}}
         <br/>
         <em>{{talk.conference}}</em>, {{talk.location}}, {{talk.date}}.
       </h4>
@@ -108,6 +108,31 @@ banner_caption: Dispositif expérimental de culture semi-<em>in vivo</em> de tub
         {{poster.authors | replace: "Joly V", "<strong>Joly V</strong>"}}
         <br/>
         <em>{{poster.conference}}</em>, {{poster.location}}, {{poster.date}}.
+      </h4>
+      <hr>
+    </li>
+  {% endfor %}
+</ul>
+
+<br/>
+<br/>
+
+<h2>Autres présentations</h2>
+<h5>{{speaker}} Présentateur</h5>
+<hr>
+
+<ul class="list-unstyled">
+  {% for pres in site.data.fr.other_presentations %}
+    <li>
+      <h4>
+        {% if pres.award %}
+          {{star}}
+        {% endif %}
+        <strong>{{pres.title}}</strong>
+        <br/>
+        {{pres.authors | replace: "*", speaker | replace: "Joly V", "<strong>Joly V</strong>"}}
+        <br/>
+        <em>{{pres.conference}}</em>, {{pres.location}}, {{pres.date}}.
       </h4>
       <hr>
     </li>
