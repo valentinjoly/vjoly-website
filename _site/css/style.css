@@ -10369,26 +10369,49 @@ readers do not read off random characters that represent icons */
   max-width: 100%; }
 
 * {
-  font-family: source-sans-pro, sans-serif; }
+  font-family: lato, sans-serif; }
 
 .monospace {
   font-family: inconsolata, monospace; }
 
 h1, h2, h3 {
-  font-weight: bold; }
+  font-weight: 900; }
 
 p {
-  font-size: large; }
+  font-size: large;
+  font-weight: 400; }
+
+a {
+  font-weight: 700; }
 
 .card-title {
   font-weight: bold; }
 
 .sandstone, .navbar .nav-link, .btn, .nav-tabs .nav-link, .nav-pills .nav-link, .breadcrumb, .pagination, .dropdown-menu .dropdown-item, .tooltip {
-  font-size: 110%;
-  font-weight: bold; }
+  font-size: 115%;
+  font-weight: 700;
+  text-transform: none; }
+
+.navbar {
+  padding-bottom: 0.25rem;
+  padding-top: 0.25rem; }
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-right: 0rem;
+  padding-left: 0rem; }
+
+.nav-link {
+  padding-bottom: 0.1rem;
+  padding-top: 0.1rem;
+  margin: 0.4rem; }
+
+.active > .nav-link {
+  border-bottom: 0.5px solid white; }
 
 .navbar-brand {
-  font-weight: bold; }
+  font-size: 140%;
+  font-weight: 700;
+  padding-bottom: 0.5rem; }
 
 .red-text {
   color: #B30000; }
@@ -10454,7 +10477,8 @@ p {
   padding: 0.75rem; }
 
 .seq-card p {
-  font-family: inconsolata, monospace; }
+  font-family: inconsolata, monospace;
+  font-weight: 700; }
 
 .seq-card span {
   font-family: inconsolata, monospace; }
@@ -10475,7 +10499,7 @@ p {
   margin-bottom: 10mm; }
 
 div.desc {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.75);
   bottom: 0;
   color: #ffffff;
   left: 0;
@@ -10486,6 +10510,9 @@ div.desc {
 .desc_content {
   font-size: large;
   font-weight: 600; }
+
+h5.desc_content {
+  margin-bottom: 0; }
 
 img.figure-img {
   margin-bottom: 0.2rem; }
@@ -10552,6 +10579,3 @@ ol.bibliography > li:before {
 .blog-abstract {
   color: #8E8C84;
   line-height: 120%; }
-
-a {
-  font-weight: bold; }
