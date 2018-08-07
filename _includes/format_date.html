@@ -58,6 +58,22 @@
       {%- when "11" -%} {%- assign month = "novembre" -%}
       {%- when "12" -%} {%- assign month = "dicembre" -%}
     {%- endcase -%}
+  {%- elsif page.lang == "eo" -%}
+    {%- assign day = day | append: "-a de" -%}
+    {%- case month -%}
+      {%- when  "1" -%} {%- assign month = "januaro" -%}
+      {%- when  "2" -%} {%- assign month = "frebruaro" -%}
+      {%- when  "3" -%} {%- assign month = "marto" -%}
+      {%- when  "4" -%} {%- assign month = "aprilo" -%}
+      {%- when  "5" -%} {%- assign month = "majo" -%}
+      {%- when  "6" -%} {%- assign month = "junio" -%}
+      {%- when  "7" -%} {%- assign month = "julio" -%}
+      {%- when  "8" -%} {%- assign month = "aŭgusto" -%}
+      {%- when  "9" -%} {%- assign month = "septembro" -%}
+      {%- when "10" -%} {%- assign month = "oktobro" -%}
+      {%- when "11" -%} {%- assign month = "novembro -%}
+      {%- when "12" -%} {%- assign month = "decembro" -%}
+    {%- endcase -%}
   {%- endif -%}
   {{ day }} {{ month }} {{ year }}
 {%- endif -%}

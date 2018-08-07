@@ -20,7 +20,7 @@ navbar_pages:
 
 google_analytics: UA-122333490-1
 
-languages: [en, fr, es, it]
+languages: [en, fr, es, it, eo]
 
 image_dir: "/images/"
 paper_dir: "/papers/"

@@ -1,0 +1,107 @@
+- name: Doktora esplorprojekto
+  field: Molekula biologio kaj biokomputiko
+  date: ekde 2013
+  supervisor: P-ro Daniel P. Matton
+  institution: Universitato de Montrealo
+  location: Montrealo, QC, Kanado
+  image: logo_udem.jpg
+  url: http://www.irbv.umontreal.ca/chercheurs/daniel-philippe-matton
+  molbiol_skills: [
+    "DNA- kaj RNA-teknikoj. Klonado. Esprimo kaj purigo de proteinoj.",
+    "Kulturo de plantaj ĉeloj. Eksperimentoj de aktraksio de polen-tuboj. Mikrofluidiko.",
+    "Mikroskopio: epifluoreska, konfokusa kaj elektrona mikroskopio (SEM, TEM).",
+  ]
+  bioinfo_skills: [
+    "Python kaj R programado. Disvolviĝo de la sekvenca serĉilo KAPPA.",
+    "Transcriptomiko: RNA-vicrivelado. DNA-mikropuntaro. Genesprimiĝo-analizo. Anotado.",
+    "Proteomiko: LC-MS-datuma analizo. Sekretomiko."
+  ]
+
+- name: Internacia kunlaboro
+  field: Biokomputiko
+  date: ekde majo 2016
+  supervisor: D-ro Johan Edqvist
+  institution: Universitato de Linköping
+  location: Linköping, Svedio
+  image: logo_liu.jpg
+  url: https://www.ifm.liu.se/biology/molgen/edqvist_lab/
+  molbiol_skills: [
+    Esprimo kaj purado de proteinoj en <em>Pichia pastoris</em>.,
+  ]
+  bioinfo_skills: [
+    Disvolviĝo de nsLTP-prognozilo kaj datumbazo de plantaj nsLTP.,
+  ]
+
+- name: Somera programo de la JSPS
+  field: Mikrofluidiko por polen-tuboj
+  date: junio–aŭgusto 2016
+  supervisor: P-ro Tetsuya Higashiyama
+  institution: Institute for Transformative Bio-Molecules (ITbM), Universitato de Nagojo
+  location: Nagojo, Japanio
+  image: logo_itbm.jpg
+  url: http://www.itbm.nagoya-u.ac.jp/en/members/t-higashiyama/
+  molbiol_skills: [
+    "Disvolviĝo de mikrofluidikaj aparatoj por ekzamenoj pri polen-tuboj.",
+    "Enkonduko al la 2-fotona konfokusa mikroskopio."
+  ]
+
+- name: Internacia staĝo de esplorado
+  field: Molekula evoluado kaj biokomputiko
+  date: aprilo–majo 2014
+  supervisor: P-ro William J. Swanson
+  institution: Universitato de Vaŝingtonio
+  location: Seatlo, WA, Usono
+  image: logo_uw.jpg
+  url: http://depts.washington.edu/swansonw/Swanson_Lab/Overview.html
+  bioinfo_skills: [
+    "Analizo fde genetikaj variantoj (GATK).",
+    "Analizoj de molekula evoluado kaj pozitiva selektado.",
+  ]
+
+- name: Botanika vojaĝo
+  field: Kolekto de individuoj de <em>Solanum</em> en la Andoj
+  date: aprilo–majo 2012
+  supervisor: Kunlaborado kun la D-ro Franco Chiarini
+  institution: Nacia Universitato de Kordobo
+  location: Kordobo, Argentino
+  image: logo_unc.jpg
+  url: http://museobotanico.unc.edu.ar/herbario
+  molbiol_skills: [
+    "Kolekto de sovaĝaj terpomoj en la Andoj.",
+  ]
+
+- name: Staĝo de esplorado
+  field: Planta molekula biologio
+  date: januaro–aŭgusto 2011
+  supervisor: P-ro Daniel P. Matton
+  institution: Universitato de Montrealo
+  location: Montrealo, QC, Kanado
+  image: logo_udem.jpg
+  url: http://www.irbv.umontreal.ca/chercheurs/daniel-philippe-matton
+  molbiol_skills: [
+    "Molekula klonado. Biolistiko. Epifluoreska kaj konfokusa mikroskopio.",
+  ]
+
+- name: Staĝo de esplorado
+  field: Planta fiziologio
+  date: junio–julio 2010
+  supervisor: P-ro Christophe Bailly
+  institution: CNRS (UMR 7622) – Universitato Pierre-kaj-Marie-Curie (Parizo-VI)
+  location: Parizo, Francio
+  image: logo_upmc.jpg
+  url: http://www.ibps.upmc.fr/en/research/developmental-biology-laboratory/seed-biology
+  molbiol_skills: [
+    "Biologio de sema dormado kaj ĝermado.",
+  ]
+
+- name: Mallongatempa enkonduka staĝo de esplorado
+  field: Planta molekula biologio
+  date: januaro 2009
+  supervisor: P-ro Chris Bowler
+  institution: CNRS (UMR 8197) – Normala Altlernejo de Parizo (ENS)
+  location: Parizo, Francio
+  image: logo_ens.jpg
+  url: http://www.ibens.ens.fr/spip.php?rubrique36&lang=fr
+  molbiol_skills: [
+    "Elektroforezo de proteinoj. Imunoprecipitado. “Western Blot”.",
+  ]

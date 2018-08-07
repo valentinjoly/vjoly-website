@@ -1,0 +1,89 @@
+---
+layout: default
+lang: eo
+title: "Ĉefpaĝo"
+banner_image: banner_pollen_MEB.jpg
+banner_caption: SEM-bildo de polenoj de <em>Solanum chacoense</em>
+---
+
+{%- assign image_path = "/images/valentin-labo.jpg" | relative-url -%}
+{%- assign research_url = "/eo/research.html" | relative-url -%}
+{%- assign cv_url = "https://github.com/valentinjoly/CV/raw/master/en/Valentin_Joly_CV_en.pdf" -%}
+{%- assign matton_lab_url = "http://www.irbv.umontreal.ca/chercheurs/daniel-philippe-matton?lang=en" -%}
+{%- assign phonetics_url = "https://eo.wikipedia.org/wiki/Franca_lingvo#Prononco"  -%}
+{%- assign github_url = "https://github.com/valentinjoly" -%}
+{%- assign linkedin_url = "https://www.linkedin.com/in/valentinjoly" -%}
+{%- assign researchgate_url = "https://www.researchgate.net/profile/Valentin_Joly" -%}
+{%- assign email_address = "valentin.joly@gmail.com" -%}
+
+{%- assign download = '<span class="fas fa-download"></span>' -%}
+{%- assign phone = '<span class="fas fa-phone"></span>' -%}
+{%- assign skype = '<span class="fab fa-skype"></span>' -%}
+{%- assign email = '<span class="fas fa-envelope"></span>' -%}
+{%- assign github = '<span class="fab fa-github-square" style="font-size: 200%;"></span>' -%}
+{%- assign linkedin = '<span class="fab fa-linkedin" style="font-size: 200%;"></span>' -%}
+{%- assign researchgate = '<span class="fab fa-researchgate" style="font-size: 200%;"></span>' -%}
+
+<div class="row py-3">
+  <div class="col-md-8">
+    <div class="jumbotron">
+      <h2><strong>Bonvenon!</strong></h2>
+      <p>
+        Mi estas <strong>Valentin Joly*</strong>, molekula biologo, biokomputikisto kaj doktoriĝonto en la Universitato de Montrealo, Kanado.
+      </p>
+      <p>
+        Mia esplorprojekto ĉe la laboratorio de la <a href="{{ matton_lab_url }}"><strong>P-ro Matton</strong></a> celas malkovri la molekulajn mekanismojn kiuj kontrolas prezigotajn reproduktajn barojn en sovaĝaj terpomoj. Mi speciale interesiĝas pri atrakcio de polen-tuboj, kun duobla metodo, kiu kombinas biokomputiko (RNA-vicrivelado) kaj molekula biologio (proteino-esprimo kaj funkciaj analizoj). Legu pli pri mia projekto en la paĝo <a href="{{ research_url }}"><strong>Esplorado</strong></a>.
+      </p>
+      <br/>
+      <a class="btn btn-danger btn-lg" href="{{ cv_url }}" role="button">
+        {{ download }} &nbsp; Elŝuti mian kariertabelon
+      </a>
+      <br/>
+      <br/>
+      <p>
+        <small>
+          *<a href="{{ phonetics_url }}">[valɑ̃tɛ̃ ʒoli]</a> estas la bona maniero diri ĝin, sed [val] aŭ [valentino] ankaŭ konvenas al mi. :)
+        </small>
+      </p>
+    </div>
+  </div>
+
+  <div class="col-8 col-md-4">
+    <div class="card">
+      <img class="card-img-top" src="{{ image_path }}" alt="Valentin">
+      <div class="card-body">
+        <h4 class="card-title">Kontaktinformoj</h4>
+        <p class="card-text">
+          Laboratorio de la P-ro D. P. Matton
+          <br/>
+          Departamento de biologio
+          <br/>
+          Universitato de Montrealo
+        </p>
+
+        <p class="card-text">
+          Institut de Recherche en Biologie Végétale<br/>
+          Bureau B367<br/>
+          4101, rue Sherbrooke Est<br/>
+          Montréal (Québec)  H1X 2B2<br/>
+          Kanado</p>
+        <p class="card-text">
+          {{ phone }} &nbsp; +1 (438) 495-3215
+          <br/>
+          {{ skype }} &nbsp; valentin.joly
+          <br/>
+          {{ email }} &nbsp; <a href="mailto:{{ email_address }}">{{ email_address }}</a>
+        </p>
+      </div>
+      <div class="card-footer">
+        <p class="card-text" >
+          <a href="{{ github_url }}" style="font-weight: normal;">{{ github }}</a>
+          &nbsp;
+          <a href="{{ linkedin_url }}" style="font-weight: normal;">{{ linkedin }}</a>
+          &nbsp;
+          <a href="{{ researchgate_url }}" style="font-weight: normal;">{{ researchgate }}</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

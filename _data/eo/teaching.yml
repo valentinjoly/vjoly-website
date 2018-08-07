@@ -1,0 +1,42 @@
+- position: Ĉefasistanto
+  field: Planta fiziologio
+  course: Planta fiziologio, praktikaj kursoj (BIO1534)
+  professor: P-ro Jean Rivoal
+  institution: Universitato de Montrealo
+  location: Montrealo, QC, Kanado
+  period: ekde 2011
+  image: logo_udem.jpg
+  url: https://admission.umontreal.ca/cours-et-horaires/cours/bio-1534/
+  description: "Teaching load: 140 hours per session, about 80 students<br/>Weekly courses including a lecture (0:45) and a practical session (2:30)<br/>Supervision of 1-2 teaching assistants"
+  description: "Instrua ŝarĝo: 140 horoj por kvarono, ĉirkaŭ 80 lernantoj <br/> Semajna klasoj inkluzive de prelego (0:45) kaj praktika laboro (2:30) <br/> Superrigardo de 1-2 asistantoj"
+
+- position: Asistanto
+  field: Molekula biologio
+  course: "Molekula biologio, praktikaj kursoj pri DNA kaj RNA (BIO3102)"
+  professor: P-ro Daniel P. Matton
+  institution: Universitato de Montrealo
+  location: Montrealo, QC, Kanado
+  period: 2014–2016
+  image: logo_udem.jpg
+  url: https://admission.umontreal.ca/cours-et-horaires/cours/bio-3102/
+  description: "Instrua ŝarĝo: 110 horoj por kvarono, 10–20 lernantoj"
+
+- position: Staĝ-superrigardisto por interaciaj gradstudantoj
+  course: Programo “Emerging Leaders in the Americas” (ELAP-PFLA)
+  professor: P-ro Daniel P. Matton
+  institution: Universitato de Montrealo
+  location: Montrealo, QC, Kanado
+  period: ekde 2015
+  image: logo_udem.jpg
+  url: http://www.scholarships-bourses.gc.ca/scholarships-bourses/can/institutions/elap-pfla.aspx?lang=eng
+  description: "Superrigardo de latinamerikaj gradstudantoj por 4 al 6-monataj esplorstaĝoj ĉe la Universitato de Montrealo (4 studentoj de Argentino kaj Meksiko superrigarditaj ĝis nun)"
+
+- position: Staĝ-superrigardisto por bakalaŭraj studantoj
+  course: Kurso “Enkonduko al esplorado” (BIO2050-BIO3050)
+  professor: P-ro Daniel P. Matton
+  institution: Universitato de Montrealo
+  location: Montrealo, QC, Kanado
+  period: ekde 2012
+  image: logo_udem.jpg
+  url: https://admission.umontreal.ca/cours-et-horaires/cours/bio-2050/
+  description: "Superrigardo de bakalaŭraj studentoj por 2 al 4-monataj someraj staĝoj (6 studentoj superrigarditaj ĝis nun)"

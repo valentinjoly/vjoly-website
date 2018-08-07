@@ -1,0 +1,52 @@
+---
+layout: page
+lang: eo
+title: "Stipendioj kaj premioj"
+banner_image: banner_flowers.jpg
+banner_caption: "Portretoj de floroj de sovaĝaj terpomoj: <em>S. chacoense</em>, <em>S. gandarillasii</em>, <em>S. tarijense</em>, <em>S. megistacrolobum</em>"
+---
+
+{%- assign star = '<span class="fas fa-star"></span>' -%}
+{%- assign travel = '<span class="fas fa-globe-africa"></span>' -%}
+
+<h5><strong>{{star}} Grava stipendio aŭ premio &nbsp;&nbsp; {{travel}} Vojaĝ-stipendio</strong></h5>
+<hr>
+
+{% assign years = "" %}
+{% for award in site.data.en.scholarships_awards %}
+  {% assign years = years | append: award.year %}
+  {% assign years = years | append: " " %}
+{% endfor %}
+{% assign years = years | strip | split: " " | uniq | sort | reverse %}
+
+{% for year in years %}
+<h3><strong>{{ year }}</strong></h3>
+
+<ul class="list-unstyled">
+  {% for award in site.data.eo.scholarships_awards %}
+    {% if year == award.year %}
+      <li>
+        <h4>
+          {% if award.major %}
+            {{star}}
+          {% endif %}
+
+          {% if award.travel %}
+            {{travel}}
+          {% endif %}
+
+          <strong>{{award.name}}</strong>
+          <br/>
+
+          {% if award.amount %}
+            {{award.organization}}, {{award.amount}} {{award.currency}} 
+          {% else %}
+            {{award.organization}}
+          {% endif %}
+        </h4>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
+<hr>
+{% endfor %}

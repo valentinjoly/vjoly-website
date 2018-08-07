@@ -1,0 +1,140 @@
+---
+layout: page
+lang: eo
+title: "Publikigoj"
+banner_image: banner_pistils.jpg
+banner_caption: Eksperimenta aranĝo por la kulturo semi-<em>in vivo</em> de terpomaj polen-tuboj
+---
+
+{%- assign link = '<span class="fas fa-external-link-square-alt"></span>' -%}
+{%- assign pdf = '<span class="fas fa-file-pdf"></span>' -%}
+{%- assign file = '<span class="fas fa-file"></span>' -%}
+{%- assign bookmark = '<span class="fas fa-bookmark"></span>' -%}
+{%- assign speaker = '<small><span class="fas fa-chalkboard-teacher"></span></small>' -%}
+{%- assign co_author = '<span class="fas fa-adjust" style="font-size: 80%"></span>' -%}
+{%- assign star = '<span class="fas fa-star" style="font-size: 80%"></span>' -%}
+
+<h2>Artikoloj</h2>
+<h5>{{co_author}} Ko-unuaj aŭtoroj</h5>
+<hr>
+
+<ul class="list-unstyled">
+  {% for paper in site.data.eo.published_papers %}
+    {%- assign paper_image_path = paper.image | prepend: site.image_dir | relative_url -%}
+    {%- assign paper_url = paper.doi | prepend: "http://dx.doi.org/" -%}
+    <li class="media">
+      <div class="align-self-start mr-3">
+        <a href="{{ paper_url }}" target="_new">
+          <img class="rounded" src="{{ paper_image_path }}" alt="..." width="100px"/>
+        </a>
+      </div>
+      <div class="media-body">
+        <h4>
+          <strong>{{paper.title}}</strong>
+          <br/>
+          {{paper.authors | replace: "*", co_author | replace: "Joly V", "<strong>Joly V</strong>"}}
+          <br/>
+          <em>{{paper.journal}}</em>, {{paper.year}}, {{paper.volume}}({{paper.issue}}):{{paper.pages}}. DOI: {{paper.doi}}
+          <br/>
+          <small>
+            <strong>
+              {{link}} <a href="{{ paper_url }}" target="_new">Legi enrete</a>
+            </strong>
+          </small>
+          |
+          {% if paper.pdf %}
+          {% assign pdf_path = paper.pdf | prepend: site.papers.dir | relative_url %}
+          <small>
+            <strong>
+              {{pdf}} <a href="{{ pdf_path }}" target="_new">PDF</a>
+            </strong>
+          </small>
+          |
+          {% endif %}
+          {% assign bibtex_path = paper.bibtex | prepend: site.papers.dir | relative_url %}
+          <small>
+            <strong>
+              {{bookmark}} <a href="{{ bibtex_path }}" target="_new">BibTeX-dosiero</a>
+            </strong>
+          </small>
+        </h4>
+      </div>
+    </li>
+    <hr>
+  {% endfor %}
+</ul>
+
+<br/>
+<br/>
+
+<h2>Parolaj prezentoj</h2>
+<h5>{{star}} Premio</h5>
+<hr>
+
+<ul class="list-unstyled">
+  {% for talk in site.data.eo.oral_presentations %}
+    <li>
+      <h4>
+        {% if talk.award %}
+          {{star}}
+        {% endif %}
+        <strong>{{talk.title}}</strong>
+        <br/>
+        {{talk.authors | replace: "Joly V", "<strong>Joly V</strong>"}}
+        <br/>
+        <em>{{talk.conference}}</em>, {{talk.location}}, {{talk.date}}.
+      </h4>
+      <hr>
+    </li>
+  {% endfor %}
+</ul>
+
+<br/>
+<br/>
+
+<h2>Prezentoj kun afiŝo</h2>
+<h5>{{star}} Premio</h5>
+<hr>
+
+<ul class="list-unstyled">
+  {% for poster in site.data.eo.poster_presentations %}
+    <li>
+      <h4>
+        {% if poster.award %}
+          {{star}}
+        {% endif %}
+        <strong>{{poster.title}}</strong>
+        <br/>
+        {{poster.authors | replace: "Joly V", "<strong>Joly V</strong>"}}
+        <br/>
+        <em>{{poster.conference}}</em>, {{poster.location}}, {{poster.date}}.
+      </h4>
+      <hr>
+    </li>
+  {% endfor %}
+</ul>
+
+<br/>
+<br/>
+
+<h2>Aliaj prezentoj</h2>
+<h5>{{speaker}} Prezentisto</h5>
+<hr>
+
+<ul class="list-unstyled">
+  {% for pres in site.data.eo.other_presentations %}
+    <li>
+      <h4>
+        {% if pres.award %}
+          {{star}}
+        {% endif %}
+        <strong>{{pres.title}}</strong>
+        <br/>
+        {{pres.authors | replace: "*", speaker | replace: "Joly V", "<strong>Joly V</strong>"}}
+        <br/>
+        <em>{{pres.conference}}</em>, {{pres.location}}, {{pres.date}}.
+      </h4>
+      <hr>
+    </li>
+  {% endfor %}
+</ul>

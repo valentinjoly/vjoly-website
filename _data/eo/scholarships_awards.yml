@@ -1,0 +1,268 @@
+- name: "Vojaĝ-stipendio “Jacques-Rousseau”"
+  year: "2018"
+  organization: "Plantbiologio Esplorinstituto, Universitato de Montrealo"
+  amount: "800"
+  currency: "CAD"
+  major: false
+  travel: true
+
+- name: "Plejboneca stipendio “Hydro-Québec” (2-a jaro)"
+  year: "2017"
+  organization: "Hydro-Québec (nacia elektra kompanio)"
+  amount: "25 000"
+  currency: "CAD"
+  major: true
+  travel: false
+
+- name: "Stipendio por finantaj doktoriĝontoj (BFED)"
+  year: "2017"
+  organization: "Fakultato de Diplomiĝintaj kaj Postdoktoriĝaj Studoj, Universitato de Montrealo"
+  amount: "8 400"
+  currency: "CAD"
+  major: false
+  travel: false
+
+- name: "Vojaĝ-stipendio “Jacques-Rousseau”"
+  year: "2017"
+  organization: "Plantbiologio Esplorinstituto, Universitato de Montrealo"
+  amount: "1 500"
+  currency: "CAD"
+  major: false
+  travel: true
+
+- name: "Vojaĝ-stipendio (<em>Bourse d'appui à la diffusion des résultats de recherche</em>)"
+  year: "2017"
+  organization: "Fakultato de Diplomiĝintaj kaj Postdoktoriĝaj Studoj, Universitato de Montrealo"
+  amount: "500"
+  currency: "CAD"
+  major: false
+  travel: true
+
+- name: "Honora mencio por studenta parola prezento"
+  year: "2017"
+  organization: "CSPB Eastern Regional Meeting"
+  major: false
+  travel: false
+
+
+- name: "Plejboneca stipendio “Hydro-Québec”"
+  year: "2016"
+  organization: "Hydro-Québec (nacia elektra kompanio)"
+  amount: "25 000"
+  currency: "CAD"
+  major: true
+  travel: false
+
+- name: "Doktoriĝonta stipendio de la Registaro de Kebekio"
+  year: "2016"
+  organization: "Fonds Québécois de Recherche – Nature et Technologies"
+  amount: "13 333"
+  currency: "CAD"
+  major: true
+  travel: false
+
+- name: "Premio “MITACS Globalink” – Somera programo de la JSPS"
+  year: "2016"
+  organization: "MITACS / Japanese Society for the Promotion of Science"
+  amount: "534 000"
+  currency: "JPY"
+  major: true
+  travel: true
+
+- name: "Premio de la plej bona gradigita studenta afiŝo"
+  year: "2016"
+  organization: "Frontiers in Plant Reproduction Biology, Konferenco “Plant Reproduction 2016”"
+  amount: "300"
+  currency: "USD"
+  major: false
+  travel: false
+
+- name: "Vojaĝ-stipendio “Jacques-Rousseau”"
+  year: "2016"
+  organization: "Plantbiologio Esplorinstituto, Universitato de Montrealo"
+  amount: "1 500"
+  currency: "CAD"
+  major: false
+  travel: true
+
+- name: "Vojaĝ-subvencio “PARSECS”"
+  year: "2016"
+  organization: "FAÉCUM, Universitato de Montrealo"
+  amount: "400"
+  currency: "CAD"
+  major: false
+  travel: true
+
+- name: "Plejboneca stipendio “Catherine-Frédette” pri biologio kaj neŭrologio"
+  year: "2015"
+  organization: "Fakultato de Diplomiĝintaj kaj Postdoktoriĝaj Studoj, Universitato de Montrealo"
+  amount: "5 000"
+  currency: "CAD"
+  major: true
+  travel: false
+
+- name: "Doktoriĝonta stipendio “FBSB” de la Departamento de Biologio"
+  year: "2015"
+  organization: "Universitato de Montrealo"
+  amount: "1 500"
+  currency: "CAD"
+  major: true
+  travel: false
+
+- name: "Premio de la prezidanto por la plej bona studenta parola prezento"
+  year: "2015"
+  organization: "Kanada Socio de Plantaj Biologoj (CSPB-SCBV), Konferenco “Botany 2015”"
+  amount: "500"
+  currency: "CAD"
+  major: false
+  travel: false
+
+- name: "Premio de la plej bona studenta afiŝo"
+  year: "2015"
+  organization: "Compute Canada, High Performance Computing Symposium HPCS 2015"
+  amount: "500"
+  currency: "CAD"
+  major: false
+  travel: false
+
+- name: "Vojaĝ-stipendio “G.-H. Duff”"
+  year: "2015"
+  organization: "Kanada Socio de Plantaj Biologoj (CSPB-SCBV)"
+  amount: "340"
+  currency: "CAD"
+  major: false
+  travel: true
+
+- name: "Vojaĝ-stipendio “Jacques-Rousseau”"
+  year: "2015"
+  organization: "Plantbiologio Esplorinstituto, Universitato de Montrealo"
+  amount: "770"
+  currency: "CAD"
+  major: false
+  travel: true
+
+- name: "Plejboneca stipendio de la Fakultato de Diplomiĝintaj kaj Postdoktoriĝaj Studoj"
+  year: "2015"
+  organization: "Universitato de Montrealo"
+  amount: "3 000"
+  currency: "CAD"
+  major: true
+  travel: false
+
+- name: "Stipendio “Pehr-Kalm Scholarship”"
+  year: "2014"
+  organization: "Botanika Ĝardeno de Montrealo"
+  amount: "2 000"
+  currency: "CAD"
+  major: true
+  travel: false
+
+- name: "Vojaĝ-stipendio port internaciaj staĝoj"
+  year: "2014"
+  organization: "Registaro de Kebekio (FRQNT) – Centre SÈVE"
+  amount: "3 815"
+  currency: "CAD"
+  major: false
+  travel: true
+
+- name: "Vojaĝ-stipendio “Jacques-Rousseau”"
+  year: "2014"
+  organization: "Plantbiologio Esplorinstituto, Universitato de Montrealo"
+  amount: "1 760"
+  currency: "CAD"
+  major: false
+  travel: true
+
+- name: "Plejboneca stipendio “Marie-Victorin”"
+  year: "2013"
+  organization: "Plantbiologio Esplorinstituto, Universitato de Montrealo"
+  amount: "3 000"
+  currency: "CAD"
+  major: true
+  travel: false
+
+- name: "Premio de la plej bona parola prezento"
+  year: "2013"
+  organization: "Konferenco “Journées du Centre SÈVE”"
+  amount: "300"
+  currency: "CAD"
+  major: false
+  travel: false
+
+- name: "Vojaĝ-stipendio “Jacques-Rousseau”"
+  year: "2013"
+  organization: "Plantbiologio Esplorinstituto, Universitato de Montrealo"
+  amount: "850"
+  currency: "CAD"
+  major: false
+  travel: true
+
+- name: "Premio de la plej bona parola prezento"
+  year: "2013"
+  organization: "Simpozio de biologio, Universitato de Montrealo"
+  amount: "100"
+  currency: "CAD"
+  major: false
+  travel: false
+
+- name: "Majstra stipendio “FBSB” de la Departamento de Biologio"
+  year: "2012"
+  organization: "Universitato de Montrealo"
+  amount: "1 200"
+  currency: "CAD"
+  major: true
+  travel: false
+
+- name: "Stipendio por akcelita M.Sc.-al-Ph.D. transiro"
+  year: "2012"
+  organization: "Fakultato de Diplomiĝintaj kaj Postdoktoriĝaj Studoj, Universitato de Montrealo"
+  amount: "14 000"
+  currency: "CAD"
+  major: true
+  travel: false
+
+- name: "Vojaĝ-stipendio por studenta interŝanĝo en Kanado"
+  year: "2011"
+  organization: "Franca registaro (CROUS)"
+  amount: "1 600 "
+  currency: "EUR"
+  major: false
+  travel: true
+
+- name: "Plejboneca stipendio “PIL” por studenta interŝanĝo en Kanado"
+  year: "2011"
+  organization: "Universitato Pierre-kaj-Marie-Curie (Parizo VI)"
+  amount: "1 500"
+  currency: "EUR"
+  major: false
+  travel: true
+
+- name: "Vojaĝ-stipendio “AMIÉ” por studenta interŝanĝo en Kanado"
+  year: "2011"
+  organization: "Franca regiona aŭtoritato (<em>Conseil régional</em>)"
+  amount: "2 800"
+  currency: "EUR"
+  major: false
+  travel: true
+
+- name: "Vojaĝ-stipendio “Campus'Trotter” por studenta interŝanĝo en Kanado"
+  year: "2011"
+  organization: "Franca loka aŭtoritato (<em>Conseil général</em>)"
+  amount: "700"
+  currency: "EUR"
+  major: false
+  travel: true
+
+- name: "Plej bona bakalaŭra studento de biologio post la finaj ekzamenoj de junio 2010"
+  year: "2010"
+  organization: "Universitato Pierre-kaj-Marie-Curie (Parizo VI)"
+  major: false
+  travel: false
+
+- name: "Plejboneca stipendio por bakalaŭraj studoj"
+  year: "2008"
+  organization: "Franca registaro (CROUS)"
+  amount: "5 400"
+  currency: "EUR"
+  major: true
+  travel: false

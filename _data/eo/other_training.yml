@@ -1,0 +1,36 @@
+- name: Enreta trejnado pri biomputiko
+  date: 2016–2018
+  institution: Universitato de Kalifornio ĉe San-Diego
+  location: en Coursera
+  image: logo_uc_san_diego.jpg
+  url: https://www.coursera.org/specializations/bioinformatics
+  courses:
+    - name: 6 kursoj kaj 1 fina projekto
+      certificate: H528Q2K9KYB6
+      url: https://www.coursera.org/account/accomplishments/specialization/H528Q2K9KYB6
+
+- name: Enretaj kursoj
+  field: Biokomputiko
+  date: 2016
+  institution: Universitato Johns Hopkins
+  location: en Coursera
+  image: logo_jhu.jpg
+  url: https://www.coursera.org/jhu
+  courses:
+    - name: Python por genara datumscienco
+      certificate: XHKWDB4XD7
+      url: https://www.coursera.org/account/accomplishments/verify/XHKWDB4XD7
+    - name: Enkonduko al genomikaj teknologioj
+      certificate: U88T89XKR2
+      url: https://www.coursera.org/account/accomplishments/verify/U88T89XKR2
+    - name: Programado R
+      certificate: X8NKEQAUU4
+      url: https://www.coursera.org/account/accomplishments/verify/X8NKEQAUU4
+
+- name: Internacia seminario
+  field: Funkcia anotado de proteinoj
+  date: July 2012
+  institution: BLAST2GO
+  location: Universitato de Kalifornio ĉe Davis, CA, Usono
+  image: logo_blast2go.jpg
+  url: https://www.blast2go.com/
