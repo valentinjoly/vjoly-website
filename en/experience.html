@@ -26,9 +26,9 @@ parent_page: experience.html
 
       <div class="media-body">
         <h3 class="media-heading">
-          <strong>{{degree.name}}</strong>
+          {{degree.name}}
           {% if degree.field %}
-            – {{degree.field}}
+            <span style="font-weight: 700">— {{degree.field}}</span>
           {% endif %}
         </h3>
         <h4><strong>{{degree.year}}</strong></h4>
@@ -79,9 +79,9 @@ parent_page: experience.html
 
       <div class="media-body">
         <h3 class="media-heading">
-          <strong>{{experience.name}}</strong>
+          {{experience.name}}
           {% if experience.field %}
-            – {{experience.field}}
+            <span style="font-weight: 700">— {{experience.field}}</span>
           {% endif %}
         </h3>
         <h4><strong>{{experience.date}}</strong></h4>
@@ -131,9 +131,9 @@ parent_page: experience.html
 
       <div class="media-body">
         <h3 class="media-heading">
-          <strong>{{training.name}}</strong>
+          {{training.name}}
           {% if training.field %}
-            – {{training.field}}
+            <span style="font-weight: 700">— {{training.field}}</span>
           {% endif %}
         </h3>
         <h4><strong>{{training.date}}</strong></h4>
@@ -182,9 +182,9 @@ parent_page: experience.html
 
       <div class="media-body">
         <h3 class="media-heading">
-          <strong>{{teaching.position}}</strong>
+          {{teaching.position}}
           {% if teaching.field %}
-            – {{teaching.field}}
+            <span style="font-weight: 700">— {{teaching.field}}</span>
           {% endif %}
         </h3>
         <h4><strong>{{teaching.period}}</strong></h4>
@@ -227,7 +227,7 @@ parent_page: experience.html
       </div>
 
       <div class="media-body">
-        <h3 class="media-heading"><strong>{{volunteering.position}}</strong></h3>
+        <h3 class="media-heading">{{volunteering.position}}</h3>
         <h4><strong>{{volunteering.period}}</strong></h4>
         <h4><strong>{{volunteering.institution}}</strong>, <em>{{volunteering.location}}</em></h4>
 

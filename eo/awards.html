@@ -21,7 +21,7 @@ parent_page: awards.html
 {% assign years = years | strip | split: " " | uniq | sort | reverse %}
 
 {% for year in years %}
-<h3><strong>{{ year }}</strong></h3>
+<h3>{{ year }}</h3>
 
 <ul class="list-unstyled">
   {% for award in site.data.eo.scholarships_awards %}

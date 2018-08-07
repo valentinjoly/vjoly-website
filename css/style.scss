@@ -48,12 +48,8 @@
 
 // FONT SETTINGS
 
-h1, h2 {
+h1, h2, h3 {
   font-weight: 900;
-}
-
-h3 {
-  font-weight: 700;
 }
 
 p {
@@ -203,7 +199,7 @@ $lightorange:   #FFBF80;
 // FIGURES & CAPTIONS
 
 div.desc {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.75);
   bottom: 0;
   color: #ffffff;
   left: 0;
@@ -215,6 +211,10 @@ div.desc {
 .desc_content {
   font-size: large;
   font-weight: 600;
+}
+
+h5.desc_content {
+  margin-bottom: 0;
 }
 
 img.figure-img {
