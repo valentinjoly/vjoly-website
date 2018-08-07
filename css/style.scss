@@ -18,6 +18,25 @@
 
 // FONTS
 
+// Lato font weights:
+//   100 Hairline
+//   300 Light
+//   400 Regular
+//   700 Bold
+//   900 Black
+
+// Inconsolata font weights:
+//   500 Regular
+//   700 Bold
+
+// Source Sans Pro font weights:
+//   200 Extra Light
+//   300 Light
+//   400 Regular
+//   600 Semibold
+//   700 Bold
+//   900 Black
+
 * {
   font-family: lato, sans-serif;
 }
@@ -29,12 +48,22 @@
 
 // FONT SETTINGS
 
-h1, h2, h3 {
-  font-weight: bold;
+h1, h2 {
+  font-weight: 900;
+}
+
+h3 {
+  font-weight: 700;
 }
 
 p {
   font-size: large;
+  font-weight: 400;
+}
+
+
+a {
+  font-weight: 700;
 }
 
 .card-title {
@@ -42,12 +71,14 @@ p {
 }
 
 .sandstone {
-  font-size: 110%;
-  font-weight: bold;
+  font-size: 115%;
+  font-weight: 700;
+  text-transform: none;
 }
 
 .navbar-brand {
-  font-weight: bold;
+  font-size: 120%;
+  font-weight: 900;
 }
 
 
@@ -118,6 +149,7 @@ $lightorange:   #FFBF80;
 
 .seq-card p {
   font-family: inconsolata, monospace;
+  font-weight: 700;
 }
 
 .seq-card span {
@@ -246,8 +278,4 @@ ol.bibliography > li:before {
 .blog-abstract {
   color: $gray-600;
   line-height: 120%
-}
-
-a {
-  font-weight: bold;
 }
