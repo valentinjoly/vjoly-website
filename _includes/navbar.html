@@ -9,11 +9,16 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         {% for path in site.navbar_pages %}
-          {%- assign full_path = path | prepend: "/" | prepend: page.lang -%}
-          {%- assign navbar_page = site.pages | where: "path", full_path | first -%}
+          {%- assign navbar_page_url = path | prepend: "/" | prepend: page.lang -%}
+          {%- assign navbar_page = site.pages | where: "path", navbar_page_url | first -%}
+          {%- assign parent_page_url = page.parent_page | prepend: "/" | prepend: page.lang -%}
           {% if navbar_page.title %}
+            {% if navbar_page_url == parent_page_url %}
+            <li class="nav-item active">
+            {% else %}
             <li class="nav-item">
-              <a class="nav-link" href="{{ navbar_page.url | relative_url }}">{{ navbar_page.title | escape }}</a>
+            {% endif %}
+              <a class="nav-link" href="{{ navbar_page_url | relative_url }}">{{ navbar_page.title }}</a>
             </li>
           {% endif %}
         {% endfor %}
@@ -30,6 +35,10 @@
                 <a class="nav-link" href="{{ transl_page.url | relative_url }}">{{ lang | escape }}</a>
               </li>
             {% endif %}
+          {% else %}
+            <li class="nav-item active">
+              <a class="nav-link">{{ lang | escape }}</a>
+            </li>
           {% endif %}
         {% endfor %}
       </ul>
