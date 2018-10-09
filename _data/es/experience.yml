@@ -36,7 +36,7 @@
   field: Microfluídica para tubos polínicos
   date: Junio–Agosto 2016
   supervisor: Prof. Tetsuya Higashiyama
-  institution: Institute for Transformative Bio-Molecules (ITbM), Nagoya University
+  institution: Institute for Transformative Bio-Molecules (ITbM), Universidad de Nagoya
   location: Nagoya, Japón
   image: logo_itbm.jpg
   url: http://www.itbm.nagoya-u.ac.jp/en/members/t-higashiyama/
@@ -58,10 +58,10 @@
     "Análisis de evolución molecular y de selección positivas (codeml).",
   ]
 
-- name: Botanical transect
-  field: Collection of <em>Solanum</em> individuals in the Andes
+- name: Viaje botánico
+  field: Colecta de individuos de <em>Solanum</em> en los Andes
   date: Abril–Mayo 2012
-  supervisor: Partnership with Dr. Franco Chiarini
+  supervisor: Colaboración con el Dr. Franco Chiarini
   institution: Universidad Nacional de Córdoba
   location: Córdoba, Argentina
   image: logo_unc.jpg

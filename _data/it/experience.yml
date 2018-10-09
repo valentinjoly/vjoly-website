@@ -13,7 +13,7 @@
   ]
   bioinfo_skills: [
     "Programmazione Python e R. Sviluppo dello software KAPPA.",
-    "Transcriptomics: RNA-seq assemblies. Microarray analysis. DGE. Annotazione.",
+    "Trascrittomica: Assemblaggio RNA-seq. Analisi di microarray. DGE. Annotazione.",
     "Proteomica: Analisi di dati LC-MS. Secretomica. Quantificazione <em>label-free</em> delle proteine.",
   ]
 
@@ -36,13 +36,13 @@
   field: Microfluidica per tubi pollinici
   date: giugno–agosto 2016
   supervisor: Prof. Tetsuya Higashiyama
-  institution: Institute for Transformative Bio-Molecules (ITbM), Nagoya University
+  institution: Institute for Transformative Bio-Molecules (ITbM), Università di Nagoya
   location: Nagoya, Giappone
   image: logo_itbm.jpg
   url: http://www.itbm.nagoya-u.ac.jp/en/members/t-higashiyama/
   molbiol_skills: [
     "Sviluppo di dispositivi microfluidici per test di attrazione di tubi pollinici.",
-    "Introduzione alla microscopia di eccitazione a due fotoni"
+    "Introduzione alla microscopia di eccitazione a due fotoni."
   ]
 
 - name: Stage di ricerca
@@ -61,7 +61,7 @@
 - name: Transetto botanico
   field: Raccolta di <em>Solanum</em> nelle Ande
   date: aprile–maggio 2012
-  supervisor: partnership con il dott. Franco Chiarini
+  supervisor: Partnership con il Dr. Franco Chiarini
   institution: Università Nazionale di Córdoba
   location: Córdoba, Argentina
   image: logo_unc.jpg

@@ -54,8 +54,8 @@
   image: logo_uw.jpg
   url: http://depts.washington.edu/swansonw/Swanson_Lab/Overview.html
   bioinfo_skills: [
-    "Analizo fde genetikaj variantoj (GATK).",
-    "Analizoj de molekula evoluado kaj pozitiva selektado.",
+    "Analizo de genetikaj variantoj (GATK).",
+    "Analizoj de molekula evoluado kaj pozitiva selektado (codeml).",
   ]
 
 - name: Botanika vojaĝo
