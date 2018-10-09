@@ -23,7 +23,7 @@ google_analytics: UA-122333490-1
 languages: [en, fr, es, it, eo]
 
 image_dir: "/images/"
-paper_dir: "/papers/"
+docs_dir: "/docs/"
 
 exclude:
   - Gemfile

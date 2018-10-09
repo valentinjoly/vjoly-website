@@ -44,7 +44,7 @@ parent_page: publications.html
           </small>
           |
           {% if paper.pdf %}
-          {% assign pdf_path = paper.pdf | prepend: site.papers.dir | relative_url %}
+          {% assign pdf_path = paper.pdf | prepend: site.docs_dir | relative_url %}
           <small>
             <strong>
               {{pdf}} <a href="{{ pdf_path }}" target="_new">PDF</a>
@@ -52,7 +52,7 @@ parent_page: publications.html
           </small>
           |
           {% endif %}
-          {% assign bibtex_path = paper.bibtex | prepend: site.papers.dir | relative_url %}
+          {% assign bibtex_path = paper.bibtex | prepend: site.docs_dir | relative_url %}
           <small>
             <strong>
               {{bookmark}} <a href="{{ bibtex_path }}" target="_new">BibTeX entry</a>
