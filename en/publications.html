@@ -25,7 +25,7 @@ parent_page: publications.html
     {%- assign paper_url = paper.doi | prepend: "http://dx.doi.org/" -%}
     <li class="media">
       <div class="align-self-start mr-3">
-        <a href="{{ paper_url }}" target="_new">
+        <a href="{{ paper_url }}" target="_blank" rel="noopener noreferrer">
           <img class="rounded" src="{{ paper_image_path }}" alt="..." width="100px"/>
         </a>
       </div>
@@ -39,7 +39,7 @@ parent_page: publications.html
           <br/>
           <small>
             <strong>
-              {{link}} <a href="{{ paper_url }}" target="_new">Read online</a>
+              {{link}} <a href="{{ paper_url }}" target="_blank" rel="noopener noreferrer">Read online</a>
             </strong>
           </small>
           |
@@ -47,7 +47,7 @@ parent_page: publications.html
           {% assign pdf_path = paper.pdf | prepend: site.docs_dir | relative_url %}
           <small>
             <strong>
-              {{pdf}} <a href="{{ pdf_path }}" target="_new">PDF</a>
+              {{pdf}} <a href="{{ pdf_path }}" target="_blank" rel="noopener noreferrer">PDF</a>
             </strong>
           </small>
           |
@@ -55,7 +55,7 @@ parent_page: publications.html
           {% assign bibtex_path = paper.bibtex | prepend: site.docs_dir | relative_url %}
           <small>
             <strong>
-              {{bookmark}} <a href="{{ bibtex_path }}" target="_new">BibTeX entry</a>
+              {{bookmark}} <a href="{{ bibtex_path }}">BibTeX entry</a>
             </strong>
           </small>
         </h4>

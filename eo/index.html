@@ -7,8 +7,8 @@ banner_caption: SEM-bildo de polenoj de <em>Solanum chacoense</em>
 ---
 
 {%- assign image_path = "/images/valentin-labo.jpg" | relative-url -%}
+{% assign cv_path = "Valentin_Joly_CV_eo.pdf" | prepend: site.docs_dir | relative_url %}
 {%- assign research_url = "/eo/research.html" | relative-url -%}
-{%- assign cv_url = "https://github.com/valentinjoly/CV/raw/master/eo/Valentin_Joly_CV_eo.pdf" -%}
 {%- assign matton_lab_url = "http://www.irbv.umontreal.ca/chercheurs/daniel-philippe-matton?lang=en" -%}
 {%- assign phonetics_url = "https://eo.wikipedia.org/wiki/Franca_lingvo#Prononco"  -%}
 {%- assign github_url = "https://github.com/valentinjoly" -%}
@@ -35,7 +35,7 @@ banner_caption: SEM-bildo de polenoj de <em>Solanum chacoense</em>
         Mia esplorprojekto ĉe la laboratorio de la <a href="{{ matton_lab_url }}"><strong>P-ro Matton</strong></a> celas malkovri la molekulajn mekanismojn kiuj kontrolas prezigotajn reproduktajn barojn en sovaĝaj terpomoj. Mi speciale interesiĝas pri atrakcio de polen-tuboj, kun duobla metodo, kiu kombinas biokomputiko (RNA-vicrivelado) kaj molekula biologio (proteino-esprimo kaj funkciaj analizoj). Legu pli pri mia projekto en la paĝo <a href="{{ research_url }}"><strong>Esplorado</strong></a>.
       </p>
       <br/>
-      <a class="btn btn-danger btn-lg" href="{{ cv_url }}" role="button">
+      <a class="btn btn-danger btn-lg" href="{{ cv_path }}" role="button" target="_blank" rel="noopener noreferrer">
         {{ download }} &nbsp; Elŝuti mian kariertabelon
       </a>
       <br/>

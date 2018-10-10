@@ -16,7 +16,7 @@ parent_page: experience.html
 
 <ul class="list-unstyled">
   {% for degree in site.data.eo.education %}
-    {%- assign image_path = degree.image | prepend: "/images/" | relative_url -%}
+    {%- assign image_path = degree.image | prepend: site.image_dir | relative_url -%}
     <li class="media">
       <div class="align-self-start mr-3">
         <a href="{{degree.url}}">
@@ -69,7 +69,7 @@ parent_page: experience.html
 
 <ul class="list-unstyled">
   {% for experience in site.data.eo.experience %}
-    {%- assign image_path = experience.image | prepend: "/images/" | relative_url -%}
+    {%- assign image_path = experience.image | prepend: site.image_dir | relative_url -%}
     <li class="media">
       <div class="align-self-start mr-3">
         <a href="{{degree.url}}">
@@ -121,7 +121,7 @@ parent_page: experience.html
 <hr>
 <ul class="list-unstyled">
   {% for training in site.data.eo.other_training %}
-    {%- assign image_path = training.image | prepend: "/images/" | relative_url -%}
+    {%- assign image_path = training.image | prepend: site.image_dir | relative_url -%}
     <li class="media">
       <div class="align-self-start mr-3">
         <a href="{{degree.url}}">
@@ -172,7 +172,7 @@ parent_page: experience.html
 
 <ul class="list-unstyled">
   {% for teaching in site.data.eo.teaching %}
-    {%- assign image_path = teaching.image | prepend: "/images/" | relative_url -%}
+    {%- assign image_path = teaching.image | prepend: site.image_dir | relative_url -%}
     <li class="media">
       <div class="align-self-start mr-3">
         <a href="{{degree.url}}">
@@ -218,7 +218,7 @@ parent_page: experience.html
 
 <ul class="list-unstyled">
   {% for volunteering in site.data.eo.volunteering %}
-    {%- assign image_path = volunteering.image | prepend: "/images/" | relative_url -%}
+    {%- assign image_path = volunteering.image | prepend: site.image_dir | relative_url -%}
     <li class="media">
       <div class="align-self-start mr-3">
         <a href="{{degree.url}}">

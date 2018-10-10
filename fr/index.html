@@ -7,8 +7,8 @@ banner_caption: Grains de pollen de <em>Solanum chacoense</em> vus au MEB
 ---
 
 {%- assign image_path = "/images/valentin-labo.jpg" | relative-url -%}
+{% assign cv_path = "Valentin_Joly_CV_fr.pdf" | prepend: site.docs_dir | relative_url %}
 {%- assign research_url = "/fr/research.html" | relative-url -%}
-{%- assign cv_url = "https://github.com/valentinjoly/CV/raw/master/fr/Valentin_Joly_CV_fr.pdf" -%}
 {%- assign matton_lab_url = "http://www.irbv.umontreal.ca/chercheurs/daniel-philippe-matton" -%}
 {%- assign github_url = "https://github.com/valentinjoly" -%}
 {%- assign linkedin_url = "https://www.linkedin.com/in/valentinjoly" -%}
@@ -34,7 +34,7 @@ banner_caption: Grains de pollen de <em>Solanum chacoense</em> vus au MEB
         Mes travaux au <a href="{{ matton_lab_url }}"><strong>laboratoire Matton</strong></a> visent à décrypter les mécanismes moléculaires gouvernant les barrières prézygotiques à l’hybridation chez les pommes de terre sauvages. Je m’intéresse en particulier au <strong>guidage du tube pollinique</strong> en utilisant une approche qui combine la bioinformatique (séquençage de nouvelle génération) et la biologie moléculaire (expression de protéines et test fonctionnels). Vous trouverez plus d’informations sur mon projet à la page <a href="{{ research_url }}"><strong>Recherche</strong></a>.
       </p>
       <br/>
-      <a class="btn btn-danger btn-lg" href="{{ cv_url }}" role="button">
+      <a class="btn btn-danger btn-lg" href="{{ cv_path }}" role="button" target="_blank" rel="noopener noreferrer">
         {{ download }} &nbsp; Télécharger mon CV
       </a>
       <br/>

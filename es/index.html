@@ -7,8 +7,8 @@ banner_caption: Granos de pólen de <em>Solanum chacoense</em> en microscopía d
 ---
 
 {%- assign image_path = "/images/valentin-labo.jpg" | relative-url -%}
+{% assign cv_path = "Valentin_Joly_CV_es.pdf" | prepend: site.docs_dir | relative_url %}
 {%- assign research_url = "/es/research.html" | relative-url -%}
-{%- assign cv_url = "https://github.com/valentinjoly/CV/raw/master/es/Valentin_Joly_CV_es.pdf" -%}
 {%- assign matton_lab_url = "http://wwwirbv.umontreal.ca/chercheurs/daniel-philippe-matton?lang=en" -%}
 {%- assign phonetics_url = "https://es.wikipedia.org/wiki/Fonolog%C3%ADa_del_franc%C3%A9s" -%}
 {%- assign github_url = "https://github.com/valentinjoly" -%}
@@ -35,7 +35,7 @@ banner_caption: Granos de pólen de <em>Solanum chacoense</em> en microscopía d
         Mi proyecto en el <a href="{{ matton_lab_url }}"><strong>laboratorio Matton</strong></a> se centra en los mecanismos moleculares responsables de la barreras de aislamiento reproductivo prezigótico en papas silvestres. Estoy espcialmente interesado en la <strong>atracción del tubo polínico</strong>, con un doble enfoque utilizando bioinformática (secuenciación de nueva generación) y biología molecular (expresión de proteínas y ensayos funcionales). Lea más sobre mi proyecto en la página <a href="{{ research_url }}"><strong>Investigación</strong></a>.
       </p>
       <br/>
-      <a class="btn btn-danger btn-lg" href="{{ cv_url }}" role="button">
+      <a class="btn btn-danger btn-lg" href="{{ cv_path }}" role="button" target="_blank" rel="noopener noreferrer">
         {{ download }} &nbsp; Descargar mi CV
       </a>
       <br/>
