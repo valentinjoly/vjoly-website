@@ -83,7 +83,28 @@ parent_page: publications.html
         <br/>
         {{talk.authors | replace: "Joly V", "<strong>Joly V</strong>"}}
         <br/>
-        <em>{{talk.conference}}</em>, {{talk.location}}, {{talk.date}}.
+        <em>{{talk.conference}}</em>, {{talk.location}}; {{talk.date}}.
+      </h4>
+      <hr>
+    </li>
+  {% endfor %}
+</ul>
+
+<br/>
+<br/>
+
+<h2>Invited speaker</h2>
+<hr>
+
+<ul class="list-unstyled">
+  {% for talk in site.data.en.invited_speaker %}
+    <li>
+      <h4>
+        <strong>{{talk.title}}</strong>
+        <br/>
+        {{talk.authors | replace: "Joly V", "<strong>Joly V</strong>"}}
+        <br/>
+        {{talk.location}}; {{talk.date}}.
       </h4>
       <hr>
     </li>
@@ -108,7 +129,7 @@ parent_page: publications.html
         <br/>
         {{poster.authors | replace: "Joly V", "<strong>Joly V</strong>"}}
         <br/>
-        <em>{{poster.conference}}</em>, {{poster.location}}, {{poster.date}}.
+        <em>{{poster.conference}}</em>, {{poster.location}}; {{poster.date}}.
       </h4>
       <hr>
     </li>
@@ -133,7 +154,7 @@ parent_page: publications.html
         <br/>
         {{pres.authors | replace: "*", speaker | replace: "Joly V", "<strong>Joly V</strong>"}}
         <br/>
-        <em>{{pres.conference}}</em>, {{pres.location}}, {{pres.date}}.
+        <em>{{pres.conference}}</em>, {{pres.location}};  {{pres.date}}.
       </h4>
       <hr>
     </li>

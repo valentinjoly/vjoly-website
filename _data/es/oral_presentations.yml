@@ -9,14 +9,7 @@
   authors: "Joly V, Viallet C, Liu Y y Matton DP."
   conference: "Plant Biology 2017"
   location: "Honolulu, HI, EE UU"
-  date: "23-28 junio 2017"
-  award: false
-
-- title: "Deciphering potatoes’ words of love."
-  authors: "Joly V y Matton DP."
-  conference: "Orador invitado"
-  location: "Institute for Transformative bio-Molecules (ITbM), Universidad de Nagoya, Japón"
-  date: "13 julio 2016"
+  date: "23–28 junio 2017"
   award: false
 
 - title: "Plants’ secret words of love: rapid evolution of pollen–pistil recognition proteins drives reproductive isolation of wild potatoes."
@@ -26,33 +19,12 @@
   date: "26–29 julio 2015"
   award: true
 
-- title: "Sex among wild potatoes: ladies wear the pants."
-  authors: "Joly V y Matton DP."
-  conference: "Orador invitado"
-  location: "Centre for Structural and Functional Genomics, Concordia University, Montreal, QC, Canadá"
-  date: "16 julio 2015"
-  award: false
-
-- title: "Cell-cell communication between gametophytes and reproductive isolation in wild potatoes."
-  authors: "Joly V y Matton DP."
-  conference: "Orador invitado"
-  location: "Dept. of Genome Sciences, University of Washington, Seattle, WA, EE UU"
-  date: "24 abril 2014"
-  award: false
-
 - title: "Comment éviter les liaisons dangereuses : secrets d’alcôve des pommes de terre."
   authors: "Joly V y Matton DP."
   conference: "Journées du Centre SÈVE"
   location: "Wendake, QC, Canadá"
   date: "7–8 noviembre 2013"
   award: true
-
-- title: "Species-specificity of pollen-pistil interactions in wild potatoes."
-  authors: "Joly V y Matton DP."
-  conference: "Orador invitado"
-  location: "Instituto de Genética, Academia de Ciencias de China, Pekín, China"
-  date: "24 octubre 2013"
-  award: false
 
 - title: "Divergence des protéines reproductives et maintien des barrières de spéciation chez les pommes de terre sauvages."
   authors: "Joly V, Liu Y y Matton DP."

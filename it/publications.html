@@ -92,6 +92,27 @@ parent_page: publications.html
 <br/>
 <br/>
 
+<h2>Relatore invitato</h2>
+<hr>
+
+<ul class="list-unstyled">
+  {% for talk in site.data.it.invited_speaker %}
+    <li>
+      <h4>
+        <strong>{{talk.title}}</strong>
+        <br/>
+        {{talk.authors | replace: "Joly V", "<strong>Joly V</strong>"}}
+        <br/>
+        {{talk.location}}; {{talk.date}}.
+      </h4>
+      <hr>
+    </li>
+  {% endfor %}
+</ul>
+
+<br/>
+<br/>
+
 <h2>Presentazioni con poster</h2>
 <h5>{{star}} Premio</h5>
 <hr>
