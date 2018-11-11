@@ -1,1 +1,1 @@
-Sitemap: http://vjoly.net/sitemap.xml
+Sitemap: https://vjoly.net/sitemap.xml
