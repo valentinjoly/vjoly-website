@@ -4,4 +4,5 @@
 JEKYLL_ENV=production bundle exec jekyll build
 
 # Commit
-git commit -a -m "Rebuilt _site"
+git add _site
+git commit -m "Rebuilt _site"
