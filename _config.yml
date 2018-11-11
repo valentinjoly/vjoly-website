@@ -1,6 +1,6 @@
 baseurl: ""
 title: Valentin Joly
-url: "http://vjoly.net"
+url: "https://vjoly.net"
 
 plugins:
   - jekyll/scholar
