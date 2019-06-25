@@ -29,6 +29,7 @@
   issue: 1
   pages: 6
   doi: 10.3390/plants7010006
+  pmid: 29342939
   bibtex: Salminen_2018_LTP.bib
   pdf: Salminen_2018_LTP.pdf
   image: paper_Salminen_2018.jpg
@@ -41,6 +42,7 @@
   issue: 11
   pages: 1716-23
   doi: 10.1093/bioinformatics/btv047
+  pmid: 25638812
   bibtex: Joly_2015_KAPPA.bib
   pdf: Joly_2015_KAPPA.pdf
   image: paper_Joly_2015.jpg
@@ -53,6 +55,7 @@
   issue: 11
   pages: 4763-75
   doi: 10.1021/acs.jproteome.5b00618
+  pmid: 26387803
   bibtex: Liu_2015_secretome.bib
   image: paper_Liu_2015.jpg
 
@@ -64,6 +67,7 @@
   issue: 7
   pages: 1833-43
   doi: 10.1093/jxb/eru524
+  pmid: 25576576
   bibtex: Lafleur_2015_frk1.bib
   pdf: Lafleur_2015_frk1.pdf
   image: paper_Lafleur_2015.jpg

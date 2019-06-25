@@ -25,6 +25,9 @@ languages: [en, fr, es, it, eo]
 image_dir: "/images/"
 docs_dir: "/docs/"
 
+doi_url_prefix: "https://doi.org/"
+pubmed_url_prefix: "https://www.ncbi.nlm.nih.gov/pubmed/"
+
 exclude:
   - Gemfile
   - Gemfile.lock

@@ -22,10 +22,10 @@ parent_page: publications.html
 <ul class="list-unstyled">
   {% for paper in site.data.en.published_papers %}
     {%- assign paper_image_path = paper.image | prepend: site.image_dir | relative_url -%}
-    {%- assign paper_url = paper.doi | prepend: "http://dx.doi.org/" -%}
+    {%- assign paper_doi_url = paper.doi | prepend: site.doi_url_prefix -%}
     <li class="media">
       <div class="align-self-start mr-3">
-        <a href="{{ paper_url }}" target="_blank" rel="noopener noreferrer">
+        <a href="{{ paper_doi_url }}" target="_blank" rel="noopener noreferrer">
           <img class="rounded" src="{{ paper_image_path }}" alt="..." width="100px"/>
         </a>
       </div>
@@ -39,10 +39,19 @@ parent_page: publications.html
           <br/>
           <small>
             <strong>
-              {{link}} <a href="{{ paper_url }}" target="_blank" rel="noopener noreferrer">Read online</a>
+              {{link}} <a href="{{ paper_doi_url }}" target="_blank" rel="noopener noreferrer">Read online</a>
             </strong>
           </small>
           |
+          {% if paper.pmid %}
+          {%- assign paper_pubmed_url = paper.pmid | prepend: site.pubmed_url_prefix -%}
+          <small>
+            <strong>
+              {{link}} <a href="{{ paper_pubmed_url }}" target="_blank" rel="noopener noreferrer">PubMed</a>
+            </strong>
+          </small>
+          |
+          {% endif %}
           {% if paper.pdf %}
           {% assign pdf_path = paper.pdf | prepend: site.docs_dir | relative_url %}
           <small>
