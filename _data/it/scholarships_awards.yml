@@ -1,3 +1,11 @@
+- name: "Borsa di ricerca postdottorale"
+  year: "2019"
+  organization: "Governo del Québec (<em>Fonds de Recherche du Québec – Nature et Technologies</em>)"
+  amount: "110 000"
+  currency: "CAD"
+  major: true
+  travel: false
+
 - name: "Borsa di viaggio Jacques-Rousseau"
   year: "2018"
   organization: "Istituto di Ricerca in Biologia Vegetale, Università di Montreal"
@@ -54,7 +62,7 @@
 
 - name: "Borsa di dottorato"
   year: "2016"
-  organization: "Governo del Québec (<em>Fonds Québécois de Recherche – Nature et Technologies</em>)"
+  organization: "Governo del Québec (<em>Fonds de Recherche du Québec – Nature et Technologies</em>)"
   amount: "13 333"
   currency: "CAD"
   major: true

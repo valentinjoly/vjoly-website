@@ -1,3 +1,11 @@
+- name: "Postdoctoral fellowship B3X"
+  year: "2019"
+  organization: "Government of Québec (<em>Fonds de Recherche du Québec – Nature et Technologies</em>)"
+  amount: "110,000"
+  currency: "CAD"
+  major: true
+  travel: false
+
 - name: "Jacques-Rousseau Travel Scholarship"
   year: "2018"
   organization: "Plant Biology Research Institute, University of Montreal"
@@ -55,7 +63,7 @@
 
 - name: "Ph.D. Scholarship from the Government of Québec"
   year: "2016"
-  organization: "Fonds Québécois de Recherche – Nature et Technologies"
+  organization: "Government of Québec (<em>Fonds de Recherche du Québec – Nature et Technologies</em>)"
   amount: "13,333"
   currency: "CAD"
   major: true

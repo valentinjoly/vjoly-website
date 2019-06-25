@@ -1,3 +1,11 @@
+- name: "Postdoktora stipendio B3X"
+  year: "2019"
+  organization: "Registaro de Kebekio (<em>Fonds de Recherche du Québec – Nature et Technologies</em>)"
+  amount: "110 000"
+  currency: "CAD"
+  major: true
+  travel: false
+
 - name: "Vojaĝ-stipendio “Jacques-Rousseau”"
   year: "2018"
   organization: "Plantbiologio Esplorinstituto, Universitato de Montrealo"
@@ -55,7 +63,7 @@
 
 - name: "Doktoriĝonta stipendio de la Registaro de Kebekio"
   year: "2016"
-  organization: "Fonds Québécois de Recherche – Nature et Technologies"
+  organization: "Registaro de Kebekio (<em>Fonds de Recherche du Québec – Nature et Technologies</em>)"
   amount: "13 333"
   currency: "CAD"
   major: true

@@ -1,3 +1,11 @@
+- name: "Beca de investigación postdoctoral B3X"
+  year: "2019"
+  organization: "Gobierno de Québec (<em>Fonds de Recherche du Québec – Nature et Technologies</em>)"
+  amount: "110 000"
+  currency: "CAD"
+  major: true
+  travel: false
+
 - name: "Beca de viaje Jacques-Rousseau"
   year: "2018"
   organization: "Instituto de Investigación en Biología Vegetal, Universidad de Montreal"
@@ -54,7 +62,7 @@
 
 - name: "Beca de doctorado"
   year: "2016"
-  organization: "Gobierno de Québec (<em>Fonds Québécois de Recherche – Nature et Technologies</em>)"
+  organization: "Gobierno de Québec (<em>Fonds de Recherche du Québec – Nature et Technologies</em>)"
   amount: "13 333"
   currency: "CAD"
   major: true

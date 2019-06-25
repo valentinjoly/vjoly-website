@@ -1,3 +1,11 @@
+- name: "Bourse de recherche postdoctorale B3X"
+  year: "2019"
+  organization: "Gouvernement du Québec (Fonds de Recherche du Québec – Nature et Technologies)"
+  amount: "110 000"
+  currency: "CAD"
+  major: true
+  travel: false
+
 - name: "Bourse de voyage Jacques-Rousseau"
   year: "2018"
   organization: "Institut de Recherche en Biologie Végétale, Université de Montréal"
@@ -55,7 +63,7 @@
 
 - name: "Bourse de doctorat de 3e cycle"
   year: "2016"
-  organization: "Fonds Québécois de Recherche – Nature et Technologies"
+  organization: "Gouvernement du Québec (Fonds de Recherche du Québec – Nature et Technologies)"
   amount: "13 333"
   currency: "CAD"
   major: true
