@@ -7,6 +7,7 @@ banner_caption: Eksperimenta aranĝo por la kulturo semi-<em>in vivo</em> de ter
 parent_page: publications.html
 ---
 
+{%- assign arrow = '<span class="fas fa-angle-double-down"></span>' -%}
 {%- assign link = '<span class="fas fa-external-link-square-alt"></span>' -%}
 {%- assign pdf = '<span class="fas fa-file-pdf"></span>' -%}
 {%- assign file = '<span class="fas fa-file"></span>' -%}
@@ -37,6 +38,26 @@ parent_page: publications.html
           <br/>
           <em>{{paper.journal}}</em>, {{paper.year}}, {{paper.volume}}({{paper.issue}}):{{paper.pages}}. DOI: {{paper.doi}}
           <br/>
+          {% if paper.abstract %}
+          <small>
+            <strong>
+              {{arrow}}
+              <a data-toggle="collapse" href="#{{ paper.id }}" aria-expanded="false" aria-controls="{{ paper.id }}">
+                Resumo
+              </a>
+            </strong>
+          </small>
+          |
+          {% endif %}
+          {% if paper.pdf %}
+          {% assign pdf_path = paper.pdf | prepend: site.docs_dir | relative_url %}
+          <small>
+            <strong>
+              {{pdf}} <a href="{{ pdf_path }}" target="_blank" rel="noopener noreferrer" >PDF</a>
+            </strong>
+          </small>
+          |
+          {% endif %}
           <small>
             <strong>
               {{link}} <a href="{{ paper_doi_url }}" target="_blank" rel="noopener noreferrer" >Legi enrete</a>
@@ -52,22 +73,18 @@ parent_page: publications.html
           </small>
           |
           {% endif %}
-          {% if paper.pdf %}
-          {% assign pdf_path = paper.pdf | prepend: site.docs_dir | relative_url %}
-          <small>
-            <strong>
-              {{pdf}} <a href="{{ pdf_path }}" target="_blank" rel="noopener noreferrer" >PDF</a>
-            </strong>
-          </small>
-          |
-          {% endif %}
           {% assign bibtex_path = paper.bibtex | prepend: site.docs_dir | relative_url %}
           <small>
             <strong>
-              {{bookmark}} <a href="{{ bibtex_path }}">BibTeX-dosiero</a>
+              {{bookmark}} <a href="{{ bibtex_path }}">BibTeX</a>
             </strong>
           </small>
         </h4>
+        {% if paper.abstract %}
+          <div class="collapse" id="{{ paper.id }}">
+            <p>{{paper.abstract}}</p>
+          </div>
+        {% endif %}
       </div>
     </li>
     <hr>
@@ -93,28 +110,23 @@ parent_page: publications.html
         {{talk.authors | replace: "Joly V", "<strong>Joly V</strong>"}}
         <br/>
         <em>{{talk.conference}}</em>, {{talk.location}}, {{talk.date}}.
-      </h4>
-      <hr>
-    </li>
-  {% endfor %}
-</ul>
-
-<br/>
-<br/>
-
-<h2>Invitata parolisto</h2>
-<hr>
-
-<ul class="list-unstyled">
-  {% for talk in site.data.eo.invited_speaker %}
-    <li>
-      <h4>
-        <strong>{{talk.title}}</strong>
+        {% if talk.abstract %}
         <br/>
-        {{talk.authors | replace: "Joly V", "<strong>Joly V</strong>"}}
-        <br/>
-        {{talk.location}}; {{talk.date}}.
+        <small>
+          <strong>
+            {{arrow}}
+            <a data-toggle="collapse" href="#{{ talk.id }}" aria-expanded="false" aria-controls="{{ talk.id }}">
+              Resumo
+            </a>
+          </strong>
+        </small>
+        {% endif %}
       </h4>
+      {% if talk.abstract %}
+        <div class="collapse" id="{{ talk.id }}">
+          <p>{{talk.abstract}}</p>
+        </div>
+      {% endif %}
       <hr>
     </li>
   {% endfor %}
@@ -139,6 +151,43 @@ parent_page: publications.html
         {{poster.authors | replace: "Joly V", "<strong>Joly V</strong>"}}
         <br/>
         <em>{{poster.conference}}</em>, {{poster.location}}, {{poster.date}}.
+        {% if poster.abstract %}
+        <br/>
+        <small>
+          <strong>
+            {{arrow}}
+            <a data-toggle="collapse" href="#{{ poster.id }}" aria-expanded="false" aria-controls="{{ poster.id }}">
+              Resumo
+            </a>
+          </strong>
+        </small>
+        {% endif %}
+      </h4>
+      {% if poster.abstract %}
+        <div class="collapse" id="{{ poster.id }}">
+          <p>{{poster.abstract}}</p>
+        </div>
+      {% endif %}
+      <hr>
+    </li>
+  {% endfor %}
+</ul>
+
+<br/>
+<br/>
+
+<h2>Invitata parolisto</h2>
+<hr>
+
+<ul class="list-unstyled">
+  {% for talk in site.data.eo.invited_speaker %}
+    <li>
+      <h4>
+        <strong>{{talk.title}}</strong>
+        <br/>
+        {{talk.authors | replace: "Joly V", "<strong>Joly V</strong>"}}
+        <br/>
+        {{talk.location}}; {{talk.date}}.
       </h4>
       <hr>
     </li>
