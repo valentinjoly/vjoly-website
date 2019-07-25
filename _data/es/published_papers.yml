@@ -7,6 +7,7 @@
   pages: 185
   doi: 10.3390/plants8060185
   pmid: 31238522
+  id: paper_Joly_2019_Plants
   bibtex: Joly_2019_Plants.bib
   pdf: Joly_2019_Plants.pdf
   image: paper_Joly_2019.jpg
@@ -21,6 +22,7 @@
   pages: 1620059
   doi: 10.1080/15592324.2019.1620059
   pmid: 31131700
+  id: paper_Mazin_2019_ScFRK2
   bibtex: Mazin_2019_ScFRK2.bib
   image: paper_Mazin_2019.jpg
   abstract: "Fertilization-related kinase (FRK) is a group of the mitogen-activated protein kinase kinase kinase (MAP3K or MEKK) that has proliferated in <em>Solanaceae</em> species. Studies on the wild potato <em>Solanum chacoense</em> have shown that three ScFRKs are directly involved in female gametophyte development. Decreasing the expression of <em>ScFRK1</em> and <em>ScFRK3</em> by RNA interference lead to embryonic sac development arrest at the functional megaspore (FM) stage. As for <em>ScFRK2</em>, the first FRK studied, antisense and co-suppression lines showed no abnormality, while overexpression lines lead to a drastic decrease in seed numbers, presumably caused by a conversion of the ovule into a carpel-like structure. Here we show that in ScFRK2 overexpression lines, carpel-like structures from the ovule cannot explain the drastic decrease in seeds considering the low percentage of these carpel-like structures but occurs in early ovule development as observed in <em>Scfrk1</em> and <em>Scfrk3</em> knockdown mutants were most ovules are arrested at the FM stage. The highly similar phenotype from knockdown mutants (<em>Scfrk1</em> and <em>Scfrk3</em>) and ScFRK2 overexpression lines suggests that these MAP kinases could operate antagonistically through a balance between <em>ScFRK1</em> and <em>3</em> on one side and <em>ScFRK2</em> on the other. This study strongly suggests the importance of the FRK family expression levels during early stages of ovule development in <em>Solanum chacoense</em> embryo sac."
@@ -34,6 +36,7 @@
   pages: 6
   doi: 10.3390/plants7010006
   pmid: 29342939
+  id: paper_Salminen_2018_LTP
   bibtex: Salminen_2018_LTP.bib
   pdf: Salminen_2018_LTP.pdf
   image: paper_Salminen_2018.jpg
@@ -48,6 +51,7 @@
   pages: 1716-23
   doi: 10.1093/bioinformatics/btv047
   pmid: 25638812
+  id: paper_Joly_2015_KAPPA
   bibtex: Joly_2015_KAPPA.bib
   pdf: Joly_2015_KAPPA.pdf
   image: paper_Joly_2015.jpg
@@ -62,6 +66,7 @@
   pages: 4763-75
   doi: 10.1021/acs.jproteome.5b00618
   pmid: 26387803
+  id: paper_Liu_2015_secretome
   bibtex: Liu_2015_secretome.bib
   image: paper_Liu_2015.jpg
   abstract: "During plant sexual reproduction, continuous exchange of signals between the pollen and the pistil (stigma, style, and ovary) plays important roles in pollen recognition and selection, establishing breeding barriers and, ultimately, leading to optimal seed set. After navigating through the stigma and the style, pollen tubes (PTs) reach their final destination, the ovule. This ultimate step is also regulated by numerous signals emanating from the embryo sac (ES) of the ovule. These signals encompass a wide variety of molecules, but species-specificity of the pollen-ovule interaction relies mainly on secreted proteins and their receptors. Isolation of candidate genes involved in pollen-pistil interactions has mainly relied on transcriptomic approaches, overlooking potential post-transcriptional regulation. To address this issue, ovule exudates were collected from the wild potato species <em>Solanum chacoense</em> using a tissue-free gravity-extraction method (tf-GEM). Combined RNA-seq and mass spectrometry-based proteomics led to the identification of 305 secreted proteins, of which 58% were ovule-specific. Comparative analyses using mature ovules (attracting PTs) and immature ovules (not attracting PTs) revealed that the last maturation step of ES development affected almost half of the ovule secretome. Of 128 upregulated proteins in anthesis stage, 106 were not regulated at the mRNA level, emphasizing the importance of post-transcriptional regulation in reproductive development."
@@ -75,6 +80,7 @@
   pages: 1833-43
   doi: 10.1093/jxb/eru524
   pmid: 25576576
+  id: paper_Lafleur_2015_frk1
   bibtex: Lafleur_2015_frk1.bib
   pdf: Lafleur_2015_frk1.pdf
   image: paper_Lafleur_2015.jpg
