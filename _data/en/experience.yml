@@ -1,6 +1,21 @@
+- name: Postdoctoral Fellowship
+  field: Plant Molecular Biology & Bioinformatics
+  date: 2019–<em>present</em>
+  supervisor: Prof. Yannick Jacob
+  institution: Yale University
+  location: New Haven, CT, USA
+  image: logo_yale.jpg
+  url: https://jacob-lab.yale.edu/
+  molbiol_skills: [
+    "CRISPR/Cas9 genome editing.",
+  ]
+  bioinfo_skills: [
+    "High-throughput transcriptomics & methylomics.",
+  ]
+
 - name: Ph.D. Project
   field: Molecular Biology & Bioinformatics
-  date: 2013–<em>present</em>
+  date: 2013–2019
   supervisor: Prof. Daniel P. Matton
   institution: University of Montreal
   location: Montreal, QC, Canada
@@ -19,7 +34,7 @@
 
 - name: International collaboration
   field: Bioinformatics
-  date: May 2016–<em>present</em>
+  date: 2016–2018
   supervisor: Dr. Johan Edqvist
   institution: Linköping University
   location: Linköping, Sweden

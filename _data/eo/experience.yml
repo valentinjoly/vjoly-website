@@ -1,6 +1,21 @@
+- name: Postdoktoriĝa esploristo
+  field: Molekula plantbiologio kaj biokomputiko
+  date: ekde 2019
+  supervisor: P-ro Yannick Jacob
+  institution: Universitato Yale
+  location: New Haven, CT, Usono
+  image: logo_yale.jpg
+  url: https://jacob-lab.yale.edu/
+  molbiol_skills: [
+    "CRISPR/Cas9-genarredaktado.",
+  ]
+  bioinfo_skills: [
+    "Transcriptomiko kaj metilomiko.",
+  ]
+
 - name: Doktora esplorprojekto
   field: Molekula biologio kaj biokomputiko
-  date: ekde 2013
+  date: 2013–2019
   supervisor: P-ro Daniel P. Matton
   institution: Universitato de Montrealo
   location: Montrealo, QC, Kanado
@@ -19,7 +34,7 @@
 
 - name: Internacia kunlaboro
   field: Biokomputiko
-  date: ekde majo 2016
+  date: 2016–2018
   supervisor: D-ro Johan Edqvist
   institution: Universitato de Linköping
   location: Linköping, Svedio

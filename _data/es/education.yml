@@ -1,12 +1,13 @@
 - name: Doctorado
   field: Ciencias biológicas
-  year: desde 2013 (<em>presentación de la tesis planeada en junio de 2019</em>)
+  year: 2019
   institution: Instituto de Investigación en Biología Vegetal, Universidad de Montreal
   location: Montreal, QC, Canadá
   advisor: Prof. Daniel P. Matton
-  project: Comunicación molecular entre gametófitos masculinos y femeninos y barreras reproductivas en papas silvestres (<em>Solanum</em> sect. <em>Petota</em>).
+  project: Exploración bioinformática de las interacciones polen–pistilo en <em>Solanum chacoense</em>.
   image: logo_udem.jpg
   url: http://en.bio.umontreal.ca/programs/graduate-programs/phd-in-biological-sciences/
+  info: "“Mention Exceptionnel” (≈ summa cum laude) <br/> GPA: 4.3/4.3"
 
 
 - name: Maestría
@@ -16,7 +17,7 @@
   location: Montreal, QC, Canadá
   image: logo_udem.jpg
   url: http://en.bio.umontreal.ca/programs/graduate-programs/masters-in-biological-sciences/
-  info: Transición acelerada al doctorado en enero 2013
+  info: "Transición acelerada al doctorado en enero 2013 <br/> GPA: 4.3/4.3"
 
 - name: Licenciatura
   field: Biología — Programa internacional

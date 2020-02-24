@@ -1,6 +1,21 @@
+- name: Ricercatore post-dottorale (con borsa)
+  field: Biologia molecolare delle piante e bioinformatica
+  date: dal 2019
+  supervisor: Prof. Yannick Jacob
+  institution: Università Yale
+  location: New Haven, CT, Stati Uniti
+  image: logo_yale.jpg
+  url: https://jacob-lab.yale.edu/
+  molbiol_skills: [
+    "Editing genomico CRISPR/Cas9.",
+  ]
+  bioinfo_skills: [
+    "Trascrittomica e metilomica.",
+  ]
+
 - name: Progetto di dottorato
   field: Biologia molecolare e bioinformatica
-  date: dal 2013
+  date: 2013–2019
   supervisor: Prof. Daniel P. Matton
   institution: Università di Montreal
   location: Montreal, QC, Canada
@@ -19,7 +34,7 @@
 
 - name: Collaborazione internazionale
   field: Bioinformatica
-  date: da maggio 2016
+  date: 2016–2018
   supervisor: Dr. Johan Edqvist
   institution: Università di Linköping
   location: Linköping, Svezia

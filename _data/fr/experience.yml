@@ -1,6 +1,21 @@
+- name: Chercheur postdoctoral
+  field: Biologie moléculaire des plantes et bioinformatique
+  date: depuis 2019
+  supervisor: Pr Yannick Jacob
+  institution: Université Yale
+  location: New Haven, CT, États-Unis
+  image: logo_yale.jpg
+  url: https://jacob-lab.yale.edu/
+  molbiol_skills: [
+    "Édition du génome CRISPR/Cas9.",
+  ]
+  bioinfo_skills: [
+    "Transcriptomique et méthylomique à haut débit.",
+  ]
+
 - name: Projet de doctorat
   field: Biologie moléculaire et bioinformatique
-  date: depuis 2013
+  date: 2013–2019
   supervisor: Pr Daniel P. Matton
   institution: Université de Montréal
   location: Montréal, QC, Canada
@@ -19,7 +34,7 @@
 
 - name: Collaboration internationale
   field: Bioinformatique
-  date: depuis mai 2016
+  date: 2016–2018
   supervisor: Dr Johan Edqvist
   institution: Université de Linköping
   location: Linköping, Suède
@@ -52,7 +67,7 @@
   date: avr.–mai 2014
   supervisor: Pr William J. Swanson
   institution: University of Washington
-  location: Seattle, WA, USA
+  location: Seattle, WA, États-Unis
   image: logo_uw.jpg
   url: http://depts.washington.edu/swansonw/Swanson_Lab/Overview.html
   bioinfo_skills: [
